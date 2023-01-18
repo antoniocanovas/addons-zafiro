@@ -11,4 +11,6 @@ class PartnerType(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Partner Type'
 
-    name = fields.Char('Name', store=True, required=True)
+    name = fields.Char('Name', store=True, required=True, readonly=True)
+    code = fields.Char('Name', store=True, required=True, readonly=True)
+    color = fields.Integer('Color', store=True)

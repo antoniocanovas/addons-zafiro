@@ -1,0 +1,11 @@
+
+<odoo>
+
+    <record id="partner_type_staff" model="partner_type">
+        <field name="name">Staff</field>
+        <field name="code">staff</field>
+        <field name="color">1</field>
+    </record>
+
+
+</odoo>
