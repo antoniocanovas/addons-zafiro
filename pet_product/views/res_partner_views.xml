@@ -13,4 +13,17 @@
         </field>
     </record>
 
+    <record id="view_res_partner_pet_tree_inh" model="ir.ui.view">
+        <field name="name">res.partner.pet.tree.inh</field>
+        <field name="model">res.partner</field>
+        <field name="type">tree</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <field name="email" position="after">
+                <field name="type_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </field>
+        </field>
+    </record>
+
+
 </odoo>
