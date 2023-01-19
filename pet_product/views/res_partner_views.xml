@@ -10,7 +10,7 @@
             <field name="vat" position="after">
                 <field name="type_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
             </field>
-            <xpath expr="//page[@name='contact_addresses']" position="before">
+            <xpath expr="//page[@name='contact_addresses']" position="after">
                 <page name="contact_pet" string="Pet">
                     <field name="task_ids"/>
                 </page>
