@@ -6,7 +6,7 @@
             <field name="name">Staff</field>
             <field name="code">staff</field>
             <field name="color">1</field>
-            <field name="model_id" ref='partner.type'</field>
+            <field name="model_id" ref='partner.type'/>
     </record>
 
 
