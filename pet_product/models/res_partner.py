@@ -18,3 +18,9 @@ class ResPartner(models.Model):
             typechar += li.code
         self.type_char = typechar
     type_char = fields.Char('Collaborations', store=True, compute='get_type_char')
+
+    # Tareas (es casa, veterinario, usuario de la tarea o voluntario):
+    def get_partner_tasks(self):
+        tasks = self.env['project.task'].search([('home_id','=', record.id),('user_ids.partner_id','=',record.id)])
+        self.task_ids = tasks
+    task_ids = field.Many2many('project.task', store=False, compute='get_partner_tasks')

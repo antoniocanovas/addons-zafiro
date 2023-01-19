@@ -9,6 +9,7 @@
         <field name="arch" type="xml">
             <field name="vat" position="after">
                 <field name="type_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                <field name="task_ids"/>
             </field>
         </field>
     </record>
