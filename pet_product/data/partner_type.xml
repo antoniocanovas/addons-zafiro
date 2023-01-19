@@ -1,12 +1,15 @@
 
 <odoo>
+    <data>
 
-    <record id="partner_type_staff" model="partner.type">
-        <field name="name">Staff</field>
-        <field name="code">staff</field>
-        <field name="color">1</field>
-        <field name="model_id" ref='partner.type'</field>
+        <record id="partner_type_staff" model="partner.type">
+            <field name="name">Staff</field>
+            <field name="code">staff</field>
+            <field name="color">1</field>
+            <field name="model_id" ref='partner.type'</field>
     </record>
 
 
-</odoo>
+</data>
+
+        </odoo>
