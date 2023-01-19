@@ -11,7 +11,7 @@ class ProductTemplate(models.Model):
 
     PET_STATE = [
         ('new', 'New'),
-        ('adopt', '2Adopt'),
+        ('available', 'Available'),
         ('reserved', 'Reserved'),
         ('preadopt', 'Pre adopted'),
         ('done', 'Adoption'),
