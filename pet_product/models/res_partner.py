@@ -23,4 +23,4 @@ class ResPartner(models.Model):
     def get_partner_tasks(self):
         tasks = self.env['project.task'].search([('home_id','=', record.id),('user_ids.partner_id','=',record.id)])
         self.task_ids = tasks
-    task_ids = field.Many2many('project.task', store=False, compute='get_partner_tasks')
+    task_ids = fields.Many2many('project.task', store=False, compute='get_partner_tasks')
