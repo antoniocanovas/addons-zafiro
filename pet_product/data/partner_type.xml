@@ -20,9 +20,9 @@
         <field name="color">3</field>
     </record>
 
-    <record id="partner_type_staff" model="partner.type">
-        <field name="name">Collaborator</field>
-        <field name="code">collaborator</field>
+    <record id="partner_type_volunteer" model="partner.type">
+        <field name="name">Volunteer</field>
+        <field name="code">volunteer</field>
         <field name="color">4</field>
     </record>
 
