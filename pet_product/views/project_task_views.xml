@@ -7,8 +7,11 @@
         <field name="active" eval="True"/>
         <field name="arch" type="xml">
                 <field name="user_ids" position="after">
-                    <field name="product_id"/>
-                    <field name="home_id" attrs="{'invisible':[('product_id','=',False)]}"/>
+                    <field name="product_id"
+                           domain="[('pet_ok','=',True)]"/>
+                    <field name="home_id"
+                           domain="[('type_ids','ilike','home')]"
+                           attrs="{'invisible':[('product_id','=',False)]}"/>
                 </field>
         </field>
         <field name="field_parent" eval="False"/>
