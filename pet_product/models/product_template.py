@@ -18,4 +18,4 @@ class ProductTemplate(models.Model):
     ]
     state = fields.Selection(selection=PET_STATE, string="Status")
     task_ids = fields.One2many('project.task', 'product_id', string='Tasks')
-    pet_ok = fields.Boolean('Pet')
+    pet_ok = fields.Boolean('Pet', default=True)
