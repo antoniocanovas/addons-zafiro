@@ -30,5 +30,24 @@
         </field>
     </record>
 
+    <record id="res_partner_pet_search_inh" model="ir.ui.view">
+        <field name="name">res.partner.pet.search.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="name" string="Collaboration" filter_domain="[('type_ids', 'ilike', self)]"/>
+            </field>
+            <filter name="type_person" position="after">
+                <separator>
+                <filter string="Homes" name="homes" domain="[('type_char', 'ilike', 'home')]"/>
+                <filter string="Volunteers" name="volunteer" domain="[('type_char', 'ilike', 'volunteer')]"/>
+                <filter string="Veterinaries" name="veterinaries" domain="[('type_char', 'ilike', 'veterinary')]"/>
+                <filter string="Staff" name="staff" domain="[('type_char', 'ilike', 'staff')]"/>
+                </separator>
+            </filter>
+
+        </field>
+    </record>
 
 </odoo>
