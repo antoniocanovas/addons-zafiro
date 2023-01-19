@@ -1,13 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
 
 <odoo>
-    <data>
 
-        <record id="partner_type_staff" model="partner.type">
-            <field name="name">Staff</field>
-            <field name="code">staff</field>
-            <field name="color">1</field>
-        </record>
-
-    </data>
+    <record id="partner_type_staff" model="partner.type">
+        <field name="name">Staff</field>
+        <field name="code">staff</field>
+        <field name="color">1</field>
+    </record>
 
 </odoo>
