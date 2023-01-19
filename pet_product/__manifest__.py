@@ -7,6 +7,7 @@ Base module for Pets as Odoo Products.
 """,
     'author': 'Serincloud',
     'depends': [
+        'contacts',
         'product',
         'project',
     ],

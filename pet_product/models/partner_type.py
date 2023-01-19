@@ -8,7 +8,6 @@ from odoo import api, fields, models, _
 
 class PartnerType(models.Model):
     _name = 'partner.type'
-    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Partner Type'
 
     name = fields.Char('Name', store=True, required=True, readonly=True)
