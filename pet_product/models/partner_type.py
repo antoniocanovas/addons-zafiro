@@ -12,5 +12,5 @@ class PartnerType(models.Model):
     _description = 'Partner Type'
 
     name = fields.Char('Name', store=True, required=True, readonly=True)
-    code = fields.Char('Name', store=True, required=True, readonly=True)
+    code = fields.Char('Code', store=True, required=True, readonly=True)
     color = fields.Integer('Color', store=True)
