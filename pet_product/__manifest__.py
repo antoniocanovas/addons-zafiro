@@ -12,7 +12,7 @@ Base module for Pets as Odoo Products.
     ],
     "data": [
         "security/ir.model.access.csv",
-#        "data/partner_type.xml",
+        "data/partner_type.xml",
 #        "views/product_views.xml",
     ],
     'installable':True,
