@@ -38,7 +38,7 @@
             <field name="name" position="after">
                 <field name="name" string="Collaboration" filter_domain="[('type_ids', 'ilike', self)]"/>
             </field>
-            <filter name="type_person" position="after">
+            <filter name="type_company" position="after">
                 <separator>
                 <filter string="Homes" name="homes" domain="[('type_char', 'ilike', 'home')]"/>
                 <filter string="Volunteers" name="volunteer" domain="[('type_char', 'ilike', 'volunteer')]"/>
