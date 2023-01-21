@@ -48,7 +48,6 @@
                         <field name="home_id" attrs="{'invisible': ['|',('product_id', '=', False), ('home_id', '=', False)]}"/>
                         <field name="veterinary_id" attrs="{'invisible': ['|',('product_id', '=', False), ('veterinary_id', '=', False)]}"/>
                         <field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/>
-                        <field name="user_id" widget="many2one_avatar_user" t-if="record.user_id.raw_value"/>
                     </div>
                 </div>
              </data>
