@@ -30,4 +30,31 @@
         <field name="type">form</field>
     </record>
 
+
+    <record id="project_task_pet_kanban_inh" model="ir.ui.view">
+        <field name="name">Project Task Pet Kanban Inherited</field>
+        <field name="model">project.task</field>
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data><templates position="before">
+                    <field name="product_id"/>
+                    <field name="home_id"/>
+                    <field name="veterinary_id"/>
+                    <field name="volunteer_id"/>
+                </templates>
+                <div name="date_deadline" position="before">
+                    <field name="product_id" attrs="{'invisible': [('product_id', '=', False)]}"/>
+                </div>
+             </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="project.view_task_kanban"/>
+        <field name="key" eval="False"/>
+        <field name="mode">extension</field>
+        <field name="priority">99</field>
+        <field name="type">form</field>
+    </record>
+
+
 </odoo>
