@@ -10,7 +10,7 @@
             <xpath expr="//form/header" position="inside">
                 <field name="shelter_state" widget="statusbar"
                        options="{'clickable': '1', 'fold_field': 'fold'}"
-                       attrs="{'invisible': [('type_ids', '=', False)]}"
+                       attrs="{'invisible': [('type_ids', '=', False)]}">
                 </field>
             </xpath>
             <field name="vat" position="after">
