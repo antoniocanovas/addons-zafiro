@@ -13,4 +13,4 @@ class ProjectTask(models.Model):
     home_id         = fields.Many2one('res.partner', string='Home', domain="[('type_char','ilike','home')]")
     veterinary_id   = fields.Many2one('res.partner', string='Veterinary', domain="[('type_char','ilike','veterinary')]")
     volunteer_id    = fields.Many2one('res.partner', string='Volunteer', domain="[('type_char','ilike','volunteer')]")
-    product_image   = fields.Binary('Image', related='product_id.image_1920')
+    product_image   = fields.Binary('Image', related='product_id.image_1920', store=False)
