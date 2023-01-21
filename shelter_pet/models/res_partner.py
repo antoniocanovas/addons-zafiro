@@ -14,7 +14,6 @@ class ResPartner(models.Model):
         ('sent', 'Sent'),
         ('approved', 'Approved'),
         ('fail', 'Discarded')]
-    ]
     shelter_approve = fields.Selection(selection = STATUS, string='Survey status', store=True)
     shelter_begin   = fields.Date('Date start')
     shelter_end     = fields.Date('Date end')
