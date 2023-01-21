@@ -43,10 +43,19 @@
                     <field name="volunteer_id"/>
                 </templates>
                 <div name="date_deadline" position="before">
-                    <field name="product_id" attrs="{'invisible': [('product_id', '=', False)]}"/>
-                    <field name="home_id" attrs="{'invisible': ['|',('product_id', '=', False), ('home_id', '=', False)]}"/>
-                    <field name="veterinary_id" attrs="{'invisible': ['|',('product_id', '=', False), ('veterinary_id', '=', False)]}"/>
-                    <field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/>
+                   <div class="o_primary">
+                        <span class="o_text_overflow text-muted" t-if="record.product_id.value">
+                            <span aria-label="Pet" title="Pet"/><t t-esc="record.product_id.value"/>
+                            <span class="fa fa-user me-2" aria-label="Home" title="Home"/><t t-esc="record.home_id.value"/>
+                        </span>
+                       <!--
+                       <field name="product_id" attrs="{'invisible': [('product_id', '=', False)]}"/>
+                        <field name="home_id" attrs="{'invisible': ['|',('product_id', '=', False), ('home_id', '=', False)]}"/>
+                        <field name="veterinary_id" attrs="{'invisible': ['|',('product_id', '=', False), ('veterinary_id', '=', False)]}"/>
+                        <field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/>
+                        <field name="user_id" widget="many2one_avatar_user" t-if="record.user_id.raw_value"/>
+                    -->
+                    </div>
                 </div>
              </data>
         </field>
