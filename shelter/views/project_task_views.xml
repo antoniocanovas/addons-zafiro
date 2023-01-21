@@ -44,6 +44,9 @@
                 </templates>
                 <div name="date_deadline" position="before">
                     <field name="product_id" attrs="{'invisible': [('product_id', '=', False)]}"/>
+                    <field name="home_id" attrs="{'invisible': ['|',('product_id', '=', False), ('home_id', '=', False)]}"/>
+                    <field name="veterinary_id" attrs="{'invisible': ['|',('product_id', '=', False), ('veterinary_id', '=', False)]}"/>
+                    <field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/>
                 </div>
              </data>
         </field>
