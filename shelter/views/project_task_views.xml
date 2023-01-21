@@ -12,9 +12,7 @@
             <field name="description" position="before">
                 <group>
                     <field name="home_id"
-                           attrs="{'invisible':[('product_id','=',False)
-                           <!--,('type_char','not like','home') -->
-                           ]}"/>
+                           attrs="{'invisible':[('product_id','=',False)]}"/>
                            <!--
                     <field name="veterinary_id"
                            attrs="{'invisible':['|',('product_id','=',False),('type_char','not like','veterinary')]}"/>
