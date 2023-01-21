@@ -16,4 +16,4 @@ class ProductProduct(models.Model):
         for record in self:
             pp = self.env['product.product'].search([('id','=',record.id)])
             record.self = pp.id
-    self = fields.Many2one('product.product', string="Self", store=True, compute="get_product_template_self")
+    self = fields.Many2one('product.product', string="Self", store=True, compute="get_product_product_self")
