@@ -7,7 +7,7 @@
         <field name="type">form</field>
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
-            <field name="responsible_id" position="after">
+            <field name="user_id" position="after">
                 <field name="type_ids" widget="many2many_tags"
                        options="{'color_field': 'color'}"
                        domain="[('code','!=','staff')]"/>
