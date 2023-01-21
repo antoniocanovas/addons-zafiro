@@ -20,7 +20,7 @@
   </record>
 
   <menuitem
-          action="action_shelter_pets"
+<!--          action="action_shelter_pets" -->
           id="menu_shelter_main"
           name="Shelter"
           sequence="10"
