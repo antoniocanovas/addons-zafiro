@@ -6,6 +6,9 @@
         <field name="model">project.task</field>
         <field name="active" eval="True"/>
         <field name="arch" type="xml">
+            <field name="kanban_state" position="before">
+                <field name="product_image" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}" no_label="1"/>
+            </field>
             <field name="user_ids" position="after">
                 <field name="product_id" domain="[('pet_ok','=',True)]"/>
                 <field name="home_id" attrs="{'invisible':[('product_id','=',False)]}"/>
@@ -37,11 +40,12 @@
         <field name="active" eval="True"/>
         <field name="arch" type="xml">
             <data><templates position="before">
-                    <field name="product_id"/>
-                    <field name="home_id"/>
-                    <field name="veterinary_id"/>
-                    <field name="volunteer_id"/>
-                </templates>
+                <field name="product_id"/>
+                <field name="home_id"/>
+                <field name="veterinary_id"/>
+                <field name="volunteer_id"/>
+                <field name="product_image"/>
+            </templates>
                 <div name="date_deadline" position="before">
                     <div class="oe_kanban_bottom_right">
                         <field name="product_id" attrs="{'invisible': [('product_id', '=', False)]}"/>
@@ -50,7 +54,7 @@
                         <field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/>
                     </div>
                 </div>
-             </data>
+            </data>
         </field>
         <field name="field_parent" eval="False"/>
         <field name="groups_id" eval="[(6, 0, [])]"/>
