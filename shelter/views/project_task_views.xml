@@ -12,11 +12,11 @@
             <field name="description" position="before">
                 <group>
                     <field name="home_id"
-                           attrs="{'invisible':['|',('product_id','=',False),('project_id.type_char','!ilike','home')]}"/>
+                           attrs="{'invisible':['|',('product_id','=',False),('type_char','!ilike','home')]}"/>
                     <field name="veterinary_id"
-                           attrs="{'invisible':['|',('product_id','=',False),('project_id.type_char','!ilike','veterinary')]}"/>
+                           attrs="{'invisible':['|',('product_id','=',False),('type_char','!ilike','veterinary')]}"/>
                     <field name="volunteer_id"
-                           attrs="{'invisible':['|',('product_id','=',False),('project_id.type_char','!ilike','volunteer')]}"/>
+                           attrs="{'invisible':['|',('product_id','=',False),('type_char','!ilike','volunteer')]}"/>
                 </group>
             </field>
         </field>
