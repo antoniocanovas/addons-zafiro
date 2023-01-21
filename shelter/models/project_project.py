@@ -9,7 +9,12 @@ from odoo import api, fields, models, _
 class ProjectProject(models.Model):
     _inherit = "project.project"
 
-    type_ids = fields.Many2many('partner.type', string="Collaborations")
+    type_ids = fields.Many2many(string="Collaborations",
+        comodel_name='partner.type',
+        relation='project_partnertype_rel',
+        column1='project_id',
+        column2='type_id',
+    )
 
     @api.depends('type_ids')
     def get_type_char(self):
