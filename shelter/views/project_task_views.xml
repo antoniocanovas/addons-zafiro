@@ -17,6 +17,7 @@
                            attrs="{'invisible':['|',('product_id','=',False),('type_char','!ilike','veterinary')]}"/>
                     <field name="volunteer_id"
                            attrs="{'invisible':['|',('product_id','=',False),('type_char','!ilike','volunteer')]}"/>
+                    <field name="type_char" invisible="1"/>
                 </group>
             </field>
         </field>
