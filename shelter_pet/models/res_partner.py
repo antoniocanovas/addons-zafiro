@@ -9,12 +9,12 @@ from odoo import api, fields, models, _
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    STATUS = [
+    PARTNER_STATUS = [
         ('pending', 'Pending'),
         ('sent', 'Sent'),
         ('approved', 'Approved'),
         ('fail', 'Discarded')]
-    shelter_approve = fields.Selection(selection = STATUS, string='Survey status', store=True)
+    shelter_state   = fields.Selection(selection = PARTNER_STATUS, string='Survey status', store=True)
     shelter_begin   = fields.Date('Date start')
     shelter_end     = fields.Date('Date end')
     shelter_note    = fields.Text('Notes')

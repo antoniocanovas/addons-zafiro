@@ -7,6 +7,12 @@
         <field name="type">form</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <field name="shelter_state" widget="statusbar"
+                       options="{'clickable': '1', 'fold_field': 'fold'}"
+                       attrs="{'invisible': [('type_ids', '=', False)]}"
+                <field/>
+            </xpath>
             <field name="vat" position="after">
                 <field name="type_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
             </field>
@@ -19,6 +25,7 @@
                         <group>
                             <field name="shelter_end"/>
                         </group>
+                        <h3>Shelter notes:</h3>
                         <field name="shelter_note" no_label="1"/>
                     </group>
                     <h3>Tasks:</h3>
@@ -50,10 +57,10 @@
             </field>
             <filter name="type_company" position="after">
                 <separator>
-                <filter string="Homes" name="homes" domain="[('type_char', 'ilike', 'home')]"/>
-                <filter string="Volunteers" name="volunteer" domain="[('type_char', 'ilike', 'volunteer')]"/>
-                <filter string="Veterinaries" name="veterinaries" domain="[('type_char', 'ilike', 'veterinary')]"/>
-                <filter string="Staff" name="staff" domain="[('type_char', 'ilike', 'staff')]"/>
+                    <filter string="Homes" name="homes" domain="[('type_char', 'ilike', 'home')]"/>
+                    <filter string="Volunteers" name="volunteer" domain="[('type_char', 'ilike', 'volunteer')]"/>
+                    <filter string="Veterinaries" name="veterinaries" domain="[('type_char', 'ilike', 'veterinary')]"/>
+                    <filter string="Staff" name="staff" domain="[('type_char', 'ilike', 'staff')]"/>
                 </separator>
             </filter>
 
