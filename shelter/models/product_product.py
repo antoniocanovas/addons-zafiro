@@ -6,8 +6,8 @@
 from odoo import api, fields, models, _
 
 
-class ProductTemplate(models.Model):
-    _inherit = "product.template"
+class ProductProduct(models.Model):
+    _inherit = "product.product"
 
     PET_STATE = [
         ('new', 'New'),
