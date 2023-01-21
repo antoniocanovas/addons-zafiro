@@ -10,12 +10,14 @@
                 <field name="product_id" domain="[('pet_ok','=',True)]"/>
             </field>
             <field name="description" position="before">
-                <group name="task_collaborators">
-                    <field name="home_id" attrs="{'invisible':[('product_id','=',False)]}"/>
-                    <field name="veterinary_id" attrs="{'invisible':[('product_id','=',False)]}"/>
-                </group>
                 <group>
-                    <field name="volunteer_id" attrs="{'invisible':[('product_id','=',False)]}"/>
+                    <group name="task_collaborators">
+                        <field name="home_id" attrs="{'invisible':[('product_id','=',False)]}"/>
+                        <field name="veterinary_id" attrs="{'invisible':[('product_id','=',False)]}"/>
+                    </group>
+                    <group>
+                        <field name="volunteer_id" attrs="{'invisible':[('product_id','=',False)]}"/>
+                    </group>
                 </group>
             </field>
         </field>
