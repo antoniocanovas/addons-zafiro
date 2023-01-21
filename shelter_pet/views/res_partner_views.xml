@@ -11,7 +11,7 @@
                 <field name="shelter_state" widget="statusbar"
                        options="{'clickable': '1', 'fold_field': 'fold'}"
                        attrs="{'invisible': [('type_ids', '=', False)]}"
-                <field/>
+                </field>
             </xpath>
             <field name="vat" position="after">
                 <field name="type_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
