@@ -7,7 +7,9 @@
         <field name="active" eval="True"/>
         <field name="arch" type="xml">
             <field name="kanban_state" position="before">
-                <field name="product_image" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}" no_label="1"/>
+                <field name="product_image" widget="image" class="oe_avatar"
+                       options="{'preview_image': 'image_128'}" no_label="1"
+                       attrs="{'invisible':[('preview_image','=',False)]}"/>/>
             </field>
             <field name="user_ids" position="after">
                 <field name="product_id" domain="[('pet_ok','=',True)]"/>
@@ -52,6 +54,9 @@
                         <field name="home_id" attrs="{'invisible': ['|',('product_id', '=', False), ('home_id', '=', False)]}"/>
                         <field name="veterinary_id" attrs="{'invisible': ['|',('product_id', '=', False), ('veterinary_id', '=', False)]}"/>
                         <field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/>
+                    </div>
+                    <div t-if="record.product_image.value">
+                        <field name="product_image" widget="image"/>
                     </div>
                 </div>
             </data>
