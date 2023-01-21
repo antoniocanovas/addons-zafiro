@@ -6,12 +6,19 @@
         <field name="model">project.task</field>
         <field name="active" eval="True"/>
         <field name="arch" type="xml">
-                <field name="user_ids" position="after">
-                    <field name="product_id"
-                           domain="[('pet_ok','=',True)]"/>
+            <field name="user_ids" position="after">
+                <field name="product_id" domain="[('pet_ok','=',True)]"/>
+            </field>
+            <field name="description" position="before">
+                <group>
                     <field name="home_id"
-                           attrs="{'invisible':[('product_id','=',False)]}"/>
-                </field>
+                           attrs="{'invisible':['|',('product_id','=',False),('project_id.type_char','!ilike','home')]}"/>
+                    <field name="veterinary_id"
+                           attrs="{'invisible':['|',('product_id','=',False),('project_id.type_char','!ilike','veterinary')]}"/>
+                    <field name="volunteer_id"
+                           attrs="{'invisible':['|',('product_id','=',False),('project_id.type_char','!ilike','volunteer')]}"/>
+                </group>
+            </field>
         </field>
         <field name="field_parent" eval="False"/>
         <field name="groups_id" eval="[(6, 0, [])]"/>

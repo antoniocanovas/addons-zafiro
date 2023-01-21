@@ -9,5 +9,7 @@ from odoo import api, fields, models, _
 class ProjectTask(models.Model):
     _inherit = "project.task"
 
-    product_id = fields.Many2one('product.template', string='Pet')
-    home_id = fields.Many2one('res.partner', string='Home', domain="[('type_char','ilike','home')]")
+    product_id      = fields.Many2one('product.template', string='Pet')
+    home_id         = fields.Many2one('res.partner', string='Home', domain="[('type_char','ilike','home')]")
+    veterinary_id   = fields.Many2one('res.partner', string='Home', domain="[('type_char','ilike','veterinary')]")
+    volunteer_id    = fields.Many2one('res.partner', string='Home', domain="[('type_char','ilike','volunteer')]")
