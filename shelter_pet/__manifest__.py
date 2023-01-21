@@ -1,5 +1,5 @@
 {
-    'name': 'Pet Product',
+    'name': 'Shelter Pets',
     'version': '16.0.0.1',
     'category': 'Product',
     'description': u"""
