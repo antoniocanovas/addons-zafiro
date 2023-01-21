@@ -9,7 +9,10 @@ from odoo import api, fields, models, _
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    type_ids = fields.Many2many(string="Collaborations",
+    shelter_begin  = fields.Date('Date start')
+    shelter_end    = fields.Date('Date end')
+
+    type_ids    = fields.Many2many(string="Collaborations",
         comodel_name='partner.type',
         relation='partner_partnertype_rel',
         column1='partner_id',
