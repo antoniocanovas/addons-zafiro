@@ -10,11 +10,11 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     PARTNER_STATUS = [
-        ('pending', 'Pending'),
+        ('new', 'New'),
         ('sent', 'Sent'),
         ('approved', 'Approved'),
         ('fail', 'Discarded')]
-    shelter_state   = fields.Selection(selection = PARTNER_STATUS, string='Survey status', store=True)
+    shelter_state   = fields.Selection(selection = PARTNER_STATUS, string='Survey status', default='new', store=True)
     shelter_begin   = fields.Date('Date start')
     shelter_end     = fields.Date('Date end')
     shelter_note    = fields.Text('Notes')
