@@ -9,8 +9,11 @@ from odoo import api, fields, models, _
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    shelter_begin  = fields.Date('Date start')
-    shelter_end    = fields.Date('Date end')
+    shelter_approve = fields.Selection(string='Survey status', store=True,
+        '[('pending', 'Pending'), ('sent', 'Sent'), ('approved', 'Approved'), ('fail','Discarded')]')
+    shelter_begin   = fields.Date('Date start')
+    shelter_end     = fields.Date('Date end')
+    shelter_note    = fields.Text('Notes')
 
     type_ids    = fields.Many2many(string="Collaborations",
         comodel_name='partner.type',
