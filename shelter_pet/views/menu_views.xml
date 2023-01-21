@@ -1,15 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
 
+  <record id="action_shelter_pets" model="ir.actions.act_window">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="context">{'default_active':1}</field>
+    <field name="domain">[('pet_ok','=',True')]</field>
+    <field name="filter" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="limit">80</field>
+    <field name="name">Shelter</field>
+    <field name="res_model">product.product</field>
+    <field name="search_view_id" eval="False"/>
+    <field name="target">current</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="usage" eval="False"/>
+    <field name="view_id" eval="False"/>
+    <field name="view_mode">kanban,tree,form,activity</field>
+  </record>
+
   <menuitem
           id="menu_shelter_main"
           name="Shelter"
+          action="action_shelter_pets"
           groups="stock.group_stock_user"
           web_icon="shelter_pet,static/icon.png"
           sequence="10"
   />
-
-
-
 
 </odoo>
