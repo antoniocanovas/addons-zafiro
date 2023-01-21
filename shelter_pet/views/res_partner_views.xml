@@ -30,7 +30,7 @@
                         <h3>Shelter notes:</h3>
                         <field name="shelter_note" no_label="1"/>
                     </group>
-                    <h3>Tasks:</h3>
+                    <h3>Tasks history:</h3>
                     <field name="task_ids"/>
                 </page>
             </xpath>
