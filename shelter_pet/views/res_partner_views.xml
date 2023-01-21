@@ -7,11 +7,13 @@
         <field name="type">form</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//form/header" position="inside">
-                <field name="shelter_state" widget="statusbar"
-                       options="{'clickable': '1', 'fold_field': 'fold'}"
-                       attrs="{'invisible': [('type_ids', '=', False)]}">
-                </field>
+            <xpath expr="//form" position="inside">
+                <header>
+                    <field name="shelter_state" widget="statusbar"
+                           options="{'clickable': '1', 'fold_field': 'fold'}"
+                           attrs="{'invisible': [('type_ids', '=', False)]}">
+                    </field>
+                </header>
             </xpath>
             <field name="vat" position="after">
                 <field name="type_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
