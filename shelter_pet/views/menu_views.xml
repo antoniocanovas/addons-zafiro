@@ -22,8 +22,9 @@
   <menuitem
           id="menu_shelter_main"
           name="Shelter"
-          sequence="10"
+          groups="stock.group_stock_user"
           web_icon="shelter_pet,static/icon.png"
+          sequence="10"
   />
 
   <record id="menu_shelter_pets" model="ir.ui.menu">
