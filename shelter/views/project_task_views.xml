@@ -12,12 +12,17 @@
             <field name="description" position="before">
                 <group>
                     <field name="home_id"
-                           attrs="{'invisible':['|',('product_id','=',False),('type_char','not like','home')]}"/>
+                           attrs="{'invisible':[('product_id','=',False)
+                           <!--,('type_char','not like','home') -->
+                           ]}"/>
+                           <!--
                     <field name="veterinary_id"
                            attrs="{'invisible':['|',('product_id','=',False),('type_char','not like','veterinary')]}"/>
                     <field name="volunteer_id"
                            attrs="{'invisible':['|',('product_id','=',False),('type_char','not like','volunteer')]}"/>
-                    <field name="type_char" invisible="1"/>
+                    -->
+
+                    <field name="type_char"/>
                 </group>
             </field>
         </field>
