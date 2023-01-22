@@ -14,7 +14,7 @@ class ProductProduct(models.Model):
         ('available', 'Available'),
         ('reserved', 'Reserved'),
         ('preadopt', 'Pre adopted'),
-        ('done', 'Adoption'),
+        ('done', 'Done'),
     ]
     state    = fields.Selection(selection=PET_STATE, string="Status", default='new')
     task_ids = fields.One2many('project.task', 'product_id', string='Tasks')
