@@ -16,6 +16,6 @@ class ProductProduct(models.Model):
         ('preadopt', 'Pre adopted'),
         ('done', 'Adoption'),
     ]
-    state_id = fields.Selection(selection=PET_STATE, string="Status", default='new')
+    state    = fields.Selection(selection=PET_STATE, string="Status", default='new')
     task_ids = fields.One2many('project.task', 'product_id', string='Tasks')
-    pet_ok = fields.Boolean('Pet', default=True)
+    pet_ok   = fields.Boolean('Pet', default=True)
