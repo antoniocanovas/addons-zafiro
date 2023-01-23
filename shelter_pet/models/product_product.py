@@ -9,13 +9,6 @@ from odoo import api, fields, models, _
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
-    PET_STATE = [
-        ('new', 'New'),
-        ('available', 'Available'),
-        ('reserved', 'Reserved'),
-        ('preadopt', 'Pre adopted'),
-        ('done', 'Done'),
-    ]
-    stage_id    = fields.Many2one('product.stage', string="Stage",)
+    stage_id    = fields.Many2one('product.stage', string="Stage", default="New")
     task_ids = fields.One2many('project.task', 'product_id', string='Tasks')
     pet_ok   = fields.Boolean('Pet', default=True)
