@@ -10,8 +10,8 @@
                 <field name="lst_price"/>
                 <field name="activity_state"/>
                 <field name="color"/>
-                <field name="veterinary_id"/>
-                <field name="volunteer_id"/>
+               <!-- <field name="veterinary_id"/>
+                <field name="volunteer_id"/>-->
                 <field name="image_1920"/>
                 <field name="color"/>
                 <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
