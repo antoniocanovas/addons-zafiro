@@ -107,7 +107,7 @@
                                         </b>
                                     </div>
                                     <div class="oe_kanban_bottom_right" t-if="!selection_mode">
-                                        <field name="state" widget="state_selection" groups="base.group_user"/>
+                                        <field name="stage_id" widget="state_selection" groups="base.group_user"/>
                                     </div>
                                 </div>
                             </div>
