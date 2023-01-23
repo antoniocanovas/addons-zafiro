@@ -41,19 +41,20 @@
         <field name="model">project.task</field>
         <field name="active" eval="True"/>
         <field name="arch" type="xml">
-            <data><templates position="before">
-                <field name="product_id"/>
-                <field name="home_id"/>
-                <field name="veterinary_id"/>
-                <field name="volunteer_id"/>
-                <field name="product_image"/>
-            </templates>
+            <data>
+                <templates position="before">
+                    <field name="product_id"/>
+                    <field name="home_id"/>
+                    <field name="veterinary_id"/>
+                    <field name="volunteer_id"/>
+                    <field name="product_image"/>
+                </templates>
                 <div name="date_deadline" position="before">
                     <div class="oe_kanban_bottom_right">
-                        <field name="product_id" attrs="{'invisible': [('product_id', '=', False)]}"/>
-                        <field name="home_id" attrs="{'invisible': ['|',('product_id', '=', False), ('home_id', '=', False)]}"/>
-                        <field name="veterinary_id" attrs="{'invisible': ['|',('product_id', '=', False), ('veterinary_id', '=', False)]}"/>
-                        <field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/>
+                        <span><b>Pet:</b><field name="product_id" attrs="{'invisible': [('product_id', '=', False)]}"/> <br/> </span>
+                        <span><b>Home:</b><field name="home_id" attrs="{'invisible': ['|',('product_id', '=', False), ('home_id', '=', False)]}"/><br/> </span>
+                        <span><b>Veterinay:</b><field name="veterinary_id" attrs="{'invisible': ['|',('product_id', '=', False), ('veterinary_id', '=', False)]}"/><br/> </span>
+                        <span><b>Volunteer:</b><field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/><br/> </span>
                     </div>
                     <div t-if="record.product_image.value">
                         <field name="product_image" widget="image"/>
@@ -69,6 +70,78 @@
         <field name="priority">99</field>
         <field name="type">form</field>
     </record>
+
+    <record id="product_pet_kanban_view" model="ir.ui.view">
+        <field name="name">Product Pet Kanban</field>
+        <field name="model">product.product</field>
+        <field name="arch" type="xml">
+            <kanban sample="1">
+                <field name="id"/>
+                <field name="lst_price"/>
+                <field name="activity_state"/>
+                <field name="color"/>
+                <field name="veterinary_id"/>
+                <field name="volunteer_id"/>
+                <field name="image_1920"/>
+                <field name="color"/>
+                <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="{{!selection_mode ? 'oe_kanban_color_' + kanban_getcolor(record.color.raw_value) : ''}} oe_kanban_card oe_kanban_global_click">
+                            <div class="oe_kanban_content">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title">
+                                            <s t-if="!record.active.raw_value"><field name="name"/></s>
+                                            <t t-else=""><field name="name"/></t>
+                                        </strong>
+                                        <br />
+                                    </div>
+                                    <div class="o_dropdown_kanban dropdown" t-if="!selection_mode" groups="base.group_user">
+                                        <a role="button" class="dropdown-toggle o-no-caret btn" data-bs-toggle="dropdown" data-bs-display="static" href="#" aria-label="Dropdown menu" title="Dropdown menu">
+                                            <span class="fa fa-ellipsis-v"/>
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <a name="%(portal.portal_share_action)d" role="menuitem" type="action" class="dropdown-item">Share</a>
+                                            <a t-if="widget.editable" role="menuitem" type="edit" class="dropdown-item">Edit</a>
+                                            <div role="separator" class="dropdown-divider"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <div class="oe_kanban_bottom_right">
+                                        <span><b>Home:</b><field name="home_id" attrs="{'invisible': ['|',('product_id', '=', False), ('home_id', '=', False)]}"/><br/> </span>
+                                        <span><b>Veterinay:</b><field name="veterinary_id" attrs="{'invisible': ['|',('product_id', '=', False), ('veterinary_id', '=', False)]}"/><br/> </span>
+                                        <span><b>Volunteer:</b><field name="volunteer_id" attrs="{'invisible': ['|',('product_id', '=', False), ('volunteer_id', '=', False)]}"/><br/> </span>
+                                    </div>
+                                    <div t-if="record.image_1920">
+                                        <field name="image_1920" widget="image"/>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_bottom" t-if="!selection_mode">
+                                    <div class="oe_kanban_bottom_left">
+                                        <field name="priority" widget="priority"/>
+                                        <field name="activity_ids" widget="kanban_activity"/>
+                                        <b t-if="record.rating_active.raw_value and record.rating_count.raw_value &gt; 0" groups="project.group_project_rating">
+                                            <span style="font-weight:bold;" class="fa fa-fw mt4 fa-smile-o text-success" t-if="record.rating_avg.raw_value &gt;= 3.66" title="Average Rating: Satisfied" role="img" aria-label="Happy face"/>
+                                            <span style="font-weight:bold;" class="fa fa-fw mt4 fa-meh-o text-warning" t-elif="record.rating_avg.raw_value &gt;= 2.33" title="Average Rating: Okay" role="img" aria-label="Neutral face"/>
+                                            <span style="font-weight:bold;" class="fa fa-fw mt4 fa-frown-o text-danger" t-else="" title="Average Rating: Dissatisfied" role="img" aria-label="Sad face"/>
+                                        </b>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right" t-if="!selection_mode">
+                                        <field name="kanban_state" widget="state_selection" groups="base.group_user"/>
+                                        <t t-if="record.user_ids.raw_value"><field name="user_ids" widget="many2many_avatar_user"/></t>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
 
 
 </odoo>
