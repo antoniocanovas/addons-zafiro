@@ -14,6 +14,7 @@
                 <field name="volunteer_id"/>-->
                 <field name="image_1920"/>
                 <field name="color"/>
+                <field name="state"/>
                 <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
                 <templates>
                     <t t-name="kanban-box">
@@ -59,7 +60,7 @@
                                         </b>
                                     </div>
                                     <div class="oe_kanban_bottom_right" t-if="!selection_mode">
-                                        <field name="kanban_state" widget="state_selection" groups="base.group_user"/>
+                                        <field name="state" widget="state_selection" groups="base.group_user"/>
                                     </div>
                                 </div>
                             </div>
