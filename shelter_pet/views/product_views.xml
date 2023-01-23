@@ -36,7 +36,7 @@
         <field name="inherit_id" ref="product.product_search_form_view"/>
         <field name="arch" type="xml">
             <filter name="type" position="before">
-                <filter string="State" name="state" context="{'group_by':'state'}"/>
+                <filter string="State" name="state" context="{'group_by':'stage_id'}"/>
             </filter>
         </field>
     </record>
