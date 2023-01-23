@@ -16,6 +16,6 @@ class ProductProduct(models.Model):
         ('preadopt', 'Pre adopted'),
         ('done', 'Done'),
     ]
-    state    = fields.Selection(selection=PET_STATE, string="Status", default='new')
+    stage_id    = fields.Many2one('product.stage', string="Stage",)
     task_ids = fields.One2many('project.task', 'product_id', string='Tasks')
     pet_ok   = fields.Boolean('Pet', default=True)

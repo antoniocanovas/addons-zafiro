@@ -9,8 +9,6 @@
     <field name="domain">[('sale_ok','=',True)]</field>
     <field name="view_ids"
                    eval="[(5, 0, 0),
-                          (0, 0, {'view_mode': 'tree'}),
-                          (0, 0, {'view_mode': 'form'}),
                           (0, 0, {'view_mode': 'kanban', 'view_id': ref('product_pet_kanban_view')})]"/>
   </record>
 

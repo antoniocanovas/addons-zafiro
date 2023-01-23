@@ -7,3 +7,4 @@ from . import product_product
 from . import res_partner
 from . import partner_type
 from . import project_task
+from . import product_stage
