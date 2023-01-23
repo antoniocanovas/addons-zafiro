@@ -9,9 +9,9 @@
         <field name="arch" type="xml">
             <xpath expr="//form/sheet" position="before">
                 <header>
-                    <field name="shelter_state" widget="statusbar"
+                   <!-- <field name="shelter_state" widget="statusbar"
                            options="{'clickable': '1', 'fold_field': 'fold'}">
-                    </field>
+                    </field>-->
                 </header>
             </xpath>
             <field name="vat" position="after">
