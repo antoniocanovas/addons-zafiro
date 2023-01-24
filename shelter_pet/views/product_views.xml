@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
     <!--
             <xpath expr="//form/header" position="inside">
-                <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}" attrs="{'invisible': [('pet_ok', '=', False)]}"/>
+                <field name="stage_id" widget="statusbar" options="{'clickable': '1'}" attrs="{'invisible': [('pet_ok', '=', False)]}"/>
             </xpath>
     -->
             <xpath expr="//div[@name='options']" position="inside">
@@ -40,7 +40,7 @@
         <field name="inherit_id" ref="product.product_normal_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//form/header" position="inside">
-                <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}" attrs="{'invisible': [('pet_ok', '=', False)]}"/>
+                <field name="stage_id" widget="statusbar" options="{'clickable': '1'}" attrs="{'invisible': [('pet_ok', '=', False)]}"/>
             </xpath>
         <!--
             <xpath expr="//div[@name='options']" position="inside">
