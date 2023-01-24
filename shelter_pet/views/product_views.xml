@@ -7,9 +7,9 @@
         <field name="type">form</field>
         <field name="inherit_id" ref="product.product_normal_form_view"/>
         <field name="arch" type="xml">
-            <!--<xpath expr="//form/header" position="inside">
+            <xpath expr="//form/header" position="inside">
                 <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}" attrs="{'invisible': [('pet_ok', '=', False)]}"/>
-            </xpath>-->
+            </xpath>
             <xpath expr="//div[@name='options']" position="inside">
                 <span class="d-inline-block">
                     <field name="pet_ok"/>
@@ -45,7 +45,7 @@
         <field name="name">Product Pet Kanban</field>
         <field name="model">product.product</field>
         <field name="arch" type="xml">
-            <kanban default_group_by="stage_id" class="o_kanban_small_column" sample="1" records_draggable="false" quick_create="false" create="false">
+            <kanban default_group_by="stage_id" class="o_kanban_small_column" sample="1" quick_create="false">
                 <field name="id"/>
                 <field name="lst_price"/>
                 <field name="activity_state"/>
