@@ -6,12 +6,17 @@
 from odoo import api, fields, models, _
 
 
+class ProductTemplate(models.Model):
+    _inherit = "product.template"
+
+    pet_ok   = fields.Boolean('Pet', default=True)
+
+
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
 
     task_ids = fields.One2many('project.task', 'product_id', string='Tasks')
-    pet_ok   = fields.Boolean('Pet', default=True)
 
     def _default_stage(self):
         return self.env['product.stage'].search([('name', '=', 'New')], limit=1).id
