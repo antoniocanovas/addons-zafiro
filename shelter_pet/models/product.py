@@ -18,14 +18,18 @@ class ProductProduct(models.Model):
 
     task_ids = fields.One2many('project.task', 'product_id', string='Tasks')
 
-    def _default_stage(self):
-        return self.env['product.stage'].search([('name', '=', 'New')], limit=1).id
+#    def _default_stage(self):
+#        return self.env['product.stage'].search([('name', '=', 'New')], limit=1).id
+
+#    @api.model
+#    def _read_group_stage_ids(self, stages, domain, order):
+#        stage_ids = self.env['product.stage'].search([])
+#        return stage_ids
 
     @api.model
-    def _read_group_stage_ids(self, stages, domain, order):
-        stage_ids = self.env['product.stage'].search([])
+    def _read_group_stage_ids(self):
+        stage_ids = self.env['product.stage'].search([],order='depreciation_date desc')
         return stage_ids
-
     stage_id = fields.Many2one('product.stage', string='Stage', store=True, readonly=False, ondelete='restrict',
                                tracking=True, index=True, group_expand='_read_group_stage_ids', copy=False,
-                               default=_default_stage)
+                               default='New')
