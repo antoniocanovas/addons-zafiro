@@ -28,7 +28,7 @@ class ProductProduct(models.Model):
 
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
-        stage_ids = self.env['product.stage'].search([],order='depreciation_date desc')
+        stage_ids = self.env['product.stage'].search([],order='sequence asc')
         return stage_ids
     stage_id = fields.Many2one('product.stage', string='Stage', store=True, readonly=False, ondelete='restrict',
                                tracking=True, index=True, group_expand='_read_group_stage_ids', copy=False,
