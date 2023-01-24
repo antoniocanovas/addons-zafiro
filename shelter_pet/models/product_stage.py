@@ -12,7 +12,7 @@ class ProductStage(models.Model):
     _description = 'Product Stage'
 
     name = fields.Char(string='Name')
-    sequence = fields.Integer(default=1)
+    sequence = fields.Integer(string="Sequence")
     code = fields.Char(string="Code")
 
 

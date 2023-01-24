@@ -58,6 +58,8 @@
     <record id="product_pet_kanban_view" model="ir.ui.view">
         <field name="name">Product Pet Kanban</field>
         <field name="model">product.product</field>
+        <field name="priority">99</field>
+        <field name="type">kanban</field>
         <field name="arch" type="xml">
             <kanban default_group_by="stage_id" class="o_kanban_small_column" sample="1" quick_create="false">
                 <field name="id"/>
