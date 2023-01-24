@@ -45,7 +45,7 @@
         <field name="name">Product Pet Kanban</field>
         <field name="model">product.product</field>
         <field name="arch" type="xml">
-            <kanban sample="1">
+            <kanban default_group_by="stage_id" class="o_kanban_small_column" sample="1" records_draggable="false" quick_create="false" create="false">
                 <field name="id"/>
                 <field name="lst_price"/>
                 <field name="activity_state"/>
@@ -54,11 +54,11 @@
                  <field name="volunteer_id"/>-->
                 <field name="image_1920"/>
                 <field name="color"/>
-                <field name="stage_id"/>
+                <field name="stage_id" options="{'group_by_tooltip': {'code': 'code'}}"/>
                 <field name="active"/>
                 <field name="categ_id"/>
 
-                <progressbar field="stage_id"/>
+                <!--<progressbar field="stage_id" />-->
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="{{!selection_mode ? 'oe_kanban_color_' + kanban_getcolor(record.color.raw_value) : ''}} oe_kanban_card oe_kanban_global_click">
