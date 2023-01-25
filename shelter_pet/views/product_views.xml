@@ -241,15 +241,16 @@
                         <page name="product_pet" string="Pet" attrs="{'invisible':[('pet_ok','=',False)]}">
                             <h3>Details:</h3>
                             <group>
-                            <field name="name"/>
-                            <field name="categ_id"/>
-                            <field name="responsible_id" widget="many2one_avatar_user"/>
-                            <field name="home_id"/>
-                            <field name="veterinary_id" optional="hide"/>
-                            <field name="volunteer_id" optional="hide"/>
-                            <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
-                            <field name="default_code" optional="show"/>
-                            <field name="barcode" optional="hide"/>
+                                <field name="name"/>
+                                <field name="categ_id"/>
+                                <field name="responsible_id" widget="many2one_avatar_user"/>
+                                <field name="home_id"/>
+                                <field name="veterinary_id" optional="hide"/>
+                                <field name="volunteer_id" optional="hide"/>
+                                <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                <field name="default_code" optional="show"/>
+                                <field name="barcode" optional="hide"/>
+                            </group>
                         </page>
                         <page name="pet_tasks_leads" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
                             <field name="task_pp_ids"/>
