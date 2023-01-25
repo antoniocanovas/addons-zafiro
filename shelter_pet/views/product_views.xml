@@ -237,65 +237,44 @@
                             <label for="pet_ok"/>
                         </span>
                     </div>
+                    <group>
+                        <group>
+                            <field name="responsible_id" widget="many2one_avatar_user"/>
+                            <field name="volunteer_id" optional="hide"/>
+                        </group>
+                        <group>
+                            <field name="home_id"/>
+                            <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        </group>
+                    </group>
                     <notebook>
                         <page name="product_pet" string="Pet" attrs="{'invisible':[('pet_ok','=',False)]}">
                             <group>
                                 <group>
                                     <field name="categ_id"/>
-                                    <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                                     <field name="default_code" optional="show"/>
-                                    <field name="barcode" optional="hide"/>
                                 </group>
                                 <group>
-                                    <field name="responsible_id" widget="many2one_avatar_user"/>
-                                    <field name="home_id"/>
                                     <field name="veterinary_id" optional="hide"/>
-                                    <field name="volunteer_id" optional="hide"/>
+                                    <field name="barcode" optional="hide"/>
                                 </group>
                             </group>
                             <group string="Internal Notes">
                                 <field colspan="2" name="description" nolabel="1" placeholder="This note is only for internal purposes."/>
                             </group>
+                        </page>
+                        <page string="Process" name="pet_process">
                             <group string="Tasks and Leads">
                                 <field name="task_pp_ids"/>
                             </group>
-                        </page>
-                        <page string="General Information" name="general_information" invisible="1">
-                            <group>
-                                <group name="group_general">
-                                    <field name="active" invisible="1"/>
-                                    <field name="detailed_type"/>
-                                    <field name="product_tooltip" string="" class="fst-italic text-muted"/>
-                                </group>
-                                <group name="group_standard_price">
-                                    <label for="list_price" class="mt-1"/>
-                                    <div name="pricing">
-                                        <field name="list_price" class="oe_inline" widget="monetary" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
-                                    </div>
-                                    <label for="standard_price" attrs="{'invisible': [('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
-                                    <div name="standard_price_uom" attrs="{'invisible': [('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
-                                        <field name="standard_price" class="oe_inline" widget="monetary" options="{'currency_field': 'cost_currency_id', 'field_digits': True}"/>
-                                        <span groups="uom.group_uom">per
-                                            <field name="uom_name" class="oe_inline"/>
-                                        </span>
-                                    </div>
-                                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
-                                    <field name="currency_id" invisible="1"/>
-                                    <field name="cost_currency_id" invisible="1"/>
-                                    <field name="product_variant_id" invisible="1"/>
-                                </group>
+                            <group string="Sales Description" name="description">
+                                <field colspan="2" name="description_sale" nolabel="1" placeholder="This note is added to sales orders and invoices."/>
                             </group>
                         </page>
-                        <page string="Sales" attrs="{'invisible':[('sale_ok','=',False)]}" name="sales" invisible="1">
-                            <group name="sale">
-                                <group string="Upsell &amp; Cross-Sell" name="upsell" invisible="1"/>
-                            </group>
-                            <group>
-                                <group string="Sales Description" name="description">
-                                    <field colspan="2" name="description_sale" nolabel="1" placeholder="This note is added to sales orders and invoices."/>
-                                </group>
-                            </group>
-                        </page>
+                        <field name="active" invisible="1"/>
+                        <field name="detailed_type" invisible="1"/>
+                        <field name="company_id" invisible="1"/>
+                        <field name="currency_id" invisible="1"/>
                     </notebook>
                 </sheet>
                 <div class="oe_chatter">
