@@ -37,6 +37,17 @@
         <field name="arch" type="xml">
             <filter name="type" position="before">
                 <filter string="Stage" name="stage_pt_id" context="{'group_by':'stage_id'}"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="product_template_pet_search_inh" model="ir.ui.view">
+        <field name="name">product product shelter search inh PET</field>
+        <field name="model">product.product</field>
+        <field name="type">search</field>
+        <field name="inherit_id" ref="product.product_search_form_view"/>
+        <field name="arch" type="xml">
+            <filter name="type" position="before">
                 <filter string="Stage PP" name="stage_pp_id" context="{'group_by':'stage_pp_id'}" invisible="1"/>
             </filter>
         </field>
