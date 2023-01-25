@@ -6,7 +6,7 @@
         <field name="model">product.product</field>
         <field name="type">form</field>
         <field name="inherit_id" ref="shelter_pet.product_pet_form_view"/>
-        <field name="sequence">99</field>
+        <field name="priority">99</field>
         <field name="arch" type="xml">
             <data><!-- add state field in header -->
                 <div name="button_box" position="inside">
