@@ -10,13 +10,10 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     pet_ok   = fields.Boolean('Pet', default=True)
-
-
-class ProductProduct(models.Model):
-    _inherit = "product.product"
-
-
-    task_ids = fields.One2many('project.task', 'product_id', string='Tasks')
+    task_ids = fields.One2many('project.task', 'product_tmpl_id', string='Tasks')
+    responsible_id = fields.Many2one('res.users', string='Responsible (staff): ', store=True)
+    veterinary_id = fields.Many2one('res.partner', string='Veterinary: ', store=True)
+    home_id = fields.Many2one('res.partner', string='Home: ', store=True)
 
 #    def _default_stage(self):
 #        return self.env['product.stage'].search([('name', '=', 'New')], limit=1).id
