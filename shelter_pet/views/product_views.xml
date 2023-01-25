@@ -106,8 +106,12 @@
                             </div>
                             <div class="o_kanban_record_body">
                                 <div class="oe_kanban_bottom_right">
-                                    <span><b>Home:</b><field name="home_id" attrs="{'invisible': [('home_id', '=', False)]}"/><br/> </span>
-                                    <span><b>Responsible:</b><field name="responsible_id" attrs="{'invisible': [('responsible_id', '=', False)]}"/><br/> </span>
+                                    <div t-if="record.responsible_id.value">
+                                        <span><b>Responsible:</b><field name="responsible_id"/><br/> </span>
+                                    </div>
+                                    <div t-if="record.home_id.value">
+                                        <span><b>Home:</b><field name="home_id"/><br/> </span>
+                                    </div>
                                     <span><b>Veterinay:</b><field name="veterinary_id" attrs="{'invisible': [('veterinary_id', '=', False)]}"/><br/> </span>
                                     <span><b>Volunteer:</b><field name="volunteer_id" attrs="{'invisible': [('volunteer_id', '=', False)]}"/><br/> </span>
                                 </div>
