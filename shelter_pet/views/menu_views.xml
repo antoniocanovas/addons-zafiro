@@ -11,6 +11,7 @@
            eval="[(5, 0, 0),
                           (0, 0, {'view_mode': 'kanban', 'view_id': ref('product_pet_kanban_view')}),
                           (0, 0, {'view_mode': 'tree', 'view_id': ref('product_pet_tree_view')}),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('product_pet_form_view')}),
                           ]"/>
   </record>
 
