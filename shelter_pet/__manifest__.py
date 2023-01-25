@@ -19,7 +19,7 @@ Base module for Pets as Odoo Products.
         "views/product_views.xml",
         "views/project_task_views.xml",
         "data/partner_type.xml",
-        "views/menu_views.xml",
+ #       "views/menu_views.xml",
     ],
     'installable':True,
     'application':False,
