@@ -55,7 +55,6 @@
         </field>
     </record>
 
-
     <record id="product_template_lead" model="ir.ui.view">
         <field name="name">product template lead</field>
         <field name="model">product.template</field>
@@ -86,11 +85,15 @@
         <field name="type">tree</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='description']" position="before">
-                <field name="product_ids" domain="[('sale_ok','=', True)]" mode="kanban"/>
+            <xpath expr="//field[@name='description']" position="replace">
+                <group string="Notes">
+                    <field name="description" placeholder="Add a description..." options="{'collaborative': true}"/>
+                </group>
+                <group string="Pets">
+                    <field name="product_ids" domain="[('sale_ok','=', True)]" mode="kanban"/>
+                </group>
             </xpath>
         </field>
     </record>
-
 
 </odoo>
