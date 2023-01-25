@@ -53,18 +53,6 @@
         </field>
     </record>
 
-    <record id="product_product_pet_search_inh" model="ir.ui.view">
-        <field name="name">product product shelter search inh PET</field>
-        <field name="model">product.product</field>
-        <field name="type">search</field>
-        <field name="inherit_id" ref="product.product_search_form_view"/>
-        <field name="arch" type="xml">
-            <filter name="type" position="before">
-                <filter string="Stage" name="stage_id" context="{'group_by':'stage_id'}"/>
-            </filter>
-        </field>
-    </record>
-
 
     <record id="product_pet_kanban_view" model="ir.ui.view">
         <field name="name">Product Pet Kanban</field>
