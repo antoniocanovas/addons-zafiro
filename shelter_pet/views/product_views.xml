@@ -239,17 +239,19 @@
                     </div>
                     <notebook>
                         <page name="product_pet" string="Pet" attrs="{'invisible':[('pet_ok','=',False)]}">
-                            <h3>Details:</h3>
                             <group>
-                                <field name="name"/>
-                                <field name="categ_id"/>
-                                <field name="responsible_id" widget="many2one_avatar_user"/>
-                                <field name="home_id"/>
-                                <field name="veterinary_id" optional="hide"/>
-                                <field name="volunteer_id" optional="hide"/>
-                                <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
-                                <field name="default_code" optional="show"/>
-                                <field name="barcode" optional="hide"/>
+                                <group>
+                                    <field name="categ_id"/>
+                                    <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                    <field name="default_code" optional="show"/>
+                                    <field name="barcode" optional="hide"/>
+                                </group>
+                                <group>
+                                    <field name="responsible_id" widget="many2one_avatar_user"/>
+                                    <field name="home_id"/>
+                                    <field name="veterinary_id" optional="hide"/>
+                                    <field name="volunteer_id" optional="hide"/>
+                                </group>
                             </group>
                             <group string="Internal Notes">
                                 <field colspan="2" name="description" nolabel="1" placeholder="This note is only for internal purposes."/>
