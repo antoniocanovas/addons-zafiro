@@ -3,10 +3,9 @@
 #    License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 #    Copyright (C) 2021 Serincloud S.L. All Rights Reserved
 ##############################################################################
-from . import product_stage
-from . import product_template
-from . import res_partner
-from . import partner_type
-from . import project_task
-from . import stock_location
-from . import res_company
+from odoo import api, fields, models, _
+
+class ResCompany(models.Model):
+    _inherit = 'res.company'
+
+    shelter_location_id = fields.Many2one('stock.location', 'Shelter locations', store=True)

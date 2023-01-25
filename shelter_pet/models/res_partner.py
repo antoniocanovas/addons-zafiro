@@ -18,6 +18,7 @@ class ResPartner(models.Model):
     shelter_begin   = fields.Date('Date start')
     shelter_end     = fields.Date('Date end')
     shelter_note    = fields.Text('Notes')
+    location_id     = fields.Many2one('stock.location', 'WH Location')
 
     type_ids    = fields.Many2many(string="Collaborations",
         comodel_name='partner.type',
@@ -35,6 +36,8 @@ class ResPartner(models.Model):
 
     # Tareas (es casa, veterinario, usuario de la tarea o voluntario):
     def get_partner_tasks(self):
-        tasks = self.env['project.task'].search(['|',('home_id','=', self.id),('user_ids.partner_id','=',self.id)])
+        tasks = self.env['project.task'].search(['|','|',('veterinary_id','=', self.id),
+                                                 ('volunteer_id','=', self.id),
+                                                 ('user_ids.partner_id','=',self.id)])
         self.task_ids = tasks
     task_ids = fields.Many2many('project.task', store=False, compute='get_partner_tasks')
