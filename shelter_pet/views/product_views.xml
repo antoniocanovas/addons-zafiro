@@ -37,6 +37,7 @@
         <field name="arch" type="xml">
             <filter name="type" position="before">
                 <filter string="Stage" name="stage_pt_id" context="{'group_by':'stage_id'}"/>
+                <filter string="Stage PP" name="stage_pp_id" context="{'group_by':'stage_pp_id'}" invisible="1"/>
             </filter>
         </field>
     </record>
