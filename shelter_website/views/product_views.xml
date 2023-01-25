@@ -12,14 +12,11 @@
                 <div name="button_box" position="inside">
                     <field name="is_published" widget="website_redirect_button" attrs="{'invisible': [('sale_ok','=',False)]}"/>
                 </div>
-                <group name="upsell" position="attributes">
-                    <attribute name="invisible">0</attribute>
-                </group>
-                <xpath expr="//group[@name='upsell']" position="inside">
-                    <field name="accessory_product_ids" widget="many2many_tags" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Suggested accessories in the eCommerce cart"/>
-                    <field name="alternative_product_ids" widget="many2many_tags" domain="[('id', '!=', active_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Displayed in bottom of product pages"/>
-                </xpath>
-                <xpath expr="//page[@name='sales']/group[@name='sale']" position="inside">
+                <xpath expr="//group[@name='internal_notes']" position="after">
+                    <group name="upsell">
+                        <field name="accessory_product_ids" widget="many2many_tags" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Suggested accessories in the eCommerce cart"/>
+                        <field name="alternative_product_ids" widget="many2many_tags" domain="[('id', '!=', active_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Displayed in bottom of product pages"/>
+                    </group>
                     <group string="eCommerce Shop" name="shop" attrs="{'invisible': [('sale_ok','=',False)]}">
                         <field name="website_url" invisible="1"/>
                         <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>

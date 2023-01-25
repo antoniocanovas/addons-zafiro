@@ -259,7 +259,7 @@
                                     <field name="barcode" optional="hide"/>
                                 </group>
                             </group>
-                            <group string="Internal Notes">
+                            <group name="internal_notes" string="Internal Notes">
                                 <field colspan="2" name="description" nolabel="1" placeholder="This note is only for internal purposes."/>
                             </group>
                         </page>
