@@ -161,6 +161,8 @@
             <form string="Product">
                 <header>
                     <button string="Print Labels" type="object" name="action_open_label_layout" attrs="{'invisible': [('detailed_type', '==', 'service')]}"/>
+                    <field name="stage_pp_id" widget="statusbar" options="{'clickable': '1'}" attrs="{'invisible': [('pet_ok', '=', False)]}"/>
+            </xpath>
                 </header>
                 <sheet name="product_pet_form">
                     <field name="product_variant_count" invisible="1"/>
