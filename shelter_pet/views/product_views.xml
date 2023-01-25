@@ -60,7 +60,7 @@
         <field name="priority">99</field>
         <field name="type">kanban</field>
         <field name="arch" type="xml">
-            <kanban default_group_by="stage_id" class="o_kanban_small_column" sample="1" quick_create="false">
+            <kanban default_group_by="stage_pp_id" class="o_kanban_small_column" sample="1" quick_create="false">
 
                 <field name="id"/>
                 <field name="product_variant_count"/>
@@ -73,7 +73,7 @@
                 <field name="volunteer_id"/>
                 <field name="image_1920"/>
                 <field name="color"/>
-                <field name="stage_id" options="{'group_by_tooltip': {'code': 'code'}}"/>
+                <field name="stage_pp_id" options="{'group_by_tooltip': {'code': 'code'}}"/>
                 <field name="active"/>
                 <field name="categ_id"/>
                 <progressbar field="activity_state" colors="{&quot;planned&quot;: &quot;success&quot;, &quot;today&quot;: &quot;warning&quot;, &quot;overdue&quot;: &quot;danger&quot;}"/>
