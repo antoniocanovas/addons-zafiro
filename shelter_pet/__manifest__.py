@@ -24,3 +24,4 @@ Base module for Pets as Odoo Products.
     'installable':True,
     'application':False,
 }
+szssfdvv3rrrrqa<24wsrgsggg
