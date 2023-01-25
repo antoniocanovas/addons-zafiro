@@ -137,10 +137,7 @@
                 <field name="name"/>
                 <field name="categ_id"/>
                 <field name="responsible_id" widget="many2one_avatar_user"/>
-<!--
-                <field name="tasks_pp_ids" widget="many2many_tags"/>
-                <field name="lead_pp_ids" widget="many2many_tags" optional="show"/>
--->
+                <field name="task_pp_ids" widget="many2many_tags"/>
                 <field name="activity_ids" string="Next Activity" widget="list_activity" optional="show"/>
                 <field name="home_id"/>
                 <field name="veterinary_id" optional="hide"/>
