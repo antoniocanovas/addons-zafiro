@@ -254,8 +254,7 @@
                             <group string="Internal Notes">
                                 <field colspan="2" name="description" nolabel="1" placeholder="This note is only for internal purposes."/>
                             </group>
-                        </page>
-                        <page name="pet_tasks_leads" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
+                            <h3>Task and Leads:</h3>
                             <field name="task_pp_ids"/>
                         </page>
                         <page string="General Information" name="general_information" invisible="1">
