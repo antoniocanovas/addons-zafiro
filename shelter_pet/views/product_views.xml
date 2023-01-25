@@ -112,8 +112,12 @@
                                     <div t-if="record.home_id.value">
                                         <span><b>Home:</b><field name="home_id"/><br/> </span>
                                     </div>
-                                    <span><b>Veterinay:</b><field name="veterinary_id" attrs="{'invisible': [('veterinary_id', '=', False)]}"/><br/> </span>
-                                    <span><b>Volunteer:</b><field name="volunteer_id" attrs="{'invisible': [('volunteer_id', '=', False)]}"/><br/> </span>
+                                    <div t-if="record.veterinary_id.value">
+                                        <span><b>Veterinay:</b><field name="veterinary_id"/><br/> </span>
+                                    </div>
+                                    <div t-if="record.volunteer_id.value">
+                                        <span><b>Volunteer:</b><field name="volunteer_id"/><br/> </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
