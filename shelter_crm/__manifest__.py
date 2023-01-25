@@ -9,6 +9,7 @@
     'depends': [
         'crm',
         'sale_management',
+        'shelter_pet',
     ],
     'data': [
         'security/ir.model.access.csv',
