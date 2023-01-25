@@ -135,22 +135,22 @@
         <field name="arch" type="xml">
             <tree string="Pets">
                 <field name="name"/>
-<!--
                 <field name="categ_id"/>
+<!--
                 <field name="responsible_id" widget="many2many_avatar_user"/>
+                <field name="tasks_pp_ids" widget="many2many_tags"/>
+                <field name="lead_pp_ids" widget="many2many_tags" optional="show"/>
+-->
                 <field name="activity_ids" string="Next Activity" widget="list_activity" optional="show"/>
                 <field name="home_id"/>
                 <field name="veterinary_id" optional="hide"/>
                 <field name="volunteer_id" optional="hide"/>
-                <field name="tasks_pp_ids" widget="many2many_tags"/>
-                <field name="lead_pp_ids" widget="many2many_tags" optional="show"/>
                 <field name="product_tag_ids" widget="many2many_tags" optional="hide"/>
                 <field name="default_code" optional="show"/>
                 <field name="barcode" optional="hide"/>
                 <field name="create_date" optional="hide"/>
                 <field name="write_date" optional="hide"/>
                 <field name="stage_id"/>
--->
             </tree>
         </field>
     </record>
