@@ -143,8 +143,8 @@
                 <field name="volunteer_id" optional="hide"/>
 <!--
                 <field name="tasks_pp_ids" widget="many2many_tags"/>
--->
                 <field name="lead_pp_ids" widget="many2many_tags" optional="show"/>
+-->
                 <field name="product_tag_ids" widget="many2many_tags" optional="hide"/>
                 <field name="default_code" optional="show"/>
                 <field name="barcode" optional="hide"/>
