@@ -136,8 +136,8 @@
             <tree string="Pets">
                 <field name="name"/>
                 <field name="categ_id"/>
+                <field name="responsible_id" widget="many2one_avatar_user"/>
 <!--
-                <field name="responsible_id" widget="many2many_avatar_user"/>
                 <field name="tasks_pp_ids" widget="many2many_tags"/>
                 <field name="lead_pp_ids" widget="many2many_tags" optional="show"/>
 -->
