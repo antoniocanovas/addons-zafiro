@@ -31,4 +31,4 @@ class ProductProduct(models.Model):
     _inherit = "product.product"
 
     stage_pp_id = fields.Many2one('product.stage', string='Stage Product', store=True,
-                                related='product_tmpl_id.stage_id',)
+                                readonly=False, related='product_tmpl_id.stage_id',)
