@@ -16,13 +16,13 @@ class ProductTemplate(models.Model):
     home_id = fields.Many2one('res.partner', string='Home: ', store=True)
     volunteer_id = fields.Many2one('res.partner', string='Volunteer: ', store=True)
 
-#    def _default_stage(self):
-#        return self.env['product.stage'].search([('name', '=', 'New')], limit=1).id
+    def _default_stage(self):
+        return self.env['product.stage'].search([('name', '=', 'New')], limit=1).id
 
-#    @api.model
-#    def _read_group_stage_ids(self, stages, domain, order):
-#        stage_ids = self.env['product.stage'].search([])
-#        return stage_ids
+    @api.model
+    def _read_group_stage_ids(self, stages, domain, order):
+        stage_ids = self.env['product.stage'].search([])
+        return stage_ids
 
     stage_id = fields.Many2one('product.stage', string='Stage', store=True, readonly=False,
-                               tracking=True, copy=False, default='New')
+                               tracking=True, copy=False, default=_default_stage, group_expand='_read_group_stage_ids')
