@@ -23,7 +23,7 @@
                     </group>
                 </page>
                 <page name="pet_tasks" string="Tasks" attrs="{'invisible':[('pet_ok','=',False)]}">
-                    <field name="task_ids"/>
+                    <field name="task_pt_ids"/>
                 </page>
             </xpath>
         </field>
