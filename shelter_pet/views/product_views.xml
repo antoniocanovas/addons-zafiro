@@ -254,8 +254,9 @@
                             <group string="Internal Notes">
                                 <field colspan="2" name="description" nolabel="1" placeholder="This note is only for internal purposes."/>
                             </group>
-                            <h3>Task and Leads:</h3>
-                            <field name="task_pp_ids"/>
+                            <group string="Tasks and Leads">
+                                <field colsapn="2" name="task_pp_ids" nolabe="1"/>
+                            </group>
                         </page>
                         <page string="General Information" name="general_information" invisible="1">
                             <group>
