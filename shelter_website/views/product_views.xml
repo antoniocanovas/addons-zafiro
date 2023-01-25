@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="product_shelter_pet_images_form" model="ir.ui.view">
+        <field name="name">Product Shelter Pet Images</field>
+        <field name="model">product.product</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="shelter_pet.product_pet_form_view"/>
+        <field name="sequence">99</field>
+        <field name="arch" type="xml">
+            <data><!-- add state field in header -->
+                <div name="button_box" position="inside">
+                    <field name="is_published" widget="website_redirect_button" attrs="{'invisible': [('sale_ok','=',False)]}"/>
+                </div>
+                <group name="upsell" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </group>
+                <xpath expr="//group[@name='upsell']" position="inside">
+                    <field name="accessory_product_ids" widget="many2many_tags" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Suggested accessories in the eCommerce cart"/>
+                    <field name="alternative_product_ids" widget="many2many_tags" domain="[('id', '!=', active_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Displayed in bottom of product pages"/>
+                </xpath>
+                <xpath expr="//page[@name='sales']/group[@name='sale']" position="inside">
+                    <group string="eCommerce Shop" name="shop" attrs="{'invisible': [('sale_ok','=',False)]}">
+                        <field name="website_url" invisible="1"/>
+                        <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
+                        <field name="website_sequence" groups="base.group_no_one"/>
+                        <field name="public_categ_ids" widget="many2many_tags" string="Categories"/>
+                        <field name="website_ribbon_id" groups="base.group_no_one" options="{'no_quick_create': True}"/>
+                    </group>
+                    <group name="product_template_images" string="Extra Product Media" attrs="{'invisible': [('sale_ok','=',False)]}">
+                        <field name="product_template_image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Add a Media" nolabel="1"/>
+                    </group>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+
+</odoo>
