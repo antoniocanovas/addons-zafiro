@@ -167,7 +167,7 @@
                 <field name="home_id"/>
                 <field name="veterinary_id" optional="hide"/>
                 <field name="volunteer_id" optional="hide"/>
-                <field name="product_tag_ids" widget="many2many_tags" optional="hide"/>
+                <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" optional="show"/>
                 <field name="default_code" optional="show"/>
                 <field name="barcode" optional="hide"/>
                 <field name="create_date" optional="hide"/>
@@ -241,7 +241,15 @@
                         <page name="product_pet" string="Pet" attrs="{'invisible':[('pet_ok','=',False)]}">
                             <h3>Details:</h3>
                             <group>
-                            </group>
+                            <field name="name"/>
+                            <field name="categ_id"/>
+                            <field name="responsible_id" widget="many2one_avatar_user"/>
+                            <field name="home_id"/>
+                            <field name="veterinary_id" optional="hide"/>
+                            <field name="volunteer_id" optional="hide"/>
+                            <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            <field name="default_code" optional="show"/>
+                            <field name="barcode" optional="hide"/>
                         </page>
                         <page name="pet_tasks_leads" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
                             <field name="task_pp_ids"/>
@@ -252,8 +260,6 @@
                                     <field name="active" invisible="1"/>
                                     <field name="detailed_type"/>
                                     <field name="product_tooltip" string="" class="fst-italic text-muted"/>
-                                    <field name="uom_id" groups="uom.group_uom" options="{'no_create': True}"/>
-                                    <field name="uom_po_id" groups="uom.group_uom" options="{'no_create': True}"/>
                                 </group>
                                 <group name="group_standard_price">
                                     <label for="list_price" class="mt-1"/>
@@ -267,8 +273,6 @@
                                             <field name="uom_name" class="oe_inline"/>
                                         </span>
                                     </div>
-                                    <field name="categ_id" string="Product Category"/>
-                                    <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                                     <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
                                     <field name="currency_id" invisible="1"/>
                                     <field name="cost_currency_id" invisible="1"/>
