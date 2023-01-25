@@ -2,11 +2,11 @@ from odoo import _, api, fields, models
 
 
 class ProductProduct(models.Model):
-    _inherit = 'product.product'
+    _inherit = 'product.template'
 
-    lead_pp_ids = fields.Many2many(comodel_name='crm.lead',
+    lead_pt_ids = fields.Many2many(comodel_name='crm.lead',
                                 relation='product_lead_rel',
-                                column1='product_id',
+                                column1='product_tmpl_id',
                                 column2='lead_id',
                                 string="Leads",
                                 )
