@@ -22,8 +22,33 @@
                     <group>
                     </group>
                 </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_only_template_pet_form_inh" model="ir.ui.view">
+        <field name="name">Product Only Template Shelter PET</field>
+        <field name="model">product.template</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_information']" position="before">
                 <page name="pet_task_lead" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
                     <field name="task_pt_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_only_product_pet_form_inh" model="ir.ui.view">
+        <field name="name">Product Only Product Shelter PET</field>
+        <field name="model">product.product</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_information']" position="before">
+                <page name="pet_task_lead" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
+                    <field name="task_pp_ids"/>
                 </page>
             </xpath>
         </field>
