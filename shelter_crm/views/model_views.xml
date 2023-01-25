@@ -7,9 +7,7 @@
         <field name="type">form</field>
         <field name="inherit_id" ref="product.product_normal_form_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//page[@name='general_information']" position="after">
-                <page name="opportunities" string="Opportunities" attrs="{'invisible':[('id','=',False)]}">
-                    <h3>Opportunities:</h3>
+            <field name="task_pp_ids" position="after">
                     <field name="lead_pp_ids" domain="[('probability','!=',100)]">
                         <tree>
                             <field name="name"/>
@@ -20,8 +18,28 @@
                             <field name="stage_id"/>
                         </tree>
                     </field>
-                </page>
-            </xpath>
+            </field>
+        </field>
+    </record>
+
+    <record id="product_product_shelter_pet_lead" model="ir.ui.view">
+        <field name="name">product shelter pet lead</field>
+        <field name="model">product.product</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="shelter_pet.product_pet_form_view"/>
+        <field name="arch" type="xml">
+            <field name="task_pp_ids" position="after">
+                    <field name="lead_pp_ids" domain="[('probability','!=',100)]">
+                        <tree>
+                            <field name="name"/>
+                            <field name="user_id"/>
+                            <field name="partner_id"/>
+                            <field name="phone" optional="show"/>
+                            <field name="date_deadline" optional="show"/>
+                            <field name="stage_id"/>
+                        </tree>
+                    </field>
+            </field>
         </field>
     </record>
 

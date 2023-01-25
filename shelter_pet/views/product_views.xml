@@ -22,7 +22,7 @@
                     <group>
                     </group>
                 </page>
-                <page name="pet_tasks" string="Tasks" attrs="{'invisible':[('pet_ok','=',False)]}">
+                <page name="pet_task_lead" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
                     <field name="task_pt_ids"/>
                 </page>
             </xpath>
@@ -217,8 +217,8 @@
                             <group>
                             </group>
                         </page>
-                        <page name="pet_tasks" string="Tasks" attrs="{'invisible':[('pet_ok','=',False)]}">
-                            <field name="task_pt_ids"/>
+                        <page name="pet_tasks_leads" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
+                            <field name="task_pp_ids"/>
                         </page>
                         <page string="General Information" name="general_information">
                             <group>
