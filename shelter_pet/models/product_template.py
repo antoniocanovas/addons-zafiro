@@ -23,4 +23,12 @@ class ProductTemplate(models.Model):
         stage_ids = self.env['product.stage'].search([])
         return stage_ids
     stage_id = fields.Many2one('product.stage', string='Stage', store=True, readonly=False,
-                               tracking=True, copy=False, default=_default_stage, group_expand='_read_group_stage_ids')
+                               tracking=True, copy=False, default=_default_stage,
+                               group_expand='_read_group_stage_ids')
+
+
+class ProductProduct(models.Model):
+    _inherit = "product.product"
+
+    stage_pp_id = fields.Ma2one('product.stage', string='Stage Product', related='product_tmpl_id.stage_id',
+                                store=True)
