@@ -13,7 +13,7 @@
             </field>
             <field name="user_ids" position="after">
                 <field name="product_id" domain="[('pet_ok','=',True)]"/>
-                <field name="location_id" attrs="{'invisible':[('product_id','=',False)]}"/>
+                <field name="home_id" attrs="{'invisible':[('product_id','=',False)]}"/>
             </field>
             <field name="description" position="before">
                 <group>
