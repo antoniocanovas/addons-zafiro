@@ -21,7 +21,7 @@ class ResPartner(models.Model):
     location_id     = fields.Many2one('stock.location', 'WH Location')
 
     def get_shelter_location(self):
-        self.shelter_location_id = user.company_id.shelter_location_id.id
+        self.shelter_location_id = self.company_id.shelter_location_id.id
     shelter_location_id = fields.Many2one('stock.location', 'Default parent location', compute='get_shelter_location')
 
     type_ids    = fields.Many2many(string="Collaborations",
