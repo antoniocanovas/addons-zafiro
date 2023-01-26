@@ -17,6 +17,16 @@ class ProductTemplate(models.Model):
     location_id = fields.Many2one('stock.location', related='home_id.location_id')
     volunteer_id = fields.Many2one('res.partner', string='Volunteer', store=True)
 
+    sex = fields.Selection(store=True, string='Sex', [('male', 'Male'), ('female', 'Female')])
+    birthdate = fields.Date('Birthdate')
+    color = fields.Char('Color')
+    hair = fields.Char('Hair')
+    date_start = fields.Date('Date start')
+    date_finish = fields.Date('Date finish')
+
+#    Especie: Felina (son las categorías)
+#    Raza: Común Europeo
+
     def _default_stage(self):
         return self.env['product.stage'].search([('name', '=', 'New')], limit=1).id
     @api.model

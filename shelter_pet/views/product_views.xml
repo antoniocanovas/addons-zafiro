@@ -143,6 +143,12 @@
                                     <div t-if="record.volunteer_id.value">
                                         <span><b>Volunteer:</b><field name="volunteer_id"/><br/> </span>
                                     </div>
+                                    <div t-if="record.sex.value">
+                                        <span><b>Sex:</b><field name="sex"/><br/> </span>
+                                    </div>
+                                    <div t-if="record.birthdate.value">
+                                        <span><b>birthdate:</b><field name="birthdate"/><br/> </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -170,6 +176,12 @@
                 <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" optional="show"/>
                 <field name="default_code" optional="show"/>
                 <field name="barcode" optional="hide"/>
+                <field name="sex" optional="show"/>
+                <field name="birthdate" optional="show"/>
+                <field name="color" optional="hide"/>
+                <field name="hair" optional="hide"/>
+                <field name="date_start" optional="hide"/>
+                <field name="date_finish" optional="hide"/>
                 <field name="create_date" optional="hide"/>
                 <field name="write_date" optional="hide"/>
                 <field name="stage_id"/>
@@ -239,10 +251,16 @@
                     </div>
                     <group>
                         <group>
-                            <field name="responsible_id" widget="many2one_avatar_user"/>
-                            <field name="volunteer_id" optional="hide" domain="[('type_char','ilike','volunteer')]"/>
+                            <field name="sex"/>
+                            <field name="birthdate"/>
+                            <field name="color"/>
+                            <field name="hair"/>
+                            <field name="date_start"/>
+                            <field name="date_finish"/>
                         </group>
                         <group>
+                            <field name="responsible_id" widget="many2one_avatar_user"/>
+                            <field name="volunteer_id" optional="hide" domain="[('type_char','ilike','volunteer')]"/>
                             <field name="home_id" domain="[('type_char','ilike','home')]"/>
                             <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                         </group>
