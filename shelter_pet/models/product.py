@@ -17,7 +17,7 @@ class ProductTemplate(models.Model):
     location_id = fields.Many2one('stock.location', related='home_id.location_id')
     volunteer_id = fields.Many2one('res.partner', string='Volunteer', store=True)
 
-    sex = fields.Selection(store=True, string='Sex', [('male', 'Male'), ('female', 'Female')])
+    sex = fields.Selection([('male', 'Male'), ('female', 'Female')], store=True, string='Sex')
     birthdate = fields.Date('Birthdate')
     color = fields.Char('Color')
     hair = fields.Char('Hair')
