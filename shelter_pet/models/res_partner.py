@@ -18,8 +18,11 @@ class ResPartner(models.Model):
     shelter_begin   = fields.Date('Date start')
     shelter_end     = fields.Date('Date end')
     shelter_note    = fields.Text('Notes')
-    shelter_parent_location_id = fields.Many2one('stock.location', 'Default parent location', related='company_id.shelter_location_id')
     location_id     = fields.Many2one('stock.location', 'WH Location')
+
+    def get_shelter_location(self):
+        self.shelter_location_id = user.company_id.shelter_location_id.id
+    shelter_location_id = fields.Many2one('stock.location', 'Default parent location', compute='get_shelter_location')
 
     type_ids    = fields.Many2many(string="Collaborations",
         comodel_name='partner.type',
