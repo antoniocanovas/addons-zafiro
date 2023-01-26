@@ -25,11 +25,7 @@
                             <field name="shelter_end"/>
                         </group>
                         <group>
-                            <field name="location_id"
-                                   context="{'default_location_id':company_id.shelter_location_id.id,
-                                   'default_name': record.name,
-                                   'default_partner_id':record.id
-                                   }"/>
+                            <field name="location_id"/>
                         </group>
                         <h3>Shelter notes:</h3>
                         <field name="shelter_note" no_label="1"/>
