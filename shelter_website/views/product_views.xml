@@ -14,23 +14,22 @@
                 </div>
                 <xpath expr="//page[@name='pet_process']" position="after">
                     <page string="eCommerce">
-                    <group name="upsell" string="Upsell">
-                        <field name="accessory_product_ids" widget="many2many_tags" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Suggested accessories in the eCommerce cart"/>
-                        <field name="alternative_product_ids" widget="many2many_tags" domain="[('id', '!=', active_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Displayed in bottom of product pages"/>
-                    </group>
-                    <group string="eCommerce Shop" name="shop" attrs="{'invisible': [('sale_ok','=',False)]}">
-                        <field name="website_url" invisible="1"/>
-                        <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
-                        <field name="website_sequence" groups="base.group_no_one"/>
-                        <field name="public_categ_ids" widget="many2many_tags" string="Categories"/>
-                        <field name="website_ribbon_id" groups="base.group_no_one" options="{'no_quick_create': True}"/>
-                    </group>
+                        <group name="upsell" string="Upsell">
+                            <field name="accessory_product_ids" widget="many2many_tags" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Suggested accessories in the eCommerce cart"/>
+                            <field name="alternative_product_ids" widget="many2many_tags" domain="[('id', '!=', active_id), '|', ('company_id', '=', company_id), ('company_id', '=', False)]" attrs="{'invisible': [('sale_ok','=',False)]}" placeholder="Displayed in bottom of product pages"/>
+                        </group>
+                        <group string="eCommerce Shop" name="shop" attrs="{'invisible': [('sale_ok','=',False)]}">
+                            <field name="website_url" invisible="1"/>
+                            <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
+                            <field name="website_sequence" groups="base.group_no_one"/>
+                            <field name="public_categ_ids" widget="many2many_tags" string="Categories"/>
+                            <field name="website_ribbon_id" groups="base.group_no_one" options="{'no_quick_create': True}"/>
+                        </group>
                     </page>
                 </xpath>
                 <xpath expr="//group[@name='internal_notes']" position="after">
-                    <group name="product_template_images" string="Extra Product Media" attrs="{'invisible': [('sale_ok','=',False)]}">
-                        <field name="product_template_image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Add a Media" nolabel="1"/>
-                    </group>
+                    <group name="product_template_images" string="Extra Product Media" attrs="{'invisible': [('sale_ok','=',False)]}"/>
+                    <field name="product_template_image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" add-label="Add a Media" nolabel="1"/>
                 </xpath>
             </data>
         </field>
