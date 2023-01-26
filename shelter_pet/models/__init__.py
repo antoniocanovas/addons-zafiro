@@ -4,7 +4,7 @@
 #    Copyright (C) 2021 Serincloud S.L. All Rights Reserved
 ##############################################################################
 from . import product_stage
-from . import product_template
+from . import product
 from . import res_partner
 from . import partner_type
 from . import project_task
