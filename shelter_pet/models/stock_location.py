@@ -9,4 +9,4 @@ from odoo import api, fields, models, _
 class ResPartner(models.Model):
     _inherit = "stock.location"
 
-    partner_id = fields.Many2one('Partner', store=True)
+    partner_id = fields.Many2one('res.partner','Partner', store=True)
