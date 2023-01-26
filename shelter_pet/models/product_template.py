@@ -14,6 +14,7 @@ class ProductTemplate(models.Model):
     responsible_id = fields.Many2one('res.users', string='Responsible (staff) ', store=True)
     veterinary_id = fields.Many2one('res.partner', string='Veterinary', store=True)
     home_id = fields.Many2one('res.partner', string='Home', store=True)
+    location_id = fields.Many2one('stock.location', related='home_id.location_id')
     volunteer_id = fields.Many2one('res.partner', string='Volunteer', store=True)
 
     def _default_stage(self):
