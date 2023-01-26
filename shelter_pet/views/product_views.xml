@@ -299,7 +299,8 @@
                         </page>
                         <page string="Process" name="pet_process">
                             <group string="Tasks and Leads">
-                                <field name="task_pp_ids"/>
+                                <field name="task_pp_ids"
+                                       context="{'default_product_id':id, 'default_volunteer_id':volunteer_id, 'default_home_id':home_id}"/>
                             </group>
                             <group string="Sales Description" name="description">
                                 <field colspan="2" name="description_sale" nolabel="1" placeholder="This note is added to sales orders and invoices."/>
