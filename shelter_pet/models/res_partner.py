@@ -18,6 +18,7 @@ class ResPartner(models.Model):
     shelter_begin   = fields.Date('Date start')
     shelter_end     = fields.Date('Date end')
     shelter_note    = fields.Text('Notes')
+    shelter_parent_location_id = fields.Many2one('stock.location', 'Default parent location', related='company_id.shelter_location_id')
     location_id     = fields.Many2one('stock.location', 'WH Location')
 
     type_ids    = fields.Many2many(string="Collaborations",
