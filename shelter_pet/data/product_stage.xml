@@ -23,8 +23,8 @@
     </record>
 
     <record id="product_stage_preadopt" model="product.stage">
-        <field name="name">Preadopt</field>
-        <field name="code">preadopt</field>
+        <field name="name">Preadoption</field>
+        <field name="code">preadoption</field>
         <field name="sequence">4</field>
     </record>
 
