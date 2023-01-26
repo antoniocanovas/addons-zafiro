@@ -26,7 +26,7 @@
                         </group>
                         <group>
                             <field name="location_id"
-                                   context="{'default_location_id':company_id.shelter_location_id,
+                                   context="{'default_location_id':company_id.shelter_location_id.id,
                                    'default_name': record.name,
                                    'default_partner_id':record.id
                                    }"/>
