@@ -25,7 +25,9 @@
                             <field name="shelter_end"/>
                         </group>
                         <group>
-                            <field name="location_id" domain="[('usage','=','internal')]" context="{}"/>
+                            <field name="location_id" domain="[('usage','=','internal')]"
+                                   options="{'no_quick_create':True, 'no_create_edit':False}"
+                                   context="{'default_location_id':shelter_location_id, 'default_partner_id':id}"/>
                             <field name="shelter_location_id" invisible="1"/>
                         </group>
                         <h3>Shelter notes:</h3>
