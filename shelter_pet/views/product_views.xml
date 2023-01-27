@@ -10,6 +10,11 @@
             <xpath expr="//form/header" position="inside">
                 <field name="stage_id" widget="statusbar" options="{'clickable': '1'}" attrs="{'invisible': [('pet_ok', '=', False)]}"/>
             </xpath>
+            <xpath expr="//form/sheet/div[2]" position="after">
+                <group name="pet_origin_group" attrs="{'invisible':[('pet_ok','=',False)]}">
+                    <field name="pet_origin"/>
+                </group>
+            </xpath>
             <xpath expr="//div[@name='options']" position="inside">
                 <span class="d-inline-block">
                     <field name="pet_ok"/>
@@ -255,6 +260,9 @@
                                 <field class="text-break" name="name" placeholder="e.g. Cheese Burger"/>
                             </div>
                         </h1>
+                        <group name="pet_origin_group" attrs="{'invisible':[('pet_ok','=',False)]}">
+                            <field name="pet_origin"/>
+                        </group>
                     </div>
                     <style>
                         div[name="options"] .o_field_boolean &gt; div {

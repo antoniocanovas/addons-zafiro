@@ -10,6 +10,7 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     pet_ok   = fields.Boolean('Pet')
+    pet_origin = fields.Char('Alias')
     task_pt_ids = fields.One2many('project.task', 'product_tmpl_id', string='Tasks')
     responsible_id = fields.Many2one('res.users', string='Responsible (staff) ', store=True)
     veterinary_id = fields.Many2one('res.partner', string='Veterinary', store=True)
