@@ -16,6 +16,7 @@ class ProductTemplate(models.Model):
     home_id = fields.Many2one('res.partner', string='Home', store=True)
     location_id = fields.Many2one('stock.location', related='home_id.location_id')
     volunteer_id = fields.Many2one('res.partner', string='Volunteer', store=True)
+    rescuer_id = fields.Many2one('res.partner', string='Rescuer', store=True)
 
     sex = fields.Selection([('male', 'Male'), ('female', 'Female')], store=True, string='Sex')
     birthdate = fields.Date('Birthdate')

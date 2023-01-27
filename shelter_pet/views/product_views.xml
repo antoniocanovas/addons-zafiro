@@ -29,6 +29,7 @@
                         </group>
                         <group>
                             <field name="volunteer_id" optional="hide" domain="[('type_char','ilike','volunteer')]"/>
+                            <field name="rescuer_id" optional="hide"/>
                             <field name="veterinary_id" optional="hide" domain="[('type_char','ilike','veterinary')]"/>
                             <field name="default_code" optional="show"/>
                             <field name="barcode" optional="hide"/>
@@ -166,6 +167,9 @@
                                     <div t-if="record.birthdate.value">
                                         <span><b>birthdate:</b><field name="birthdate"/><br/> </span>
                                     </div>
+                                    <div t-if="record.default_code.value">
+                                        <span><b>Expedient number:</b><field name="default_code"/><br/> </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -190,6 +194,7 @@
                 <field name="home_id"/>
                 <field name="veterinary_id" optional="hide"/>
                 <field name="volunteer_id" optional="hide"/>
+                <field name="rescuer_id" optional="hide"/>
                 <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}" optional="show"/>
                 <field name="default_code" optional="show"/>
                 <field name="barcode" optional="hide"/>
@@ -197,6 +202,7 @@
                 <field name="birthdate" optional="show"/>
                 <field name="color" optional="hide"/>
                 <field name="hair" optional="hide"/>
+                <field name="default_code" optional="show"/>
                 <field name="date_start" optional="hide"/>
                 <field name="date_finish" optional="hide"/>
                 <field name="create_date" optional="hide"/>
@@ -270,10 +276,12 @@
                         <group>
                             <field name="responsible_id" widget="many2one_avatar_user"/>
                             <field name="volunteer_id" optional="hide" domain="[('type_char','ilike','volunteer')]"/>
+                            <field name="rescuer_id"/>
                         </group>
                         <group>
                             <field name="home_id" domain="[('type_char','ilike','home')]"/>
                             <field name="product_tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            <field name="list_price" widget="monetary" string="Adoption fee"/>
                         </group>
                     </group>
                     <notebook>
@@ -288,8 +296,8 @@
                                 </group>
                                 <group>
                                     <field name="veterinary_id" optional="hide" domain="[('type_char','ilike','veterinary')]"/>
-                                    <field name="default_code" optional="show"/>
-                                    <field name="barcode" optional="hide"/>
+                                    <field name="default_code" optional="show" string="Expedient number"/>
+                                    <field name="barcode" optional="hide" string="Chip"/>
                                     <field name="date_start"/>
                                     <field name="date_finish"/>
                                 </group>
