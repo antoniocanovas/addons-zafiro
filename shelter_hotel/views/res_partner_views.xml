@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <!-- Shelter Reservation BUTTON on Res.Partner FORM View -->
+    <record id="action_view_reservations" model="ir.actions.act_window">
+        <field name="binding_model_id" eval="False"/>
+        <field name="binding_type">action</field>
+        <field name="context">{'search_default_home_id': active_id,'default_home_id': active_id}</field>
+        <field name="domain">[('home_id', '=',active_id)]</field>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="help"><![CDATA[<p> Home Reservations </p>]]></field>
+        <field name="limit">80</field>
+        <field name="name">Reservations</field>
+        <field name="res_model">shelter.reservation</field>
+        <field name="target">current</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Shelter Room BUTTON on Res.Partner FORM View -->
+    <record id="action_view_rooms" model="ir.actions.act_window">
+        <field name="binding_model_id" eval="False"/>
+        <field name="binding_type">action</field>
+        <field name="context">{'search_default_home_id': active_id,'default_home_id': active_id}</field>
+        <field name="domain">[('home_id', '=',active_id)]</field>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="help"><![CDATA[<p> Home Reservations </p>]]></field>
+        <field name="limit">80</field>
+        <field name="name">Rooms</field>
+        <field name="res_model">shelter.room</field>
+        <field name="target">current</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Shelter Reservation Action on Res.Partner FORM View -->
+    <record id="partner_shelter_reservation_form_inh" model="ir.ui.view">
+        <field name="name">partner.shelter.reservation.form.inh</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" icon="fa-tasks" type="action" name="%(action_view_reservations)d">
+                    <field name="shelter_reservation_count" string="Reservations" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Shelter Room Action on Res.Partner FORM View -->
+    <record id="partner_shelter_room_form_inh" model="ir.ui.view">
+        <field name="name">partner.shelter.room.form.inh</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" icon="fa-tasks" type="action" name="%(action_view_rooms)d">
+                    <field name="shelter_room_count" string="Rooms" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
