@@ -27,7 +27,8 @@ class ShelterRoom(models.Model):
     def get_room_available(self):
         available = True
         for li in self.reservation_ids:
-            if li.done == False:  available = False
+            if li.done == False:    available = False
+        if self.active=False:       available = False
         self.available = available
     available = fields.Boolean('Available', compute='get_room_available')
 
