@@ -11,6 +11,7 @@ class ShelterReservation(models.Model):
     room_id     = fields.Many2one('shelter.room', string='Room', store=True)
     home_id     = fields.Many2one('res.partner', string='Home', store=True, related='room_id.home_id')
     location_id = fields.Many2one('stock.location', string='Location', store=True, related='room_id.location_id')
+    city        = fields.Char('City', store=True, related='home_id.city')
     type        = fields.Selection([('dog','Dogs'),('cat','Cats')], related='room_id.type')
     date_begin  = fields.Date('Begin', store=True)
     date_end    = fields.Date('End', store=True)
