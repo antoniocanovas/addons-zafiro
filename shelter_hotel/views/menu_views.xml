@@ -8,7 +8,35 @@
         <field name="search_view_id" eval="False"/>
         <field name="help" type="html">
           <p class="o_view_nocontent_smiling_face">
-            Create a room in your shelter volunteers
+            All your Pets ...
+          </p><p>
+           Great job !!
+          </p>
+        </field>
+    </record>
+
+    <record id="action_shelter_reservation" model="ir.actions.act_window">
+        <field name="name">Shelter Reservations</field>
+        <field name="res_model">shelter.reservation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" eval="False"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Book your Pet in a volunteer home.
+          </p><p>
+            We help you track availability and history
+          </p>
+        </field>
+    </record>
+
+    <record id="action_shelter_room" model="ir.actions.act_window">
+        <field name="name">Shelter Rooms</field>
+        <field name="res_model">shelter.room</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" eval="False"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a room of your shelter volunteers home ... and other
           </p><p>
             We help you track availability and history
           </p>
@@ -25,9 +53,9 @@
   />
 
   <menuitem
-          id="menu_shelter_hotel"
-          name="Hotel"
-          action="action_shelter_room"
+          id="menu_shelter_reservation"
+          name="Reservations"
+          action="action_shelter_reservation"
           groups="stock.group_stock_user"
           sequence="20"
           parent="shelter_pet.menu_shelter_main"
@@ -38,8 +66,8 @@
           name="Rooms"
           action="action_shelter_room"
           groups="stock.group_stock_user"
-          sequence="10"
-          parent="menu_shelter_hotel"
+          sequence="30"
+          parent="shelter_pet.menu_shelter_main"
   />
 
 </odoo>
