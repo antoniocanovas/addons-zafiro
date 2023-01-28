@@ -21,7 +21,7 @@ class ShelterReservation(models.Model):
         name = ""
         if self.room_id.id:     name = self.room_id.home_id.name
         if self.type:           name += " - For: " + str(self.type)
-        if self.date_begin:     name += " - From: " + str(self.date_begin)
-        if self.date_end:       name += " - To: " + str(self.date_end)
+        if self.date_begin:     name += " | " + str(self.date_begin)
+        if self.date_end:       name += " - " + str(self.date_end) + " |"
         self.name = name
     name = fields.Char('Name', store=True, compute='get_room_name', readonly=True)

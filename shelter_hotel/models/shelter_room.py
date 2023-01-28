@@ -36,7 +36,7 @@ class ShelterRoom(models.Model):
         name = ""
         if self.home_id.id:     name = self.home_id.name
         if self.type:           name += " - For: " + str(self.type)
-        if self.date_begin:     name += " |" + str(self.date_begin)
-        if self.date_end:       name += " -" + str(self.date_end) + "|"
+        if self.date_begin:     name += " | " + str(self.date_begin)
+        if self.date_end:       name += " - " + str(self.date_end) + "|"
         self.name = name
     name = fields.Char('Name', store=True, compute='get_room_name', readonly=True)
