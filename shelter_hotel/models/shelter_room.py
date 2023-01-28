@@ -11,7 +11,7 @@ class ShelterRoom(models.Model):
     home_id = fields.Many2one('res.partner', string='Home', store=True, required=True)
     location_id = fields.Many2one('stock.location', string='Location', store=True, related='home_id.location_id')
     city = fields.Char('City', related='home_id.city', store=True)
-    state_id = fields.Many2one('res.state', string='State', store=True)
+    state_id = fields.Many2one('res.country.state', string='State', store=True)
     country_id = fields.Many2one('res.country', string='Country', store=True)
     phone = fields.Char('Phone', related='home_id.phone', store=False)
     mobile = fields.Char('Mobile', related='home_id.mobile', store=False)
@@ -40,5 +40,5 @@ class ShelterRoom(models.Model):
         if self.date_end:       name += " - To: " + str(self.date_end)
         self.name = name
     name = fields.Char('Name', store=True,
-                   #    compute='get_room_name',
+                       compute='get_room_name',
                        readonly=True)
