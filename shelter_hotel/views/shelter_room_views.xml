@@ -59,7 +59,7 @@
                 <field name="location_id" optional="hide"/>
                 <field name="city" optional="show"/>
                 <field name="state_id" optional="hide"/>
-                <field name="country_id" optiona="hide"/>
+                <field name="country_id" optional="hide"/>
                 <field name="phone" optional="hide"/>
                 <field name="mobile" optional="hide"/>
                 <field name="shelter_note" optional="show"/>
