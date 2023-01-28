@@ -45,7 +45,7 @@
 
   <menuitem
           id="menu_shelter_submain"
-          name="Shelter"
+          name="Pets"
           action="shelter_pet.action_shelter_pets"
           groups="stock.group_stock_user"
           sequence="10"
