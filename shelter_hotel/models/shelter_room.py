@@ -15,7 +15,7 @@ class ShelterRoom(models.Model):
     country_id = fields.Many2one('res.country', string='Country', store=True)
     phone = fields.Char('Phone', related='home_id.phone', store=False)
     mobile = fields.Char('Mobile', related='home_id.mobile', store=False)
-    comment = fields.Text('Notes', related='home.comment', store=False)
+    shelter_note = fields.Text('Notes', related='home_id.shelter_note', store=False)
     type = fields.Selection([('dog','Dogs'),('cat','Cats')], store=True, string='Pet type')
     active = fields.Boolean('Active', default=True)
     date_begin = fields.Date('Date begin')
