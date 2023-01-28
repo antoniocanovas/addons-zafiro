@@ -1,14 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
 
-  <record id="action_shelter_room" model="ir.actions.act_window">
-    <field name="name">Shelter Rooms</field>
-    <field name="res_model">shelter.room</field>
-    <field name="view_mode">tree,form</field>
-    <field name="context" eval="False"/>
-    <field name="domain" eval="False"/>
-    <field name="view_ids" eval="False"/>
-  </record>
+    <record id="action_shelter_room" model="ir.actions.act_window">
+        <field name="name">Shelter Rooms</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" eval="False"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a room in your shelter volunteers
+          </p><p>
+            We help you track availability and history
+          </p>
+        </field>
+    </record>
 
   <menuitem
           id="menu_shelter_submain"
