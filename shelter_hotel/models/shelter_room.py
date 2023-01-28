@@ -31,7 +31,7 @@ class ShelterRoom(models.Model):
         self.available = available
     available = fields.Boolean('Available', compute='get_room_available')
 
-    api.depends('home_id', 'date_begin', 'date_end', 'type')
+    @api.depends('home_id', 'date_begin', 'date_end', 'type')
     def get_room_name(self):
         name = ""
         if self.home_id.id:     name = self.home_id.name

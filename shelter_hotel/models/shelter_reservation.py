@@ -16,10 +16,10 @@ class ShelterReservation(models.Model):
     date_end    = fields.Date('End', store=True)
     done        = fields.Boolean('Done', default=False, store=True)
 
-    api.depends('room_id', 'date_begin', 'date_end', 'type')
+    @api.depends('room_id', 'date_begin', 'date_end', 'type')
     def get_room_name(self):
         name = ""
-        if self.home_id.id:     name = self.home_id.name
+        if self.room_id.id:     name = self.room_id.home_id.name
         if self.type:           name += " - For: " + str(self.type)
         if self.date_begin:     name += " - From: " + str(self.date_begin)
         if self.date_end:       name += " - To: " + str(self.date_end)
