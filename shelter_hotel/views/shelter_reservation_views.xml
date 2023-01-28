@@ -19,7 +19,7 @@
                             <field name="room_id" domain="[('available','=',True)]"/>
                             <field name="date_begin"/>
                             <field name="date_end"/>
-                            <field name="done"/>
+                            <field name="done" widget="boolean_toggle"/>
                         </group>
                         <group>
                             <field name="home_id"/>
@@ -48,14 +48,14 @@
         <field name="arch" type="xml">
             <tree name="shelter_reservation">
                 <field name="name" invisible="1"/>
-                <field name="pet_id"/>
                 <field name="room_id"/>
-                <field name="home_id"/>
-                <field name="location_id"/>
                 <field name="type"/>
+                <field name="pet_id"/>
+                <field name="home_id" optional="hide"/>
+                <field name="location_id" optional="hide"/>
                 <field name="date_begin"/>
                 <field name="date_end"/>
-                <field name="done"/>
+                <field name="done" widget="boolean_toggle"/>
             </tree>
         </field>
     </record>
