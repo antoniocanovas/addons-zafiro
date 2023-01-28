@@ -22,13 +22,12 @@ class ShelterRoom(models.Model):
     date_end   = fields.Date('Date end')
     reservation_ids = fields.One2many('shelter.reservation', 'room_id', string='Reservations', store=True)
 
-
     api.depends('reservation_ids.done')
     def get_room_available(self):
         available = True
         for li in self.reservation_ids:
             if li.done == False:    available = False
-        if self.active=False:       available = False
+        if self.active == False:    available = False
         self.available = available
     available = fields.Boolean('Available', compute='get_room_available')
 
@@ -37,9 +36,7 @@ class ShelterRoom(models.Model):
         name = ""
         if self.home_id.id:     name = self.home_id.name
         if self.type:           name += " - For: " + str(self.type)
-        if self.date_begin:     name += " - From: " + str(self.date_begin)
-        if self.date_end:       name += " - To: " + str(self.date_end)
+        if self.date_begin:     name += " |" + str(self.date_begin)
+        if self.date_end:       name += " -" + str(self.date_end) + "|"
         self.name = name
-    name = fields.Char('Name', store=True,
-                       compute='get_room_name',
-                       readonly=True)
+    name = fields.Char('Name', store=True, compute='get_room_name', readonly=True)
