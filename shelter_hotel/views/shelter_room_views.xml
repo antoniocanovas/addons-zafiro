@@ -14,19 +14,27 @@
                         <field name="name"/>
                     </h2>
                     <group>
-                        <field name="home_id"/>
-                        <field name="location_id"/>
-                        <field name="type"/>
-                        <field name="city"/>
-                        <field name="state_id"/>
-                        <field name="country_id"/>
-                        <field name="phone"/>
-                        <field name="mobile"/>
+                        <group>
+                            <field name="home_id"/>
+                            <field name="type"/>
+                            <field name="date_begin"/>
+                            <field name="date_end"/>
+                            <field name="active"/>
+                            <field name="available"/>
+                        </group>
+                        <group>
+                            <field name="location_id"/>
+                            <field name="city"/>
+                            <field name="state_id"/>
+                            <field name="country_id"/>
+                            <field name="phone"/>
+                            <field name="mobile"/>
+                        </group>
+                    </group>
+                    <group string="Notes">
                         <field name="shelter_note"/>
-                        <field name="active"/>
-                        <field name="date_begin"/>
-                        <field name="date_end"/>
-                        <field name="available"/>
+                    </group>
+                    <group string="Reservations">
                         <field name="reservation_ids"/>
                     </group>
                 </sheet>
