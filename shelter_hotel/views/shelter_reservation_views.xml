@@ -15,16 +15,17 @@
                     </h2>
                     <group>
                         <group>
-                        <field name="room_id"/>
-                        <field name="date_begin"/>
-                        <field name="date_end"/>
-                        <field name="done"/>
+                            <field name="pet_id"/>
+                            <field name="room_id"/>
+                            <field name="date_begin"/>
+                            <field name="date_end"/>
+                            <field name="done"/>
                         </group>
                         <group>
-                        <field name="home_id"/>
-                        <field name="city"/>
-                        <field name="location_id"/>
-                        <field name="type"/>
+                            <field name="home_id"/>
+                            <field name="city"/>
+                            <field name="location_id"/>
+                            <field name="type"/>
                         </group>
                     </group>
                     <group string="Comments">
@@ -42,6 +43,7 @@
         <field name="arch" type="xml">
             <tree name="shelter_reservation">
                 <field name="name" invisible="1"/>
+                <field name="pet_id"/>
                 <field name="room_id"/>
                 <field name="home_id"/>
                 <field name="location_id"/>
