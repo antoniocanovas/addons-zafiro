@@ -29,7 +29,7 @@ class ShelterRoom(models.Model):
             if li.done == False:    available = False
         if self.active == False:    available = False
         self.available = available
-    available = fields.Boolean('Available', compute='get_room_available')
+    available = fields.Boolean('Available', store=True, compute='get_room_available')
 
     @api.depends('home_id', 'date_begin', 'date_end', 'type')
     def get_room_name(self):
