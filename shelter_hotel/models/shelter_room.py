@@ -22,14 +22,14 @@ class ShelterRoom(models.Model):
     date_end   = fields.Date('Date end')
     reservation_ids = fields.One2many('shelter.reservation', 'room_id', string='Reservations', store=True)
 
-    api.depends('reservation_ids.done', 'reservation_ids')
+    @api.depends('reservation_ids.done', 'reservation_ids')
     def get_room_available(self):
         available = True
         for li in self.reservation_ids:
             if li.done == False:    available = False
         if self.active == False:    available = False
         self.available = available
-    available = fields.Boolean('Available', store=False, compute='get_room_available')
+    available = fields.Boolean('Available', store=True, compute='get_room_available')
 
     @api.depends('home_id', 'date_begin', 'date_end', 'type')
     def get_room_name(self):
