@@ -6,6 +6,7 @@ _logger = logging.getLogger(__name__)
 
 class ShelterReservation(models.Model):
     _name = 'shelter.reservation'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Room reservations for pets'
 
     pet_id  = fields.Many2one('product.product', string='Pet', store=True,
