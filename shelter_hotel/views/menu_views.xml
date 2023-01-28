@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+  <record id="action_shelter_hotel" model="ir.actions.act_window">
+    <field name="name">Shelter Room</field>
+    <field name="res_model">shelter.room</field>
+    <field name="view_mode">tree,form,pivot,activity</field>
+    <field name="context">{}</field>
+    <field name="domain">[]</field>
+    <field name="priority">16<field>
+  </record>
+
+  <menuitem
+          id="menu_shelter_submain"
+          name="Shelter"
+          action="action_shelter_pets"
+          groups="stock.group_stock_user"
+          sequence="10"
+          parent="shelter_pet.menu_shelter_main"
+  />
+
+  <menuitem
+          id="menu_shelter_hotel"
+          name="Hotel"
+          action="action_shelter_hotel"
+          groups="stock.group_stock_user"
+          sequence="20"
+          parent="shelter_pet.menu_shelter_main"
+  />
+
+  <menuitem
+          id="menu_shelter_room"
+          name="Rooms"
+          action="action_shelter_hotel"
+          groups="stock.group_stock_user"
+          sequence="10"
+          parent="menu_shelter_hotel"
+  />
+
+
+</odoo>
