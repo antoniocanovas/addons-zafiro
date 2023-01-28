@@ -39,4 +39,6 @@ class ShelterRoom(models.Model):
         if self.date_begin:     name += " - From: " + str(self.date_begin)
         if self.date_end:       name += " - To: " + str(self.date_end)
         self.name = name
-    name = fields.Char('Name', store=True, compute='get_room_name', readonly=True)
+    name = fields.Char('Name', store=True,
+                   #    compute='get_room_name',
+                       readonly=True)
