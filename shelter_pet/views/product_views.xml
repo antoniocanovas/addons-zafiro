@@ -155,22 +155,22 @@
                             <div class="o_kanban_record_body">
                                 <div class="oe_kanban_bottom_right">
                                     <div t-if="record.home_id.value">
-                                        <span><b>Home:</b><field name="home_id"/><br/> </span>
+                                        <span><b>Home: </b><field name="home_id"/><br/> </span>
                                     </div>
                                     <div t-if="record.veterinary_id.value">
-                                        <span><b>Veterinay:</b><field name="veterinary_id"/><br/> </span>
+                                        <span><b>Veterinay: </b><field name="veterinary_id"/><br/> </span>
                                     </div>
                                     <div t-if="record.volunteer_id.value">
-                                        <span><b>Volunteer:</b><field name="volunteer_id"/><br/> </span>
+                                        <span><b>Volunteer: </b><field name="volunteer_id"/><br/> </span>
                                     </div>
                                     <div t-if="record.sex.value">
-                                        <span><b>Sex:</b><field name="sex"/><br/> </span>
+                                        <span><b>Sex: </b><field name="sex"/><br/> </span>
                                     </div>
                                     <div t-if="record.birthdate.value">
-                                        <span><b>birthdate:</b><field name="birthdate"/><br/> </span>
+                                        <span><b>birthdate: </b><field name="birthdate"/><br/> </span>
                                     </div>
                                     <div t-if="record.default_code.value">
-                                        <span><b>Exp:</b><field name="default_code"/><br/> </span>
+                                        <span><b>Exp: </b><field name="default_code"/><br/> </span>
                                     </div>
                                 </div>
                             </div>
