@@ -8,29 +8,30 @@
         <field name="inherit_id" eval="False"/>
         <field name="priority">16</field>
         <field name="arch" type="xml">
-        <form string="Shelter Room">
-            <sheet string="Sheet Room">
-                <h2>
-                    <field name="name"/>
-                </h2>
-                <group>
-                    <field name="home_id"/>
-                    <field name="location_id"/>
-                    <field name="type"/>
-                    <field name="city"/>
-                    <field name="state_id"/>
-                    <field name="country_id"/>
-                    <field name="phone"/>
-                    <field name="mobile"/>
-                    <field name="shelter_note"/>
-                    <field name="active"/>
-                    <field name="date_begin"/>
-                    <field name="date_end"/>
-                    <field name="available"/>
-                    <field name="reservation_ids"/>
-                </group>
-            </sheet>
-        </form>
+            <form string="Shelter Room">
+                <sheet string="Sheet Room">
+                    <h2>
+                        <field name="name"/>
+                    </h2>
+                    <group>
+                        <field name="home_id"/>
+                        <field name="location_id"/>
+                        <field name="type"/>
+                        <field name="city"/>
+                        <field name="state_id"/>
+                        <field name="country_id"/>
+                        <field name="phone"/>
+                        <field name="mobile"/>
+                        <field name="shelter_note"/>
+                        <field name="active"/>
+                        <field name="date_begin"/>
+                        <field name="date_end"/>
+                        <field name="available"/>
+                        <field name="reservation_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
     </record>
 
     <record id="shelter_room_tree" model="ir.ui.view">

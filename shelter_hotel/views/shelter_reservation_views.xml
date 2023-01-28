@@ -8,22 +8,23 @@
         <field name="inherit_id" eval="False"/>
         <field name="priority">16</field>
         <field name="arch" type="xml">
-        <form string="Shelter Reservation">
-            <sheet string="Sheet Reservation">
-                <h2>
-                    <field name="name"/>
-                </h2>
-                <group>
-                    <field name="room_id"/>
-                    <field name="home_id"/>
-                    <field name="location_id"/>
-                    <field name="type"/>
-                    <field name="date_begin"/>
-                    <field name="date_end"/>
-                    <field name="done"/>
-                </group>
-            </sheet>
-        </form>
+            <form string="Shelter Reservation">
+                <sheet string="Sheet Reservation">
+                    <h2>
+                        <field name="name"/>
+                    </h2>
+                    <group>
+                        <field name="room_id"/>
+                        <field name="home_id"/>
+                        <field name="location_id"/>
+                        <field name="type"/>
+                        <field name="date_begin"/>
+                        <field name="date_end"/>
+                        <field name="done"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
     </record>
 
     <record id="shelter_reservation_tree" model="ir.ui.view">
@@ -32,14 +33,14 @@
         <field name="type">tree</field>
         <field name="arch" type="xml">
             <tree name="shelter_reservation">
-                    <field name="name" invisible="1"/>
-                    <field name="room_id"/>
-                    <field name="home_id"/>
-                    <field name="location_id"/>
-                    <field name="type"/>
-                    <field name="date_begin"/>
-                    <field name="date_end"/>
-                    <field name="done"/>
+                <field name="name" invisible="1"/>
+                <field name="room_id"/>
+                <field name="home_id"/>
+                <field name="location_id"/>
+                <field name="type"/>
+                <field name="date_begin"/>
+                <field name="date_end"/>
+                <field name="done"/>
             </tree>
         </field>
     </record>
