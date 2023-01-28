@@ -22,7 +22,7 @@ class ShelterRoom(models.Model):
     date_end   = fields.Date('Date end')
     reservation_ids = fields.One2many('shelter.reservation', 'room_id', string='Reservations', store=True)
 
-    api.depends('reservation_ids.done', 'reservation_ids')
+    api.depends('reservation_ids.done', 'write_date')
     def get_room_available(self):
         available = True
         for li in self.reservation_ids:
