@@ -154,9 +154,6 @@
                             </div>
                             <div class="o_kanban_record_body">
                                 <div class="oe_kanban_bottom_right">
-                                    <div t-if="record.responsible_id.value">
-                                        <span><b>Responsible:</b><field name="responsible_id"/><br/> </span>
-                                    </div>
                                     <div t-if="record.home_id.value">
                                         <span><b>Home:</b><field name="home_id"/><br/> </span>
                                     </div>
@@ -173,7 +170,7 @@
                                         <span><b>birthdate:</b><field name="birthdate"/><br/> </span>
                                     </div>
                                     <div t-if="record.default_code.value">
-                                        <span><b>Expedient number:</b><field name="default_code"/><br/> </span>
+                                        <span><b>Exp:</b><field name="default_code"/><br/> </span>
                                     </div>
                                 </div>
                             </div>
