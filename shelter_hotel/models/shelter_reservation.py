@@ -14,13 +14,14 @@ class ShelterReservation(models.Model):
     type        = fields.Selection([('dog','Dogs'),('cat','Cats')], related='room_id.type')
     date_begin  = fields.Date('Begin', store=True)
     date_end    = fields.Date('End', store=True)
+    comment     = fields.Text('Notes')
     done        = fields.Boolean('Done', default=False, store=True)
 
     @api.depends('room_id', 'date_begin', 'date_end', 'type')
     def get_room_name(self):
         name = ""
         if self.room_id.id:     name = self.room_id.home_id.name
-        if self.type:           name += " - For: " + str(self.type)
+        if self.type:           name += " |" + str(self.type) + "|"
         if self.date_begin:     name += " | " + str(self.date_begin)
         if self.date_end:       name += " - " + str(self.date_end) + " |"
         self.name = name

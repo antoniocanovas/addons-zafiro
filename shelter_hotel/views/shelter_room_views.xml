@@ -32,10 +32,10 @@
                         </group>
                     </group>
                     <group string="Notes">
-                        <field name="shelter_note" nolabel="1"/>
+                        <field name="shelter_note" nolabel="1" colspan="2"/>
                     </group>
                     <group string="Reservations">
-                        <field name="reservation_ids" nolabel="1"/>
+                        <field name="reservation_ids" nolabel="1" colspan="2"/>
                     </group>
                 </sheet>
             </form>
