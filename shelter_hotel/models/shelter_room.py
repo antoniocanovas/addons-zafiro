@@ -8,8 +8,6 @@ class ShelterRoom(models.Model):
     _name = 'shelter.room'
     _description = 'Shelter room for pets'
 
-    pet_id  = fields.Many2one('product.product', string='Pet', store=True,
-                              domain=[('pet_ok','=',True),('stage_pp_id','not in',['preadoption','done'])])
     home_id = fields.Many2one('res.partner', string='Home', store=True, required=True)
     location_id = fields.Many2one('stock.location', string='Location', store=True, related='home_id.location_id')
     city = fields.Char('City', related='home_id.city', store=True)

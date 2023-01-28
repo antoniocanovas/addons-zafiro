@@ -8,6 +8,8 @@ class ShelterReservation(models.Model):
     _name = 'shelter.reservation'
     _description = 'Room reservations for pets'
 
+    pet_id  = fields.Many2one('product.product', string='Pet', store=True,
+                              domain=[('pet_ok','=',True),('stage_pp_id','not in',['preadoption','done'])])
     room_id     = fields.Many2one('shelter.room', string='Room', store=True)
     home_id     = fields.Many2one('res.partner', string='Home', store=True, related='room_id.home_id')
     location_id = fields.Many2one('stock.location', string='Location', store=True, related='room_id.location_id')
