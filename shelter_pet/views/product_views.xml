@@ -55,7 +55,7 @@
         <field name="arch" type="xml">
             <xpath expr="//page[@name='general_information']" position="before">
                 <page name="pet_task_lead" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
-                    <field name="task_pt_ids" readonly="True"/>
+                    <field name="task_pt_ids" nolabel="1" colspan="2" readonly="True"/>
                 </page>
             </xpath>
         </field>
