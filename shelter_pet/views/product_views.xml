@@ -102,6 +102,37 @@
     </record>
 
 
+    <record id="product_pet_search_view" model="ir.ui.view">
+        <field name="name">product.pet.search.inh</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" eval="False"/>
+        <field name="arch" type="xml">
+            <search string="Product Pet">
+                <field name="name" string="Product" filter_domain="['|', '|', ('default_code', 'ilike', self),('name', 'ilike', self), ('barcode', 'ilike', self)]"/>
+                <field name="categ_id" filter_domain="[('categ_id', 'child_of', raw_value)]"/>
+                <separator/>
+                <filter string="Can be Sold" name="filter_to_sell" domain="[('sale_ok','=',True)]"/>
+                <filter string="Not yet" name="filter_dont_sell" domain="[('sale_ok', '=', False)]"/>
+                <separator/>
+                <filter string="Favorites" name="favorites" domain="[('priority','=','1')]"/>
+                <separator/>
+                <filter string="Warnings" name="activities_exception" domain="[('activity_exception_decoration', '!=', False)]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Product Category" name="categ_id" context="{'group_by':'categ_id'}"/>
+                    <filter string="Stage" name="stage_pt_id" context="{'group_by':'stage_id'}"/>
+                    <filter string="Responsible" name="type" context="{'group_by':'responsible_id'}"/>
+                    <filter string="Volunteer" name="type" context="{'group_by':'volunteer_id'}"/>
+                    <filter string="Veterinary" name="type" context="{'group_by':'veterinary_id'}"/>
+                    <filter string="Rescuer" name="type" context="{'group_by':'rescuer_id'}"/>
+                    <filter string="Sex" name="type" context="{'group_by':'sex'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
     <record id="product_pet_kanban_view" model="ir.ui.view">
         <field name="name">Product Pet Kanban</field>
         <field name="model">product.product</field>
