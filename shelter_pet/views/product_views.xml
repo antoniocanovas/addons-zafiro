@@ -363,8 +363,8 @@
                             </group>
                         </page>
                         <page string="Process" name="pet_process">
-                            <group string="Tasks and Leads">
-                                <field name="task_pp_ids"
+                            <group name="pet_tasks" string="Tasks">
+                                <field name="task_pp_ids" nolabel="1" colspan="2"
                                        context="{'default_product_id':id, 'default_volunteer_id':volunteer_id,
                                        'default_home_id':home_id, 'form_view_ref': 'project.view_task_form2'}"/>
                             </group>
