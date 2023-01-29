@@ -12,7 +12,7 @@
         <field name="help"><![CDATA[<p> Room Reservations </p>]]></field>
         <field name="limit">80</field>
         <field name="name">Reservations</field>
-        <field name="res_model">shelter.room</field>
+        <field name="res_model">shelter.reservation</field>
         <field name="target">current</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">tree,form</field>
