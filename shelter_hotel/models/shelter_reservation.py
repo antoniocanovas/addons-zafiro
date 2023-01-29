@@ -25,7 +25,7 @@ class ShelterReservation(models.Model):
     @api.depends('room_id', 'date_begin', 'date_end', 'type')
     def get_room_name(self):
         name = ""
-        if self.pet_id.id       name = self.pet_id.name
+        if self.pet_id.id:      name = self.pet_id.name
         if self.room_id.id:     name += "(" + self.room_id.home_id.name + ")"
         self.name = name
     name = fields.Char('Name', store=True, compute='get_room_name', readonly=True)
