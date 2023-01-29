@@ -29,7 +29,6 @@
                             <field name="categ_id"/>
                             <field name="sex"/>
                             <field name="birthdate"/>
-                            <field name="color"/>
                             <field name="pet_color"/>
                             <field name="hair"/>
                         </group>
@@ -154,7 +153,7 @@
                 <field name="currency_id"/>
                 <field name="activity_state"/>
                 <field name="list_price"/>
-                <field name="color"/>
+                <field name="pet_color"/>
                 <field name="responsible_id"/>
                 <field name="veterinary_id"/>
                 <field name="volunteer_id"/>
@@ -252,7 +251,7 @@
                 <field name="barcode" optional="hide"/>
                 <field name="sex" optional="show"/>
                 <field name="birthdate" optional="show"/>
-                <field name="color" optional="hide"/>
+                <field name="pet_color" optional="hide"/>
                 <field name="hair" optional="hide"/>
                 <field name="default_code" optional="show"/>
                 <field name="date_start" optional="hide"/>
@@ -348,7 +347,6 @@
                                     <field name="sex"/>
                                     <field name="birthdate"/>
                                     <field name="pet_color"/>
-                                    <field name="color"/>
                                     <field name="hair"/>
                                 </group>
                                 <group>

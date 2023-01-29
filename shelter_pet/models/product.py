@@ -21,7 +21,6 @@ class ProductTemplate(models.Model):
 
     sex = fields.Selection([('male', 'Male'), ('female', 'Female')], store=True, string='Sex')
     birthdate = fields.Date('Birthdate')
-    color = fields.Char('Color')
     pet_color = fields.Char('Color')
     hair = fields.Char('Hair')
     date_start = fields.Date('Date start')
