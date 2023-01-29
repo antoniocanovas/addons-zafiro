@@ -358,7 +358,7 @@
                                     <field name="date_finish"/>
                                 </group>
                             </group>
-                            <group string="eCommerce and Sale description" name="description">
+                            <group string="Sale and eCommerce description (Pet history)" name="description">
                                 <field colspan="2" name="description_sale" nolabel="1" placeholder="This note is added to sales orders,invoices and e-Commerce."/>
                             </group>
                             <group name="internal_notes" string="Internal Notes">
