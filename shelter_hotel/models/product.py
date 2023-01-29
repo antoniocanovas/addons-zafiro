@@ -5,7 +5,7 @@ class ProductProduct(models.Model):
     _inherit = 'product.product'
 
     def _get_pet_reservations_count(self):
-        results = self.env['shelter.reservation'].search([('product_id', '=', self.id)])
+        results = self.env['shelter.reservation'].search([('pet_id', '=', self.id)])
         self.pet_reservation_count = len(results)
     pet_reservation_count = fields.Integer('Reservations', compute=_get_pet_reservations_count, store=False)
 
