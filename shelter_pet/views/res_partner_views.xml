@@ -68,7 +68,6 @@
                     <filter string="Staff" name="staff" domain="[('type_char', 'ilike', 'staff')]"/>
                 </separator>
             </filter>
-
         </field>
     </record>
 
