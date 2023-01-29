@@ -40,3 +40,8 @@ class ShelterRoom(models.Model):
         if self.date_begin:     name += " (" + str(self.date_begin) + ")"
         self.name = name
     name = fields.Char('Name', store=True, compute='get_room_name', readonly=True)
+
+    def _get_reservations_count(self):
+        results = self.env['shelter.reservation'].search([('room_id', '=', self.id)])
+        self.reservation_count = len(results)
+    reservation_count = fields.Integer('Reservations', compute=_get_reservations_count, store=False)

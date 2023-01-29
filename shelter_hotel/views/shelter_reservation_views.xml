@@ -1,6 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
 
+    <!-- Shelter Reservation BUTTON on SHELTER.ROOM FORM View -->
+    <record id="action_view_room_reservations" model="ir.actions.act_window">
+        <field name="binding_model_id" eval="False"/>
+        <field name="binding_type">action</field>
+        <field name="context">{'search_default_room_id': active_id,'default_room_id': active_id}</field>
+        <field name="domain">[('room_id', '=',active_id)]</field>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="help"><![CDATA[<p> Room Reservations </p>]]></field>
+        <field name="limit">80</field>
+        <field name="name">Reservations</field>
+        <field name="res_model">shelter.room</field>
+        <field name="target">current</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="shelter_reservation_form" model="ir.ui.view">
         <field name="name">Shelter Reservation Form</field>
         <field name="model">shelter.reservation</field>
@@ -10,6 +26,11 @@
         <field name="arch" type="xml">
             <form string="Shelter Reservation">
                 <sheet string="Sheet Reservation">
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-book" type="action" name="%(action_view_room_reservations)d">
+                            <field name="reservation_count" string="Reservations" widget="statinfo"/>
+                        </button>
+                    </div>
                     <h2>
                         <field name="name"/>
                     </h2>
