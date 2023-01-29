@@ -127,7 +127,7 @@
                 <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
                 <group expand="1" string="Group By">
                     <filter string="Product Category" name="categ_id" context="{'group_by':'categ_id'}"/>
-                    <filter string="Stage" name="stage_pt_id" context="{'group_by':'stage_id'}"/>
+                    <filter string="Stage" name="stage" context="{'group_by':'stage_id'}"/>
                     <filter string="Responsible" name="type" context="{'group_by':'responsible_id'}"/>
                     <filter string="Volunteer" name="type" context="{'group_by':'volunteer_id'}"/>
                     <filter string="Veterinary" name="type" context="{'group_by':'veterinary_id'}"/>
