@@ -110,6 +110,12 @@
             <search string="Product Pet">
                 <field name="name" string="Product" filter_domain="['|', '|', ('default_code', 'ilike', self),('name', 'ilike', self), ('barcode', 'ilike', self)]"/>
                 <field name="categ_id" filter_domain="[('categ_id', 'child_of', raw_value)]"/>
+                <field name="stage_id"/>
+                <field name="responsible_id"/>
+                <field name="volunteer_id"/>
+                <field name="veterinary_id"/>
+                <field name="rescuer_id"/>
+                <field name="sex"/>
                 <separator/>
                 <filter string="Can be Sold" name="filter_to_sell" domain="[('sale_ok','=',True)]"/>
                 <filter string="Not yet" name="filter_dont_sell" domain="[('sale_ok', '=', False)]"/>
