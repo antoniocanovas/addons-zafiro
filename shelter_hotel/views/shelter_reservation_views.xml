@@ -1,6 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
 
+    <record id="shelter_reservation_calendar" model="ir.ui.view">
+        <field name="name">Shelter Reservation Calendar</field>
+        <field name="model">shelter.reservation</field>
+        <field name="type">calendar</field>
+        <field name="arch" type="xml">
+            <calendar date_start="date_begin" date_stop="date_end"
+                      mode="month"
+                      string="Default calendar view for shelter.reservation"/>
+        </field>
+    </record>
+
     <record id="shelter_reservation_form" model="ir.ui.view">
         <field name="name">Shelter Reservation Form</field>
         <field name="model">shelter.reservation</field>
@@ -59,5 +70,6 @@
             </tree>
         </field>
     </record>
+
 
 </odoo>
