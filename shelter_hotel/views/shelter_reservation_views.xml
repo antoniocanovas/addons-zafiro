@@ -46,7 +46,7 @@
         <field name="model">shelter.reservation</field>
         <field name="type">tree</field>
         <field name="arch" type="xml">
-            <tree name="shelter_reservation">
+            <tree name="shelter_reservation" default_order="done, date_begin asc">
                 <field name="name" invisible="1"/>
                 <field name="room_id"/>
                 <field name="type"/>
