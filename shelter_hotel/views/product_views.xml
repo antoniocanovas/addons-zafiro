@@ -1,99 +1,82 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
 
-    <record id="product_product_lead" model="ir.ui.view">
-        <field name="name">product product lead</field>
+    <!-- Shelter Reservation BUTTON on Standard Product.Product FORM View -->
+    <record id="action_view_product_reservations" model="ir.actions.act_window">
+        <field name="binding_model_id" eval="False"/>
+        <field name="binding_type">action</field>
+        <field name="context">{'search_default_pet_id': active_id,'default_pet_id': active_id}</field>
+        <field name="domain">[('pet_id', '=',active_id)]</field>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="help"><![CDATA[<p> Home Reservations </p>]]></field>
+        <field name="limit">80</field>
+        <field name="name">Reservations</field>
+        <field name="res_model">shelter.reservation</field>
+        <field name="target">current</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="product_product_shelter_hotel_inh" model="ir.ui.view">
+        <field name="name">product product Shelter hotel</field>
         <field name="model">product.product</field>
         <field name="type">form</field>
         <field name="inherit_id" ref="product.product_normal_form_view"/>
         <field name="arch" type="xml">
-            <field name="task_pp_ids" position="after">
-                    <field name="lead_pp_ids" domain="[('probability','!=',100)]">
-                        <tree>
-                            <field name="name"/>
-                            <field name="user_id"/>
-                            <field name="partner_id"/>
-                            <field name="phone" optional="show"/>
-                            <field name="date_deadline" optional="show"/>
-                            <field name="stage_id"/>
-                        </tree>
-                    </field>
-            </field>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" icon="fa-book" type="action" name="%(action_view_product_reservations)d">
+                    <field name="pet_reservation_count" string="Reservations" widget="statinfo"/>
+                </button>
+            </xpath>
         </field>
     </record>
 
-    <record id="product_product_shelter_pet_lead" model="ir.ui.view">
-        <field name="name">product shelter pet lead</field>
+    <record id="product_pet_shelter_hotel_inh" model="ir.ui.view">
+        <field name="name">product Pet Shelter Hotel inh</field>
         <field name="model">product.product</field>
         <field name="type">form</field>
         <field name="inherit_id" ref="shelter_pet.product_pet_form_view"/>
         <field name="arch" type="xml">
-            <field name="task_pp_ids" position="after">
-                    <field name="lead_pp_ids" domain="[('probability','!=',100)]">
-                        <tree>
-                            <field name="name"/>
-                            <field name="user_id"/>
-                            <field name="partner_id"/>
-                            <field name="phone" optional="show"/>
-                            <field name="date_deadline" optional="show"/>
-                            <field name="stage_id"/>
-                        </tree>
-                    </field>
-            </field>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" icon="fa-book" type="action" name="%(action_view_product_reservations)d">
+                    <field name="pet_reservation_count" string="Reservations" widget="statinfo"/>
+                </button>
+            </xpath>
         </field>
     </record>
 
-    <record id="product_product_pet_tree_lead" model="ir.ui.view">
-        <field name="name">product product pet tree lead</field>
-        <field name="model">product.product</field>
-        <field name="type">tree</field>
-        <field name="inherit_id" ref="shelter_pet.product_pet_tree_view"/>
-        <field name="arch" type="xml">
-            <field name="task_pp_ids" position="after">
-                <field name="lead_pp_ids" widget="many2many_tags"/>
-            </field>
-        </field>
+
+
+    <!-- Shelter Reservation BUTTON on Product.Template FORM View -->
+    <record id="action_view_product_tmpl_reservations" model="ir.actions.act_window">
+        <field name="binding_model_id" eval="False"/>
+        <field name="binding_type">action</field>
+        <field name="context">{'search_default_product_tmpl_id': active_id,'default_product_tmpl_id': active_id}</field>
+        <field name="domain">[('product_tmpl_id', '=',active_id)]</field>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="help"><![CDATA[<p> Home Reservations </p>]]></field>
+        <field name="limit">80</field>
+        <field name="name">Reservations</field>
+        <field name="res_model">shelter.reservation</field>
+        <field name="target">current</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
-    <record id="product_template_lead" model="ir.ui.view">
-        <field name="name">product template lead</field>
+    <record id="product_template_shelter_hotel_inh" model="ir.ui.view">
+        <field name="name">product template shelter hotel</field>
         <field name="model">product.template</field>
         <field name="type">form</field>
         <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="arch" type="xml">
-            <xpath expr="//page[@name='general_information']" position="after">
-                <page name="opportunities" string="Opportunities" attrs="{'invisible':[('id','=',False)]}">
-                    <h3>Opportunities:</h3>
-                    <field name="lead_pt_ids" domain="[('probability','!=',100)]" readonly="1">
-                        <tree>
-                            <field name="name"/>
-                            <field name="user_id"/>
-                            <field name="partner_id"/>
-                            <field name="phone" optional="show"/>
-                            <field name="date_deadline" optional="show"/>
-                            <field name="stage_id"/>
-                        </tree>
-                    </field>
-                </page>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" icon="fa-book" type="action" name="%(action_view_product_tmpl_reservations)d">
+                    <field name="pet_pt_reservation_count" string="Reservations" widget="statinfo"/>
+                </button>
             </xpath>
         </field>
     </record>
 
-    <record id="crm_lead_product_opportunities" model="ir.ui.view">
-        <field name="name">crm lead product opportunitues</field>
-        <field name="model">crm.lead</field>
-        <field name="type">tree</field>
-        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='description']" position="replace">
-                <group string="Notes">
-                    <field name="description" placeholder="Add a description..." options="{'collaborative': true}"/>
-                </group>
-                <group string="Pets">
-                    <field name="product_ids" domain="[('sale_ok','=', True)]" mode="kanban"/>
-                </group>
-            </xpath>
-        </field>
-    </record>
+
 
 </odoo>

@@ -14,6 +14,7 @@ Shelter hotel allows set Pet to volunteers home with reservations.
         'views/shelter_room_views.xml',
         'views/shelter_reservation_views.xml',
         'views/res_partner_views.xml',
+        'views/product_views.xml',
         'views/menu_views.xml',
     ],
     'installable': True,
