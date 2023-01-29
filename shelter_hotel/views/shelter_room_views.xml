@@ -106,4 +106,45 @@
         </field>
     </record>
 
+    <record id="shelter_room_default_search" model="ir.ui.view">
+        <field name="name">shelter.room.search.view</field>
+        <field name="model">shelter.room</field>
+        <field name="type">search</field>
+        <field name="inherit_id" eval="False"/>
+        <field name="arch" type="xml">
+
+<search string="Search Rooms">
+                    <field name="name" string="Owner or pet" filter_domain="[('name', 'ilike', self)"/>
+                    <field name="home_id"/>
+                <field name="type"/>
+                <field name="location_id" optional="hide"/>
+                <field name="city" optional="show"/>
+                <field name="state_id" optional="hide"/>
+                <field name="country_id" optional="hide"/>
+                <field name="shelter_note" optional="show"/>
+                <field name="date_begin"/>
+                <field name="date_end"/>
+                    <separator/>
+                    <filter string="Available" name="available" domain="[('available','=',True)]"/>
+                    <filter string="Not Available" name="not_available" domain="[('available','=',False)]"/>
+                    <separator/>
+                    <filter string="Active" name="active" domain="[('active','=',True)]"/>
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <separator/>
+                    <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction', '=', True)]"/>
+                    <separator/>
+                    <filter string="Begin Date" name="date_begin" date="date_begin"/>
+                    <filter string="End Date" name="date_end" date="date_end"/>
+                    <separator/>
+                    <group expand="0" string="Group By" colspan="16">
+                        <filter string="Home" name="home" context="{'group_by':'home_id'}"/>
+                        <filter string="Allowed pet type" name="pet_type" context="{'group_by':'type'}"/>
+                    </group>
+                </search>
+
+        </field>
+    </record>
+
+
+
 </odoo>
