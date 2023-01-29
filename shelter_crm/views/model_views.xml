@@ -28,8 +28,8 @@
         <field name="type">form</field>
         <field name="inherit_id" ref="shelter_pet.product_pet_form_view"/>
         <field name="arch" type="xml">
-            <group name="pet_leads" string="Leads">
-                <field name="task_pp_ids" position="after">
+            <group name="pet_tasks" position="after">
+                <group name="pet_leads" string="Leads">
                     <field name="lead_pp_ids" nolabel="1" colspan="2" domain="[('probability','!=',100)]">
                         <tree>
                             <field name="name"/>
@@ -40,7 +40,7 @@
                             <field name="stage_id"/>
                         </tree>
                     </field>
-                </field>
+                </group>
             </group>
         </field>
     </record>
