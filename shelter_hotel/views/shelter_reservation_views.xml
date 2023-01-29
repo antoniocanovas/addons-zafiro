@@ -100,7 +100,6 @@
                 <group expand="0" string="Group By" colspan="16">
                     <filter string="Home" name="home" context="{'group_by':'home_id'}"/>
                     <filter string="Pet" name="pet_type" context="{'group_by':'pet_id'}"/>
-                    <filter string="Room pet type" name="pet_type" context="{'group_by':'type'}"/>
                 </group>
             </search>
         </field>
