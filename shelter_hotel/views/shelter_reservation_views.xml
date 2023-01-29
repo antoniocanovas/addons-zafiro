@@ -72,4 +72,38 @@
     </record>
 
 
+    <record id="shelter_reservation_default_search" model="ir.ui.view">
+        <field name="name">shelter.reservation.search.view</field>
+        <field name="model">shelter.reservation</field>
+        <field name="type">search</field>
+        <field name="inherit_id" eval="False"/>
+        <field name="arch" type="xml">
+
+            <search string="Search Reservations">
+                <field name="name"/>
+                <field name="pet_id"/>
+                <field name="home_id"/>
+                <field name="type"/>
+                <field name="location_id" optional="hide"/>
+                <field name="comment"/>
+                <field name="date_begin"/>
+                <field name="date_end"/>
+                <separator/>
+                <filter string="Active" name="running" domain="[('done','=',False)]"/>
+                <filter string="Done" name="done" domain="[('done','=',True)]"/>
+                <separator/>
+                <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction', '=', True)]"/>
+                <separator/>
+                <filter string="Begin Date" name="date_begin" date="date_begin"/>
+                <filter string="End Date" name="date_end" date="date_end"/>
+                <separator/>
+                <group expand="0" string="Group By" colspan="16">
+                    <filter string="Home" name="home" context="{'group_by':'home_id'}"/>
+                    <filter string="Pet" name="pet_type" context="{'group_by':'pet_id'}"/>
+                    <filter string="Room pet type" name="pet_type" context="{'group_by':'type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
 </odoo>
