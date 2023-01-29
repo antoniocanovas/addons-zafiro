@@ -148,6 +148,7 @@
             <kanban default_group_by="stage_pp_id" class="o_kanban_small_column" sample="1" quick_create="false">
 
                 <field name="id"/>
+                <field name="detailed_type"/>
                 <field name="product_variant_count"/>
                 <field name="currency_id"/>
                 <field name="activity_state"/>
@@ -259,6 +260,7 @@
                 <field name="create_date" optional="hide"/>
                 <field name="write_date" optional="hide"/>
                 <field name="stage_id"/>
+                <field name="detailed_type" invisible="1"/>
             </tree>
         </field>
     </record>
@@ -370,6 +372,7 @@
                                 <field colspan="2" name="description_sale" nolabel="1" placeholder="This note is added to sales orders and invoices."/>
                             </group>
                         </page>
+                        <field name="detailed_type" invisible="1"/>
                         <field name="active" invisible="1"/>
                         <field name="detailed_type" invisible="1"/>
                         <field name="company_id" invisible="1"/>
