@@ -17,7 +17,7 @@ class ShelterRoom(models.Model):
     phone = fields.Char('Phone', related='home_id.phone', store=False)
     mobile = fields.Char('Mobile', related='home_id.mobile', store=False)
     shelter_note = fields.Text('Notes', related='home_id.shelter_note', store=False)
-    type = fields.Selection([('dog','Dogs'),('cat','Cats')], store=True, string='Pet type')
+    type = fields.Selection([('dog','Dog'),('cat','Cat')], store=True, string='Pet type')
     active = fields.Boolean('Active', default=True)
     date_begin = fields.Date('Date begin')
     date_end   = fields.Date('Date end')
@@ -36,8 +36,7 @@ class ShelterRoom(models.Model):
     def get_room_name(self):
         name = ""
         if self.home_id.id:     name = self.home_id.name
-        if self.type:           name += " - For: " + str(self.type)
-        if self.date_begin:     name += " | " + str(self.date_begin)
-        if self.date_end:       name += " - " + str(self.date_end) + "|"
+        if self.type:           name += " - " + str(self.type)
+        if self.date_begin:     name += " (" + str(self.date_begin) + ")"
         self.name = name
     name = fields.Char('Name', store=True, compute='get_room_name', readonly=True)

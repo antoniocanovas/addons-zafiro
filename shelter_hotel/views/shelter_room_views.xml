@@ -35,7 +35,19 @@
                         <field name="shelter_note" nolabel="1" colspan="2"/>
                     </group>
                     <group string="Reservations">
-                        <field name="reservation_ids" nolabel="1" colspan="2"/>
+                        <field name="reservation_ids" nolabel="1" colspan="2">
+                            <tree default_order="done">
+                                <field name="name" invisible="1"/>
+                                <field name="room_id" invisible="1"/>
+                                <field name="type"/>
+                                <field name="pet_id"/>
+                                <field name="home_id" optional="hide"/>
+                                <field name="location_id" optional="hide"/>
+                                <field name="date_begin"/>
+                                <field name="date_end"/>
+                                <field name="done" widget="boolean_toggle"/>
+                            </tree>
+                        </field>
                     </group>
                 </sheet>
                 <div class="oe_chatter">
