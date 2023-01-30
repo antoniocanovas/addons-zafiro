@@ -69,9 +69,11 @@
         <field name="arch" type="xml">
             <xpath expr="//page[@name='general_information']" position="before">
                 <page name="pet_task_lead" string="Tasks / Leads" attrs="{'invisible':[('pet_ok','=',False)]}">
-                    <field name="task_pp_ids"
-                           context="{'default_product_id':id, 'default_volunteer_id':volunteer_id,
+                    <div name="pet_process_pp">
+                        <field name="task_pp_ids"
+                               context="{'default_product_id':id, 'default_volunteer_id':volunteer_id,
                            'default_home_id':home_id, 'form_view_ref': 'project.view_task_form2'}"/>
+                    </div>
                 </page>
             </xpath>
         </field>
