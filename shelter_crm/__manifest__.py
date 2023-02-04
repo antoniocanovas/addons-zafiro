@@ -1,9 +1,9 @@
 {
-    'name': 'CRM Product',
+    'name': 'Shelter CRM',
     'version': '16.0.1.0.0',
     'category': '',
     'description': u"""
-
+Shelter CRM to adopters
 """,
     'author': 'Serincloud',
     'depends': [
