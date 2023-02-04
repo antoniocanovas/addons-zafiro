@@ -11,7 +11,7 @@ Shelter pet analytic
         'product_analytic',
     ],
     'data': [
-#        'views/product_views.xml',
+        'views/product_views.xml',
     ],
     'installable': True,
 }
