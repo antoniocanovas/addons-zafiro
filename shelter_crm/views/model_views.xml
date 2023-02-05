@@ -26,7 +26,7 @@
         <field name="name">product shelter pet lead</field>
         <field name="model">product.product</field>
         <field name="type">form</field>
-        <field name="inherit_id" ref="shelter_pet.product_pet_form_view"/>
+        <field name="inherit_id" ref="shelter_pet.shelter_product_pet_form_view"/>
         <field name="arch" type="xml">
             <group name="pet_tasks" position="after">
                 <group name="pet_leads" string="Leads">
@@ -49,7 +49,7 @@
         <field name="name">product product pet tree lead</field>
         <field name="model">product.product</field>
         <field name="type">tree</field>
-        <field name="inherit_id" ref="shelter_pet.product_pet_tree_view"/>
+        <field name="inherit_id" ref="shelter_pet.shelter_product_pet_tree_view"/>
         <field name="arch" type="xml">
             <field name="task_pp_ids" position="after">
                 <field name="lead_pp_ids" widget="many2many_tags"/>
