@@ -371,7 +371,7 @@
                                 <group name="pet_tasks" string="Tasks">
                                     <field name="task_pp_ids" nolabel="1" colspan="2"
                                            context="{'default_product_id':id, 'default_volunteer_id':volunteer_id,
-                                       'default_home_id':home_id, 'form_view_ref': 'project.view_task_form2'}"/>
+                                       'default_home_id':home_id, 'form_view_ref': 'project.view_task_form2'}">
                                       <tree multi_edit="1" sample="1" js_class="project_task_list">
                                         <field name="message_needaction" invisible="1" readonly="1"/>
                                         <field name="is_closed" invisible="1"/>
