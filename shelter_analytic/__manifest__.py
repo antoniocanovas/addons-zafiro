@@ -12,6 +12,7 @@ Shelter pet analytic
     ],
     'data': [
         'views/product_views.xml',
+        'views/res_company_views.xml',
     ],
     'installable': True,
 }

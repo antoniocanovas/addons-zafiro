@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="shelter_company_form_inh" model="ir.ui.view">
+        <field name="name">Shelter company form view inh</field>
+        <field name="model">res.company</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <field name="shelter_location_id" position="after">
+                <field name="shelter_analytic_plan"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
