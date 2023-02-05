@@ -104,8 +104,8 @@
     </record>
 
 
-    <record id="product_pet_search_view" model="ir.ui.view">
-        <field name="name">product.pet.search.inh</field>
+    <record id="shelter_product_pet_search_view" model="ir.ui.view">
+        <field name="name">shelter.product.pet.search.inh</field>
         <field name="model">product.product</field>
         <field name="inherit_id" eval="False"/>
         <field name="arch" type="xml">
@@ -141,8 +141,8 @@
     </record>
 
 
-    <record id="product_pet_kanban_view" model="ir.ui.view">
-        <field name="name">Product Pet Kanban</field>
+    <record id="shelter_product_pet_kanban_view" model="ir.ui.view">
+        <field name="name">Shelter Product Pet Kanban</field>
         <field name="model">product.product</field>
         <field name="priority">99</field>
         <field name="type">kanban</field>
@@ -232,8 +232,8 @@
         </field>
     </record>
 
-    <record id="product_pet_tree_view" model="ir.ui.view">
-        <field name="name">Product Pet Tree</field>
+    <record id="shelter_product_pet_tree_view" model="ir.ui.view">
+        <field name="name">Shelter Product Pet Tree</field>
         <field name="model">product.product</field>
         <field name="priority">99</field>
         <field name="type">tree</field>
@@ -266,8 +266,8 @@
         </field>
     </record>
 
-    <record id="product_pet_form_view" model="ir.ui.view">
-        <field name="name">Product Pet Form</field>
+    <record id="shelter_product_pet_form_view" model="ir.ui.view">
+        <field name="name">Shelter Product Pet Form</field>
         <field name="model">product.product</field>
         <field name="priority">99</field>
         <field name="type">form</field>
@@ -374,6 +374,19 @@
                                        'default_home_id':home_id, 'form_view_ref': 'project.view_task_form2'}"/>
                                 </group>
                             </div>
+                        </page>
+                        <page string="Accounting" name="invoicing" groups="account.group_account_readonly,account.group_account_invoice">
+                            <group name="properties" groups="account.group_account_readonly">
+                                <group string="Receivables">
+                                    <field name="taxes_id" widget="many2many_tags" context="{'default_type_tax_use':'sale', 'search_default_sale': 1, 'search_default_service': type == 'service', 'search_default_goods': type == 'consu'}"/>
+                                    <field name="property_account_income_id" groups="account.group_account_readonly"/>
+                                </group>
+                                <group string="Payables" name="payables">
+                                    <field name="supplier_taxes_id" widget="many2many_tags" context="{'default_type_tax_use':'purchase', 'search_default_purchase': 1, 'search_default_service': type == 'service', 'search_default_goods': type == 'consu'}"/>
+                                    <field name="property_account_expense_id" groups="account.group_account_readonly"/>
+                                </group>
+                            </group>
+                            <group name="accounting" groups="account.group_account_readonly,account.group_account_invoice"/>
                         </page>
                         <field name="detailed_type" invisible="1"/>
                         <field name="active" invisible="1"/>

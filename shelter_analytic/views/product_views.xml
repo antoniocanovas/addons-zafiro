@@ -9,16 +9,12 @@
         <field name="priority">99</field>
         <field name="arch" type="xml">
             <data>
-                <group name="description" position="before">
-                    <group>
-                        <group>
-                            <field name="income_analytic_account_id" groups="account.group_account_readonly"/>
-                        </group>
-                        <group>
-                            <field name="expense_analytic_account_id" groups="account.group_account_readonly"/>
-                        </group>
-                    </group>
-                </group>
+                <field name="property_account_income_id" position="after">
+                    <field name="income_analytic_account_id" groups="account.group_account_readonly"/>
+                </field>
+                <field name="property_account_expense_id" position="after">
+                    <field name="expense_analytic_account_id" groups="account.group_account_readonly"/>
+                </field>
             </data>
         </field>
     </record>
