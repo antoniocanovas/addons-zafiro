@@ -11,6 +11,7 @@ Base module for Pets as Odoo Products.
         'product',
         'project',
         'stock',
+        'account',
     ],
     "data": [
         "data/product_stage.xml",
