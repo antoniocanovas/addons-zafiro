@@ -45,5 +45,5 @@ class ProductProduct(models.Model):
     stage_pp_id = fields.Many2one('product.stage', string='Stage Product', store=True,
                                 readonly=False, related='product_tmpl_id.stage_id',)
     task_pp_ids = fields.One2many('project.task', 'product_id', string='Tasks', store=True)
-#    responsible_id = fields.Many2one('res.users', string='Responsible (staff) ', store=True,
-#                                     related='product_tmpl_id.responsible_id', readonly=False)
+    responsible_id = fields.Many2one('res.users', string='Responsible (staff)', store=True,
+                                     related='product_tmpl_id.responsible_id', readonly=False)
