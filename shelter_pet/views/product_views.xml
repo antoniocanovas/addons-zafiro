@@ -239,6 +239,7 @@
         <field name="type">tree</field>
         <field name="arch" type="xml">
             <tree string="Pets" multi_edit="True"
+                  decoration-muted = "stage_code == 'external'"
                   decoration-it   = "stage_code == 'ceproamur'"
                   decoration-primary = "stage_code == 'new'"
                   decoration-success = "stage_code == 'available'"
@@ -246,7 +247,6 @@
                   decoration-info = "stage_code == 'preadoption'"
                   decoration-warning = "stage_code == 'done'"
                   decoration-danger   = "stage_code == 'decesased'"
-        <!--          decoration-muted = "stage_code == ''" -->
             >
                 <field name="name"/>
                 <field name="categ_id"/>
