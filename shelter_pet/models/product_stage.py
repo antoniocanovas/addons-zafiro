@@ -14,4 +14,3 @@ class ProductStage(models.Model):
     name = fields.Char(string='Name')
     sequence = fields.Integer(string="Sequence")
     code = fields.Char(string="Code")
-    color = fields.Integer('Color', store=True)
