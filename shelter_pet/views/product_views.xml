@@ -272,6 +272,7 @@
                 <field name="stage_id"/>
                 <field name="detailed_type" invisible="1"/>
                 <field name="stage_code" invisible="1"/>
+                <field name="stage_sequence" invisible="1"/>
             </tree>
         </field>
     </record>

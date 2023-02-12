@@ -47,3 +47,4 @@ class ProductProduct(models.Model):
     responsible_id = fields.Many2one('res.users', string='Responsible (staff)', store=True,
                                      related='product_tmpl_id.responsible_id', readonly=False)
     stage_code = fields.Char('Stage code', related='stage_pp_id.code')
+    stage_sequence = fields.Integer('Stage sequence', related='stage_pp_id.sequence', store=True)
