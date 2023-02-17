@@ -68,7 +68,7 @@
 
     <menuitem
             id="menu_network_tasks"
-            name="Veterinary"
+            name="Network"
             action="shelter_pet.action_shelter_network_task"
             groups="project.group_project_user"
             sequence="23"
@@ -93,7 +93,7 @@
 
     <menuitem
             id="menu_management_tasks"
-            name="Veterinary"
+            name="Management"
             action="shelter_pet.action_shelter_management_task"
             groups="project.group_project_user"
             sequence="26"
