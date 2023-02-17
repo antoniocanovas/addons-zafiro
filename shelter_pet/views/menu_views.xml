@@ -67,7 +67,7 @@
     </record>
 
     <menuitem
-            id="menu_veterinary_tasks"
+            id="menu_network_tasks"
             name="Veterinary"
             action="shelter_pet.action_shelter_network_task"
             groups="project.group_project_user"
@@ -92,7 +92,7 @@
     </record>
 
     <menuitem
-            id="menu_veterinary_tasks"
+            id="menu_management_tasks"
             name="Veterinary"
             action="shelter_pet.action_shelter_management_task"
             groups="project.group_project_user"
