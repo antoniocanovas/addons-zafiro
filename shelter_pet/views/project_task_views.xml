@@ -75,4 +75,25 @@
     </record>
 
 
+    <record id="project_task_pet_calendar_inh" model="ir.ui.view">
+        <field name="name">Project Task Pet Calendar Inherited</field>
+        <field name="model">project.task</field>
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//calendar" position="attributes">
+                    <attribute name="scales">day,week,month,year</attribute>
+                    <attribute name="mode">week</attribute>
+                </xpath>
+            </data>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" ref="project.view_task_calendar"/>
+        <field name="key" eval="False"/>
+        <field name="mode">extension</field>
+        <field name="priority">99</field>
+        <field name="type">calendar</field>
+    </record>
+
 </odoo>
