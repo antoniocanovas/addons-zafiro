@@ -9,6 +9,9 @@
         <field name="arch" type="xml">
             <field name="website" position="after">
                 <field name="shelter_location_id"/>
+                <field name="veterinary_type_id"/>
+                <field name="network_type_id"/>
+                <field name="management_type_id"/>
             </field>
         </field>
     </record>
