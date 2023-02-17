@@ -31,7 +31,7 @@
         <field name="res_model">project.task</field>
         <field name="view_mode">calendar,tree,form,pivot,activity</field>
         <field name="context">{'search_default_my_tasks': 1, 'search_default_open_tasks': 1, 'all_task': 0, 'default_user_ids': [(4, uid)]}</field>
-        <field name="search_view_id">project.view_task_search_form_extended</field>
+        <field name="search_view_id" ref="project.view_task_search_form_extended"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Book your Task for veterinaries.
@@ -56,7 +56,7 @@
         <field name="res_model">project.task</field>
         <field name="view_mode">calendar,tree,form,pivot,activity</field>
         <field name="context">{'search_default_my_tasks': 1, 'search_default_open_tasks': 1, 'all_task': 0, 'default_user_ids': [(4, uid)]}</field>
-        <field name="search_view_id">project.view_task_search_form_extended</field>
+        <field name="search_view_id" ref="project.view_task_search_form_extended"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Book your Task for network and socials.
@@ -81,7 +81,7 @@
         <field name="res_model">project.task</field>
         <field name="view_mode">calendar,tree,form,pivot,activity</field>
         <field name="context">{'search_default_my_tasks': 1, 'search_default_open_tasks': 1, 'all_task': 0, 'default_user_ids': [(4, uid)]}</field>
-        <field name="search_view_id">project.view_task_search_form_extended</field>
+        <field name="search_view_id" ref="project.view_task_search_form_extended"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Book your Task for internal and management.
