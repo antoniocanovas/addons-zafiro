@@ -45,7 +45,7 @@
           name="Reservations"
           action="action_shelter_reservation"
           groups="stock.group_stock_user"
-          sequence="20"
+          sequence="60"
           parent="shelter_pet.menu_shelter_main"
   />
 
@@ -54,7 +54,7 @@
           name="Rooms"
           action="action_shelter_room"
           groups="stock.group_stock_user"
-          sequence="30"
+          sequence="70"
           parent="shelter_pet.menu_shelter_main"
   />
 

@@ -1,28 +1,103 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <odoo>
 
-  <record id="action_shelter_pets" model="ir.actions.act_window">
-    <field name="name">Pets</field>
-    <field name="res_model">product.product</field>
-    <field name="view_mode">kanban,tree,form</field>
-    <field name="context">{'default_detailed_type':'product', 'default_stage_id':1, 'default_pet_ok':True}</field>
-    <field name="domain">[('pet_ok','=',True)]</field>
-    <field name="search_view_id" eval="shelter_product_pet_search_view"/>
-    <field name="view_ids"
-           eval="[(5, 0, 0),
+    <record id="action_shelter_pets" model="ir.actions.act_window">
+        <field name="name">Pets</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'default_detailed_type':'product', 'default_stage_id':1, 'default_pet_ok':True}</field>
+        <field name="domain">[('pet_ok','=',True)]</field>
+        <field name="search_view_id" eval="shelter_product_pet_search_view"/>
+        <field name="view_ids"
+               eval="[(5, 0, 0),
                           (0, 0, {'view_mode': 'kanban', 'view_id': ref('shelter_product_pet_kanban_view')}),
                           (0, 0, {'view_mode': 'tree', 'view_id': ref('shelter_product_pet_tree_view')}),
                           (0, 0, {'view_mode': 'form', 'view_id': ref('shelter_product_pet_form_view')}),
                           ]"/>
-  </record>
+    </record>
 
-  <menuitem
-          id="menu_shelter_main"
-          name="Shelter"
-          action="action_shelter_pets"
-          groups="stock.group_stock_user"
-          web_icon="shelter_pet,static/icon.png"
-          sequence="10"
-  />
+    <menuitem
+            id="menu_shelter_main"
+            name="Shelter"
+            action="action_shelter_pets"
+            groups="stock.group_stock_user"
+            web_icon="shelter_pet,static/icon.png"
+            sequence="10"
+    />
+
+    <!-- VETERINARY SPECIAL TASK VIEW: -->
+    <record id="action_shelter_veterinary_task" model="ir.actions.act_window">
+        <field name="name">Shelter veterinary tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">calendar,tree,form,pivot,activity</field>
+        <field name="context">{'search_default_my_tasks': 1, 'search_default_open_tasks': 1, 'all_task': 0, 'default_user_ids': [(4, uid)]}</field>
+        <field name="search_view_id">project.view_task_search_form_extended</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Book your Task for veterinaries.
+            </p><p>
+            We help you track availability and history
+        </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_veterinary_tasks"
+            name="Veterinary"
+            action="shelter_pet.action_shelter_veterinary_task"
+            groups="project.group_project_user"
+            sequence="20"
+            parent="shelter_pet.menu_shelter_main"
+    />
+
+    <!-- NETWORK SPECIAL TASK VIEW: -->
+    <record id="action_shelter_veterinary_task" model="ir.actions.act_window">
+        <field name="name">Shelter network tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">calendar,tree,form,pivot,activity</field>
+        <field name="context">{'search_default_my_tasks': 1, 'search_default_open_tasks': 1, 'all_task': 0, 'default_user_ids': [(4, uid)]}</field>
+        <field name="search_view_id">project.view_task_search_form_extended</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Book your Task for network and socials.
+            </p><p>
+            We help you track availability and history
+        </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_veterinary_tasks"
+            name="Veterinary"
+            action="shelter_pet.action_shelter_veterinary_task"
+            groups="project.group_project_user"
+            sequence="23"
+            parent="shelter_pet.menu_shelter_main"
+    />
+
+    <!-- MANAGEMENT SPECIAL TASK VIEW: -->
+    <record id="action_shelter_veterinary_task" model="ir.actions.act_window">
+        <field name="name">Shelter management tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">calendar,tree,form,pivot,activity</field>
+        <field name="context">{'search_default_my_tasks': 1, 'search_default_open_tasks': 1, 'all_task': 0, 'default_user_ids': [(4, uid)]}</field>
+        <field name="search_view_id">project.view_task_search_form_extended</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Book your Task for internal and management.
+            </p><p>
+            We help you track availability and history
+        </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_veterinary_tasks"
+            name="Veterinary"
+            action="shelter_pet.action_shelter_veterinary_task"
+            groups="project.group_project_user"
+            sequence="26"
+            parent="shelter_pet.menu_shelter_main"
+    />
 
 </odoo>
