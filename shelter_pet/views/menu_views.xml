@@ -51,7 +51,7 @@
     />
 
     <!-- NETWORK SPECIAL TASK VIEW: -->
-    <record id="action_shelter_veterinary_task" model="ir.actions.act_window">
+    <record id="action_shelter_network_task" model="ir.actions.act_window">
         <field name="name">Shelter network tasks</field>
         <field name="res_model">project.task</field>
         <field name="view_mode">calendar,tree,form,pivot,activity</field>
@@ -69,14 +69,14 @@
     <menuitem
             id="menu_veterinary_tasks"
             name="Veterinary"
-            action="shelter_pet.action_shelter_veterinary_task"
+            action="shelter_pet.action_shelter_network_task"
             groups="project.group_project_user"
             sequence="23"
             parent="shelter_pet.menu_shelter_main"
     />
 
     <!-- MANAGEMENT SPECIAL TASK VIEW: -->
-    <record id="action_shelter_veterinary_task" model="ir.actions.act_window">
+    <record id="action_shelter_management_task" model="ir.actions.act_window">
         <field name="name">Shelter management tasks</field>
         <field name="res_model">project.task</field>
         <field name="view_mode">calendar,tree,form,pivot,activity</field>
@@ -94,7 +94,7 @@
     <menuitem
             id="menu_veterinary_tasks"
             name="Veterinary"
-            action="shelter_pet.action_shelter_veterinary_task"
+            action="shelter_pet.action_shelter_management_task"
             groups="project.group_project_user"
             sequence="26"
             parent="shelter_pet.menu_shelter_main"
