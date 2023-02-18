@@ -1,0 +1,58 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* shelter_website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-18 16:52+0000\n"
+"PO-Revision-Date: 2023-02-18 17:56+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: shelter_website
+#: model_terms:ir.ui.view,arch_db:shelter_website.product_shelter_pet_images_form
+msgid "Add a Media"
+msgstr "Añade foto o vídeo"
+
+#. module: shelter_website
+#: model_terms:ir.ui.view,arch_db:shelter_website.product_shelter_pet_images_form
+msgid "Categories"
+msgstr "Categorías"
+
+#. module: shelter_website
+#: model_terms:ir.ui.view,arch_db:shelter_website.product_shelter_pet_images_form
+msgid "Displayed in bottom of product pages"
+msgstr "Mostrado en el pie de las páginas de producto"
+
+#. module: shelter_website
+#: model_terms:ir.ui.view,arch_db:shelter_website.product_shelter_pet_images_form
+msgid "Extra Product Media"
+msgstr "Foto o vídeo extra"
+
+#. module: shelter_website
+#: model_terms:ir.ui.view,arch_db:shelter_website.product_shelter_pet_images_form
+msgid "Suggested accessories in the eCommerce cart"
+msgstr "Accesorios sugeridos en el carrito del Commerce"
+
+#. module: shelter_website
+#: model_terms:ir.ui.view,arch_db:shelter_website.product_shelter_pet_images_form
+msgid "Upsell"
+msgstr "Venta adicional"
+
+#. module: shelter_website
+#: model_terms:ir.ui.view,arch_db:shelter_website.product_shelter_pet_images_form
+msgid "eCommerce"
+msgstr "comercio electrónico"
+
+#. module: shelter_website
+#: model_terms:ir.ui.view,arch_db:shelter_website.product_shelter_pet_images_form
+msgid "eCommerce Shop"
+msgstr "tienda Comercio electrónico"

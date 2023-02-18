@@ -1,5 +1,5 @@
 {
-    'name': 'Sheleter Analytic',
+    'name': 'Shelter Analytic',
     'version': '16.0.1.0.0',
     'category': '',
     'description': u"""

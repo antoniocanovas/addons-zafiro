@@ -1,0 +1,570 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* shelter_hotel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-18 16:33+0000\n"
+"PO-Revision-Date: 2023-02-18 17:49+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_needaction
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__active
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Active"
+msgstr "Activo"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_ids
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_exception_decoration
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decorador de actividad por excepción"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_state
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_type_icon
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Allowed pet type"
+msgstr "Tipo de mascota"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_attachment_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_attachment_count
+msgid "Attachment Count"
+msgstr "Anexos"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__available
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Available"
+msgstr "Disponible"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__date_begin
+msgid "Begin"
+msgstr "Comienzo"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Begin Date"
+msgstr "Fecha inicio"
+
+#. module: shelter_hotel
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_shelter_reservation
+msgid "Book your Pet in a volunteer home."
+msgstr "Registra la mascota en la casa de un voluntario."
+
+#. module: shelter_hotel
+#: model:ir.model.fields.selection,name:shelter_hotel.selection__shelter_room__type__cat
+msgid "Cat"
+msgstr "Gato"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__city
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_form
+msgid "Comments"
+msgstr "Comentarios"
+
+#. module: shelter_hotel
+#: model:ir.model,name:shelter_hotel.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__country_id
+msgid "Country"
+msgstr "País"
+
+#. module: shelter_hotel
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_shelter_room
+msgid "Create a room of your shelter volunteers home ... and other"
+msgstr "Crea una plaza de mascota en el hogar de un voluntario … u otros"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__create_uid
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__create_date
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__date_begin
+msgid "Date begin"
+msgstr "Fecha de entrada"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__date_end
+msgid "Date end"
+msgstr "Fecha fin"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_calendar
+msgid "Default calendar view for shelter.reservation"
+msgstr "Calendario por defecto para reservas"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__display_name
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: shelter_hotel
+#: model:ir.model.fields.selection,name:shelter_hotel.selection__shelter_room__type__dog
+msgid "Dog"
+msgstr "Perro"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__done
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+msgid "Done"
+msgstr "Hecho"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__date_end
+msgid "End"
+msgstr "Fin"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "End Date"
+msgstr "Fecha fin"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_follower_ids
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_partner_ids
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (contactos)"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__activity_type_icon
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de tipo de fuente, p.e. fa-tasks"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__has_message
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__home_id
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__home_id
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Home"
+msgstr "Casa de acogida"
+
+#. module: shelter_hotel
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_view_product_reservations
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_view_product_tmpl_reservations
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_view_reservations
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_view_rooms
+msgid "Home Reservations"
+msgstr "Reservas"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__id
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__id
+msgid "ID"
+msgstr "ID"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_exception_icon
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__activity_exception_icon
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar la excepción de la actividad."
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__message_needaction
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si marcado, nuevos mensajes requieren tu atención."
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__message_has_error
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__message_has_sms_error
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__message_has_error
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si marcado, algún mensaje tiene un error de entrega."
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_is_follower
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation____last_update
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__write_uid
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__write_date
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__location_id
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__location_id
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_main_attachment_id
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Anexo principal"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_has_error
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_has_error
+msgid "Message Delivery error"
+msgstr "Mensajes con errores de entrega"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_ids
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__mobile
+msgid "Mobile"
+msgstr "Móvil"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mis actividades por vencimiento"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__name
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Próxima actividad de calendario"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_date_deadline
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Próximo vencimiento de actividad"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_summary
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_summary
+msgid "Next Activity Summary"
+msgstr "Asunto de próxima actividad"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_type_id
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipo de próxima actividad"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Not Available"
+msgstr "No disponible"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__comment
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__shelter_note
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_needaction_counter
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_has_error_counter
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__message_needaction_counter
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__message_has_error_counter
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__pet_id
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+msgid "Pet"
+msgstr "Peludo"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__type
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__type
+msgid "Pet type"
+msgstr "Tipo de mascota"
+
+#. module: shelter_hotel
+#: model:ir.ui.menu,name:shelter_hotel.menu_shelter_submain
+msgid "Pets"
+msgstr "Peludos"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__phone
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: shelter_hotel
+#: model:ir.model,name:shelter_hotel.model_product_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__product_tmpl_id
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: shelter_hotel
+#: model:ir.model,name:shelter_hotel.model_product_product
+msgid "Product Variant"
+msgstr "Variantes de producto"
+
+#. module: shelter_hotel
+#: model:ir.actions.act_window,name:shelter_hotel.action_view_product_reservations
+#: model:ir.actions.act_window,name:shelter_hotel.action_view_product_tmpl_reservations
+#: model:ir.actions.act_window,name:shelter_hotel.action_view_reservations
+#: model:ir.actions.act_window,name:shelter_hotel.action_view_room_reservations
+#: model:ir.model.fields,field_description:shelter_hotel.field_product_product__pet_pt_reservation_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_product_product__pet_reservation_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_product_template__pet_pt_reservation_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_res_partner__shelter_reservation_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_res_partner__shelter_room_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_res_users__shelter_reservation_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_res_users__shelter_room_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__reservation_count
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__reservation_ids
+#: model:ir.ui.menu,name:shelter_hotel.menu_shelter_reservation
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.partner_shelter_reservation_form_inh
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.product_pet_shelter_hotel_inh
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.product_product_shelter_hotel_inh
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.product_template_shelter_hotel_inh
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_form
+msgid "Reservations"
+msgstr "Reservas"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__activity_user_id
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__activity_user_id
+msgid "Responsible User"
+msgstr "Responsable"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__room_id
+msgid "Room"
+msgstr "Plaza"
+
+#. module: shelter_hotel
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_view_room_reservations
+msgid "Room Reservations"
+msgstr "Reserva de plazas"
+
+#. module: shelter_hotel
+#: model:ir.model,name:shelter_hotel.model_shelter_reservation
+msgid "Room reservations for pets"
+msgstr "Reservas para mascotas"
+
+#. module: shelter_hotel
+#: model:ir.actions.act_window,name:shelter_hotel.action_view_rooms
+#: model:ir.ui.menu,name:shelter_hotel.menu_shelter_room
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.partner_shelter_room_form_inh
+msgid "Rooms"
+msgstr "Plazas"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__message_has_sms_error
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Errores de SMS"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+msgid "Search Reservations"
+msgstr "Buscar reservas"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Search Rooms"
+msgstr "Buscar plaza"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_form
+msgid "Sheet Reservation"
+msgstr "Hoja de reserva"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_form
+msgid "Sheet Room"
+msgstr "Hoja de plaza"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_form
+msgid "Shelter Reservation"
+msgstr "Reserva de acogida"
+
+#. module: shelter_hotel
+#: model:ir.actions.act_window,name:shelter_hotel.action_shelter_reservation
+msgid "Shelter Reservations"
+msgstr "Reservas de acogidas"
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_form
+msgid "Shelter Room"
+msgstr "Plaza mascota"
+
+#. module: shelter_hotel
+#: model:ir.actions.act_window,name:shelter_hotel.action_shelter_room
+msgid "Shelter Rooms"
+msgstr "Plazas de mascotas"
+
+#. module: shelter_hotel
+#: model:ir.model,name:shelter_hotel.model_shelter_room
+msgid "Shelter room for pets"
+msgstr "Plaza para mascota"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__state_id
+msgid "State"
+msgstr "Estado"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__activity_state
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencidos: Fecha de compromiso ya vencida\n"
+"Hoy: Actividad para hoy\n"
+"Planificado: Actividades futuras."
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__activity_exception_decoration
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de alertas de actividad en el registro."
+
+#. module: shelter_hotel
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_reservation_default_search
+#: model_terms:ir.ui.view,arch_db:shelter_hotel.shelter_room_default_search
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: shelter_hotel
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_shelter_reservation
+#: model_terms:ir.actions.act_window,help:shelter_hotel.action_shelter_room
+msgid "We help you track availability and history"
+msgstr "Documenta la disponibilidad e historial"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_reservation__website_message_ids
+#: model:ir.model.fields,field_description:shelter_hotel.field_shelter_room__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes de la web"
+
+#. module: shelter_hotel
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_reservation__website_message_ids
+#: model:ir.model.fields,help:shelter_hotel.field_shelter_room__website_message_ids
+msgid "Website communication history"
+msgstr "Comunicaciones de la web"
