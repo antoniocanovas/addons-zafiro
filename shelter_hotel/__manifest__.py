@@ -1,5 +1,5 @@
 {
-    'name': 'CRM Product',
+    'name': 'Shelter Hotel',
     'version': '16.0.1.0.0',
     'category': '',
     'description': u"""

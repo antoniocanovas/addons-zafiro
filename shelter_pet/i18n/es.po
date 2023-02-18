@@ -1,0 +1,686 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* shelter_pet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-18 09:41+0000\n"
+"PO-Revision-Date: 2023-02-18 12:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_kanban_view
+msgid "<b>Exp: </b>"
+msgstr ""
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_kanban_view
+msgid "<b>Home: </b>"
+msgstr "<b>Casa: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.project_task_pet_kanban_inh
+msgid "<b>Home:</b>"
+msgstr "<b>Casa: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.project_task_pet_kanban_inh
+msgid "<b>Pet:</b>"
+msgstr "<b>Peludo: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_kanban_view
+msgid "<b>Sex: </b>"
+msgstr "<b>Sexo: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_kanban_view
+msgid "<b>Veterinay: </b>"
+msgstr "<b>Veterinario: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.project_task_pet_kanban_inh
+msgid "<b>Veterinay:</b>"
+msgstr "<b>Veterinario: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_kanban_view
+msgid "<b>Volunteer: </b>"
+msgstr "<b>Voluntario: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.project_task_pet_kanban_inh
+msgid "<b>Volunteer:</b>"
+msgstr "<b>Voluntario: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_kanban_view
+msgid "<b>birthdate: </b>"
+msgstr "<b>Fecha nacimiento: </b>"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid ""
+"<span attrs=\"{'invisible': [('pricelist_item_count', '=', 1)]}\">\n"
+"                                    Extra Prices\n"
+"                                </span>\n"
+"                                <span attrs=\"{'invisible': "
+"[('pricelist_item_count', '!=', 1)]}\">\n"
+"                                    Extra Price\n"
+"                                </span>"
+msgstr ""
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Accounting"
+msgstr "Contabilidad"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Adoption fee"
+msgstr "Donativo adopción"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__pet_origin
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__pet_origin
+msgid "Alias"
+msgstr "Alias"
+
+#. module: shelter_pet
+#: model:ir.model.fields.selection,name:shelter_pet.selection__res_partner__shelter_state__approved
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__birthdate
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__birthdate
+msgid "Birthdate"
+msgstr "Fecha de nacimiento"
+
+#. module: shelter_pet
+#: model_terms:ir.actions.act_window,help:shelter_pet.action_shelter_management_task
+msgid "Book your Task for internal and management."
+msgstr "Documenta tus tareas internas y de gestión."
+
+#. module: shelter_pet
+#: model_terms:ir.actions.act_window,help:shelter_pet.action_shelter_network_task
+msgid "Book your Task for network and socials."
+msgstr "Documenta tus tareas de publicaciones y redes sociales."
+
+#. module: shelter_pet
+#: model_terms:ir.actions.act_window,help:shelter_pet.action_shelter_veterinary_task
+msgid "Book your Task for veterinaries."
+msgstr "Documenta tus tareas con veterinarios."
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Can be Sold"
+msgstr "Puede ser vendido"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Chip"
+msgstr "Chip"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__code
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__code
+msgid "Code"
+msgstr "Código"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.res_partner_pet_search_inh
+msgid "Collaboration"
+msgstr "Colaboración"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__type_char
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__type_ids
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__type_char
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__type_ids
+msgid "Collaborations"
+msgstr "Colaboraciones"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__color
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__pet_color
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__pet_color
+msgid "Color"
+msgstr "Color"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_company__network_type_id
+msgid "Communication type"
+msgstr "Tipo de comunicación"
+
+#. module: shelter_pet
+#: model:ir.model,name:shelter_pet.model_res_company
+msgid "Companies"
+msgstr "Empresas"
+
+#. module: shelter_pet
+#: model:ir.model,name:shelter_pet.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__create_uid
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__create_date
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__shelter_end
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__shelter_end
+msgid "Date end"
+msgstr "Fecha salida"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__date_finish
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__date_finish
+msgid "Date finish"
+msgstr "Fecha fin"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__date_start
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__date_start
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__shelter_begin
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__shelter_begin
+msgid "Date start"
+msgstr "Fecha inicio"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__shelter_location_id
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__shelter_location_id
+msgid "Default parent location"
+msgstr "Ubicación padre por defecto"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__display_name
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Expedient number"
+msgstr "Nº expediente"
+
+#. module: shelter_pet
+#: model:ir.model.fields.selection,name:shelter_pet.selection__res_partner__shelter_state__fail
+msgid "Failed"
+msgstr "Fallo"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Favorites"
+msgstr "Favoritos"
+
+#. module: shelter_pet
+#: model:ir.model.fields.selection,name:shelter_pet.selection__product_template__sex__female
+msgid "Female"
+msgstr "Hembra"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Group By"
+msgstr "Agrupado por"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__hair
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__hair
+msgid "Hair"
+msgstr "Pelaje"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__home_id
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__home_id
+#: model:ir.model.fields,field_description:shelter_pet.field_project_task__home_id
+msgid "Home"
+msgstr "Casa"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.res_partner_pet_search_inh
+msgid "Homes"
+msgstr "Casas"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__id
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__id
+msgid "ID"
+msgstr ""
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_project_task__product_image
+msgid "Image"
+msgstr "Foto"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Internal Notes"
+msgstr "Notas internas"
+
+#. module: shelter_pet
+#: model:ir.model,name:shelter_pet.model_stock_location
+msgid "Inventory Locations"
+msgstr "Ubicaciones de inventario"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type____last_update
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage____last_update
+msgid "Last Modified on"
+msgstr "Última modificación"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__write_uid
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__write_date
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__location_id
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__location_id
+#: model:ir.model.fields,field_description:shelter_pet.field_project_task__location_id
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: shelter_pet
+#: model:ir.model.fields.selection,name:shelter_pet.selection__product_template__sex__male
+msgid "Male"
+msgstr "Macho"
+
+#. module: shelter_pet
+#: model:ir.ui.menu,name:shelter_pet.menu_management_tasks
+msgid "Management"
+msgstr "Gestión"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_company__management_type_id
+msgid "Management type"
+msgstr "Type de gestión"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_partner_type__name
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: shelter_pet
+#: model:ir.ui.menu,name:shelter_pet.menu_network_tasks
+msgid "Network"
+msgstr "Comunicaciones"
+
+#. module: shelter_pet
+#: model:ir.model.fields.selection,name:shelter_pet.selection__res_partner__shelter_state__new
+msgid "New"
+msgstr "Nuevo"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_tree_view
+msgid "Next Activity"
+msgstr "Próxima actividad"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Not yet"
+msgstr "Todavía no"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__shelter_note
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__shelter_note
+msgid "Notes"
+msgstr "Notas"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_stock_location__partner_id
+msgid "Partner"
+msgstr "Contacto"
+
+#. module: shelter_pet
+#: model:ir.model,name:shelter_pet.model_partner_type
+msgid "Partner Type"
+msgstr "Tipo de contacto"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Payables"
+msgstr "Pagos"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__pet_ok
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__pet_ok
+#: model:ir.model.fields,field_description:shelter_pet.field_project_task__product_id
+#: model_terms:ir.ui.view,arch_db:shelter_pet.product_template_pet_form_inh
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Pet"
+msgstr "Peludo"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_project_task__product_tmpl_id
+msgid "Pet template"
+msgstr "Plantilla de peludo"
+
+#. module: shelter_pet
+#: model:ir.actions.act_window,name:shelter_pet.action_shelter_pets
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_tree_view
+msgid "Pets"
+msgstr "Peludos"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Print Labels"
+msgstr "Etiquetas de impresión"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Process"
+msgstr "Procesar"
+
+#. module: shelter_pet
+#: model:ir.model,name:shelter_pet.model_product_template
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Product"
+msgstr "Producto"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Product Category"
+msgstr "Categoría"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Product Name"
+msgstr "Nombre de product"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Product Pet"
+msgstr "Es peludo"
+
+#. module: shelter_pet
+#: model:ir.model,name:shelter_pet.model_product_stage
+msgid "Product Stage"
+msgstr "Etapa"
+
+#. module: shelter_pet
+#: model:ir.model,name:shelter_pet.model_product_product
+msgid "Product Variant"
+msgstr "Variantes de producto"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_project_task__project_type
+msgid "Project type"
+msgstr "Tipo de proyecto"
+
+#. module: shelter_pet
+#: model:ir.model.fields,help:shelter_pet.field_res_company__network_type_id
+msgid "Project type for communication tasks"
+msgstr ""
+"Tipo de proyecto para comunicaciones, publicaciones y redes sociales"
+
+#. module: shelter_pet
+#: model:ir.model.fields,help:shelter_pet.field_res_company__management_type_id
+msgid "Project type for management tasks"
+msgstr "Tipo de proyecto para tareas de gestión, rescate y traslados"
+
+#. module: shelter_pet
+#: model:ir.model.fields,help:shelter_pet.field_res_company__veterinary_type_id
+msgid "Proyect type for verterinary tasks"
+msgstr "Tipo de proyecto para tareas de veterinarios"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Rating"
+msgstr "Puntuación"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Receivables"
+msgstr "Ingresos"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__rescuer_id
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__rescuer_id
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Rescuer"
+msgstr "Rescatador"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__responsible_id
+msgid "Responsible (staff)"
+msgstr "Responsable (staff)"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Sale and eCommerce description (Pet history)"
+msgstr ""
+"Descripción para ventas y comercio electrónico (habitualmente la "
+"historia del peludo)"
+
+#. module: shelter_pet
+#: model:ir.model.fields.selection,name:shelter_pet.selection__res_partner__shelter_state__sent
+msgid "Sent"
+msgstr "Enviado"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_stage__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__sex
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__sex
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Sex"
+msgstr "Sexo"
+
+#. module: shelter_pet
+#: model:ir.ui.menu,name:shelter_pet.menu_shelter_main
+#: model_terms:ir.ui.view,arch_db:shelter_pet.view_res_partner_pet_form_inh
+msgid "Shelter"
+msgstr "Protectora"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_company__shelter_location_id
+msgid "Shelter locations"
+msgstr "Ubicaciones"
+
+#. module: shelter_pet
+#: model:ir.actions.act_window,name:shelter_pet.action_shelter_management_task
+msgid "Shelter management tasks"
+msgstr "Tareas de gestión, rescate y traslados"
+
+#. module: shelter_pet
+#: model:ir.actions.act_window,name:shelter_pet.action_shelter_network_task
+msgid "Shelter network tasks"
+msgstr "Tareas de comunicación y redes sociales"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.view_res_partner_pet_form_inh
+msgid "Shelter notes:"
+msgstr "Notas:"
+
+#. module: shelter_pet
+#: model:ir.actions.act_window,name:shelter_pet.action_shelter_veterinary_task
+msgid "Shelter veterinary tasks"
+msgstr "Tareas de veterinario"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.res_partner_pet_search_inh
+msgid "Staff"
+msgstr "Staff"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__stage_id
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__stage_id
+#: model_terms:ir.ui.view,arch_db:shelter_pet.product_template_pet_search_inh
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.product_product_pet_search_inh
+msgid "Stage PP"
+msgstr "Etapa del peludo"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__stage_pp_id
+msgid "Stage Product"
+msgstr "Etapa producto"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__stage_code
+msgid "Stage code"
+msgstr "Código de etapa"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__stage_sequence
+msgid "Stage sequence"
+msgstr "Secuencia de etapa"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__shelter_state
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__shelter_state
+msgid "Survey status"
+msgstr "Estado de encuesta"
+
+#. module: shelter_pet
+#: model:ir.model,name:shelter_pet.model_project_task
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__task_ids
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__task_ids
+msgid "Task"
+msgstr "Tarea"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__task_pp_ids
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__task_pt_ids
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__task_pt_ids
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "Tasks"
+msgstr "Tareas"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.product_only_product_pet_form_inh
+#: model_terms:ir.ui.view,arch_db:shelter_pet.product_only_template_pet_form_inh
+msgid "Tasks / Leads"
+msgstr "Tareas de oportunidades"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.view_res_partner_pet_form_inh
+msgid "Tasks history:"
+msgstr "Historial de tareas:"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "This note is added to sales orders,invoices and e-Commerce."
+msgstr ""
+"Esta nota se añade a ofertas, facturas y aparece en el comercio "
+"electrónico."
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "This note is only for internal purposes."
+msgstr "Nota sólo para uso interno (no se imprime ni envía)."
+
+#. module: shelter_pet
+#: model:ir.model.fields,help:shelter_pet.field_product_product__responsible_id
+msgid ""
+"This user will be responsible of the next activities related to logistic "
+"operations for this product."
+msgstr ""
+"Este usuario será el responsable de próximas actividades relacionadas a "
+"traslados ."
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_kanban_view
+msgid "Variants"
+msgstr "Variantes"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.res_partner_pet_search_inh
+msgid "Veterinaries"
+msgstr "Veterinarios"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__veterinary_id
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__veterinary_id
+#: model:ir.model.fields,field_description:shelter_pet.field_project_task__veterinary_id
+#: model:ir.ui.menu,name:shelter_pet.menu_veterinary_tasks
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Veterinary"
+msgstr "Veterinario"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_company__veterinary_type_id
+msgid "Veterinary type"
+msgstr "Tipo para veterinarios"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__volunteer_id
+#: model:ir.model.fields,field_description:shelter_pet.field_product_template__volunteer_id
+#: model:ir.model.fields,field_description:shelter_pet.field_project_task__volunteer_id
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Volunteer"
+msgstr "Voluntario"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.res_partner_pet_search_inh
+msgid "Volunteers"
+msgstr "Voluntarios"
+
+#. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_res_partner__location_id
+#: model:ir.model.fields,field_description:shelter_pet.field_res_users__location_id
+msgid "WH Location"
+msgstr "Ubicación"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
+msgid "Warnings"
+msgstr "Alertas"
+
+#. module: shelter_pet
+#: model_terms:ir.actions.act_window,help:shelter_pet.action_shelter_management_task
+#: model_terms:ir.actions.act_window,help:shelter_pet.action_shelter_network_task
+#: model_terms:ir.actions.act_window,help:shelter_pet.action_shelter_veterinary_task
+msgid "We help you track availability and history"
+msgstr "Te ayudamos en el seguimiento e historia"
+
+#. module: shelter_pet
+#: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
+msgid "e.g. Cheese Burger"
+msgstr "por ejemplo ‘Python’"
