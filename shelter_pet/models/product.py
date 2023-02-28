@@ -11,6 +11,7 @@ class ProductTemplate(models.Model):
 
     pet_ok   = fields.Boolean('Pet')
     pet_origin = fields.Char('Alias')
+    pet_breed = fields.Char('Breed')
     task_pt_ids = fields.One2many('project.task', 'product_tmpl_id', string='Tasks')
     veterinary_id = fields.Many2one('res.partner', string='Veterinary', store=True)
     home_id = fields.Many2one('res.partner', string='Home', store=True)

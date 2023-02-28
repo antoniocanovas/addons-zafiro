@@ -11,6 +11,6 @@ class ProductStage(models.Model):
     _order = 'sequence, id'
     _description = 'Product Stage'
 
-    name = fields.Char(string='Name')
+    name = fields.Char(string='Name',translate=True)
     sequence = fields.Integer(string="Sequence")
     code = fields.Char(string="Code")

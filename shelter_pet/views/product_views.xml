@@ -27,6 +27,7 @@
                         <group>
                             <field name="home_id" domain="[('type_char','ilike','home')]"/>
                             <field name="categ_id"/>
+                            <field name="pet_breed"/>
                             <field name="sex"/>
                             <field name="birthdate"/>
                             <field name="pet_color"/>
@@ -250,6 +251,7 @@
             >
                 <field name="name"/>
                 <field name="categ_id"/>
+                <field name="pet_breed"/>
                 <field name="responsible_id" widget="many2one_avatar_user"/>
                 <field name="task_pp_ids" widget="many2many_tags"/>
                 <field name="activity_ids" string="Next Activity" widget="list_activity" optional="show"/>
