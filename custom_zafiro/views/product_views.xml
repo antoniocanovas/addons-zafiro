@@ -5,7 +5,7 @@
         <field name="name">Product Shelter Pet Images</field>
         <field name="model">product.product</field>
         <field name="type">form</field>
-        <field name="inherit_id" ref="product_shelter_pet_images_form"/>
+        <field name="inherit_id" ref="shelter_website.product_shelter_pet_images_form"/>
         <field name="priority">90</field>
         <field name="arch" type="xml">
             <data>
