@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-18 09:41+0000\n"
-"PO-Revision-Date: 2023-02-18 12:05+0100\n"
+"POT-Creation-Date: 2023-03-01 12:13+0000\n"
+"PO-Revision-Date: 2023-03-01 13:21+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -93,7 +93,7 @@ msgstr "Donativo adopción"
 #: model:ir.model.fields,field_description:shelter_pet.field_product_product__pet_origin
 #: model:ir.model.fields,field_description:shelter_pet.field_product_template__pet_origin
 msgid "Alias"
-msgstr "Alias"
+msgstr ""
 
 #. module: shelter_pet
 #: model:ir.model.fields.selection,name:shelter_pet.selection__res_partner__shelter_state__approved
@@ -105,6 +105,11 @@ msgstr "Aprobado"
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
 msgid "Archived"
 msgstr "Archivado"
+
+#. module: shelter_pet
+#: model:product.stage,name:shelter_pet.product_stage_avaiable
+msgid "Available"
+msgstr "Disponible"
 
 #. module: shelter_pet
 #: model:ir.model.fields,field_description:shelter_pet.field_product_product__birthdate
@@ -128,14 +133,24 @@ msgid "Book your Task for veterinaries."
 msgstr "Documenta tus tareas con veterinarios."
 
 #. module: shelter_pet
+#: model:ir.model.fields,field_description:shelter_pet.field_product_product__pet_breed
+msgid "Breed"
+msgstr "Raza"
+
+#. module: shelter_pet
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
 msgid "Can be Sold"
 msgstr "Puede ser vendido"
 
 #. module: shelter_pet
+#: model:product.stage,name:shelter_pet.product_stage_ceproamur>
+msgid "Ceproamur"
+msgstr "Ceproamur"
+
+#. module: shelter_pet
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
 msgid "Chip"
-msgstr "Chip"
+msgstr ""
 
 #. module: shelter_pet
 #: model:ir.model.fields,field_description:shelter_pet.field_partner_type__code
@@ -161,7 +176,7 @@ msgstr "Colaboraciones"
 #: model:ir.model.fields,field_description:shelter_pet.field_product_product__pet_color
 #: model:ir.model.fields,field_description:shelter_pet.field_product_template__pet_color
 msgid "Color"
-msgstr "Color"
+msgstr ""
 
 #. module: shelter_pet
 #: model:ir.model.fields,field_description:shelter_pet.field_res_company__network_type_id
@@ -171,7 +186,7 @@ msgstr "Tipo de comunicación"
 #. module: shelter_pet
 #: model:ir.model,name:shelter_pet.model_res_company
 msgid "Companies"
-msgstr "Empresas"
+msgstr "Compañías"
 
 #. module: shelter_pet
 #: model:ir.model,name:shelter_pet.model_res_partner
@@ -211,6 +226,11 @@ msgid "Date start"
 msgstr "Fecha inicio"
 
 #. module: shelter_pet
+#: model:product.stage,name:shelter_pet.product_stage_deceased
+msgid "Deceased"
+msgstr "Fallecido"
+
+#. module: shelter_pet
 #: model:ir.model.fields,field_description:shelter_pet.field_res_partner__shelter_location_id
 #: model:ir.model.fields,field_description:shelter_pet.field_res_users__shelter_location_id
 msgid "Default parent location"
@@ -223,9 +243,19 @@ msgid "Display Name"
 msgstr "Nombre"
 
 #. module: shelter_pet
+#: model:product.stage,name:shelter_pet.product_stage_done
+msgid "Done"
+msgstr "Adoptado"
+
+#. module: shelter_pet
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
 msgid "Expedient number"
 msgstr "Nº expediente"
+
+#. module: shelter_pet
+#: model:product.stage,name:shelter_pet.product_stage_external
+msgid "External"
+msgstr "Externo"
 
 #. module: shelter_pet
 #: model:ir.model.fields.selection,name:shelter_pet.selection__res_partner__shelter_state__fail
@@ -395,6 +425,11 @@ msgid "Pets"
 msgstr "Peludos"
 
 #. module: shelter_pet
+#: model:product.stage,name:shelter_pet.product_stage_preadopt
+msgid "Preadoption"
+msgstr "Preadopción"
+
+#. module: shelter_pet
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
 msgid "Print Labels"
 msgstr "Etiquetas de impresión"
@@ -444,8 +479,7 @@ msgstr "Tipo de proyecto"
 #. module: shelter_pet
 #: model:ir.model.fields,help:shelter_pet.field_res_company__network_type_id
 msgid "Project type for communication tasks"
-msgstr ""
-"Tipo de proyecto para comunicaciones, publicaciones y redes sociales"
+msgstr "Tipo de proyecto para comunicaciones, publicaciones y redes sociales"
 
 #. module: shelter_pet
 #: model:ir.model.fields,help:shelter_pet.field_res_company__management_type_id
@@ -475,6 +509,11 @@ msgid "Rescuer"
 msgstr "Rescatador"
 
 #. module: shelter_pet
+#: model:product.stage,name:shelter_pet.product_stage_reserved
+msgid "Reserved"
+msgstr "Reservado"
+
+#. module: shelter_pet
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
 msgid "Responsible"
 msgstr "Responsable"
@@ -488,8 +527,8 @@ msgstr "Responsable (staff)"
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
 msgid "Sale and eCommerce description (Pet history)"
 msgstr ""
-"Descripción para ventas y comercio electrónico (habitualmente la "
-"historia del peludo)"
+"Descripción para ventas y comercio electrónico (habitualmente la historia "
+"del peludo)"
 
 #. module: shelter_pet
 #: model:ir.model.fields.selection,name:shelter_pet.selection__res_partner__shelter_state__sent
@@ -542,7 +581,7 @@ msgstr "Tareas de veterinario"
 #. module: shelter_pet
 #: model_terms:ir.ui.view,arch_db:shelter_pet.res_partner_pet_search_inh
 msgid "Staff"
-msgstr "Staff"
+msgstr ""
 
 #. module: shelter_pet
 #: model:ir.model.fields,field_description:shelter_pet.field_product_product__stage_id
@@ -608,8 +647,7 @@ msgstr "Historial de tareas:"
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
 msgid "This note is added to sales orders,invoices and e-Commerce."
 msgstr ""
-"Esta nota se añade a ofertas, facturas y aparece en el comercio "
-"electrónico."
+"Esta nota se añade a ofertas, facturas y aparece en el comercio electrónico."
 
 #. module: shelter_pet
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_form_view
@@ -667,6 +705,11 @@ msgstr "Voluntarios"
 #: model:ir.model.fields,field_description:shelter_pet.field_res_users__location_id
 msgid "WH Location"
 msgstr "Ubicación"
+
+#. module: shelter_pet
+#: model:product.stage,name:shelter_pet.product_stage_new
+msgid "Waiting"
+msgstr "En espera"
 
 #. module: shelter_pet
 #: model_terms:ir.ui.view,arch_db:shelter_pet.shelter_product_pet_search_view
