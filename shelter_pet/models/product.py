@@ -11,7 +11,6 @@ class ProductTemplate(models.Model):
 
     pet_ok   = fields.Boolean('Pet')
     pet_origin = fields.Char('Alias')
-    pet_breed = fields.Char('Breed')
     task_pt_ids = fields.One2many('project.task', 'product_tmpl_id', string='Tasks')
     veterinary_id = fields.Many2one('res.partner', string='Veterinary', store=True)
     home_id = fields.Many2one('res.partner', string='Home', store=True)
@@ -42,6 +41,7 @@ class ProductTemplate(models.Model):
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
+    pet_breed = fields.Char('Breed')
     stage_pp_id = fields.Many2one('product.stage', string='Stage Product', store=True,
                                 readonly=False, related='product_tmpl_id.stage_id',)
     task_pp_ids = fields.One2many('project.task', 'product_id', string='Tasks', store=True)
