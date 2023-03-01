@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="product_shelter_hide_cart_inh_form" model="ir.ui.view">
+        <field name="name">Product Shelter Pet Images</field>
+        <field name="model">product.product</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="product_shelter_pet_images_form"/>
+        <field name="priority">90</field>
+        <field name="arch" type="xml">
+            <data>
+                <field name="website_sequence" position="before">
+                    <field name="hide_cart"/>
+                </field>
+            </data>
+        </field>
+    </record>
+
+
+</odoo>
