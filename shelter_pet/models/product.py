@@ -49,3 +49,4 @@ class ProductProduct(models.Model):
                                      related='product_tmpl_id.responsible_id', readonly=False)
     stage_code = fields.Char('Stage code', related='stage_pp_id.code')
     stage_sequence = fields.Integer('Stage sequence', related='stage_pp_id.sequence', store=True)
+    stage_tree_sequence = fields.Integer('Stage tree sequence', related='stage_pp_id.tree_sequence', store=True)

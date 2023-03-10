@@ -14,3 +14,4 @@ class ProductStage(models.Model):
     name = fields.Char(string='Name',translate=True)
     sequence = fields.Integer(string="Sequence")
     code = fields.Char(string="Code")
+    tree_sequence = fields.Integer(string="Tree sequence")

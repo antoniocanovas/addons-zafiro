@@ -5,48 +5,56 @@
         <field name="name">External</field>
         <field name="code">external</field>
         <field name="sequence">1</field>
+        <field name="tree_sequence">6</field>
     </record>
 
     <record id="product_stage_ceproamur>" model="product.stage">
         <field name="name">Ceproamur</field>
         <field name="code">ceproamur</field>
         <field name="sequence">2</field>
+        <field name="tree_sequence">4</field>
     </record>
 
     <record id="product_stage_new" model="product.stage">
         <field name="name">Waiting</field>
         <field name="code">new</field>
         <field name="sequence">3</field>
+        <field name="tree_sequence">5</field>
     </record>
 
     <record id="product_stage_avaiable" model="product.stage">
         <field name="name">Available</field>
         <field name="code">available</field>
         <field name="sequence">4</field>
+        <field name="tree_sequence">1</field>
     </record>
 
     <record id="product_stage_reserved" model="product.stage">
         <field name="name">Reserved</field>
         <field name="code">reserved</field>
         <field name="sequence">5</field>
+        <field name="tree_sequence">2</field>
     </record>
 
     <record id="product_stage_preadopt" model="product.stage">
         <field name="name">Preadoption</field>
         <field name="code">preadoption</field>
         <field name="sequence">6</field>
+        <field name="tree_sequence">3</field>
     </record>
 
     <record id="product_stage_done" model="product.stage">
         <field name="name">Done</field>
         <field name="code">done</field>
         <field name="sequence">7</field>
+        <field name="tree_sequence">7</field>
     </record>
 
     <record id="product_stage_deceased" model="product.stage">
         <field name="name">Deceased</field>
         <field name="code">deceased</field>
         <field name="sequence">8</field>
+        <field name="tree_sequence">8</field>
     </record>
 
 </odoo>

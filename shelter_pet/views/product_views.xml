@@ -238,7 +238,7 @@
         <field name="priority">99</field>
         <field name="type">tree</field>
         <field name="arch" type="xml">
-            <tree string="Pets" multi_edit="True" default_order="stage_sequence, id"
+            <tree string="Pets" multi_edit="True" default_order="stage_tree_sequence, id"
                   decoration-muted = "stage_code == 'external'"
                   decoration-it   = "stage_code == 'ceproamur'"
                   decoration-primary = "stage_code == 'new'"
@@ -272,7 +272,7 @@
                 <field name="stage_id"/>
                 <field name="detailed_type" invisible="1"/>
                 <field name="stage_code" invisible="1"/>
-                <field name="stage_sequence" invisible="1"/>
+                <field name="stage_tree_sequence" invisible="1"/>
             </tree>
         </field>
     </record>
