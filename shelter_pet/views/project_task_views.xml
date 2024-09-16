@@ -83,7 +83,6 @@
             <data>
                 <xpath expr="//calendar" position="attributes">
                     <attribute name="scales">day,week,month,year</attribute>
-                    <attribute name="mode">week</attribute>
                 </xpath>
             </data>
         </field>
