@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="shelter_pet_update_first_user_task_color" model="base.automation">
+        <field name="name">=> Set favourite color task from first user</field>
+        <field name="model_id" ref="project.model_project_task"/>
+        <field name="state">code</field>
+        <field name="code">
+if record.user_ids.ids:
+  first_user = record.user_ids[0]
+  if first_user.color:
+      record['color'] = first_user.color
+        </field>
+        <field name="trigger">on_unlink</field>
+        <field name="filter_pre_domain"></field>
+        <field name="filter_domain"></field>
+        <field name="active" eval="True"/>
+    </record>
+
+</odoo>
