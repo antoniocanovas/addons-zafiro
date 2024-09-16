@@ -25,3 +25,11 @@ class ProjectTask(models.Model):
         if self.project_id.type_id.id == self.company_id.management_type_id.id: type_char = 'management'
         self.project_type = type_char
     project_type    = fields.Char('Project type', store=True, compute='_get_project_type_char')
+
+
+    @api.onchange('user_ids')
+    def _get_task_default_color_first_user(self):
+        if self.user_ids:
+            first_user = self.user_ids[0]
+            if first_user.color:
+                self.color = first_user.color

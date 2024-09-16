@@ -3,9 +3,9 @@
 <odoo>
     <record id="shelter_pet_inh_form" model="ir.ui.view">
         <field name="model">res.users</field>
-        <field name="inherit_id" ref="base.view_users_form_simple_modif" />
+        <field name="inherit_id" ref="base.view_users_form"/>
         <field name="arch" type="xml">
-            <field name="email" position="after">
+            <field name="partner_id" position="after">
                 <field name="color" widget="color_picker"/>
             </field>
         </field>
