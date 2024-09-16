@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="calendar_shelter_monthly_default_view_inh" model="ir.ui.view">
+        <field name="name">Calendar monthly default view</field>
+        <field name="model">calendar.event</field>
+        <field name="type">calendar</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_calendar"/>
+        <field name="priority">90</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//calendar[1]" position="attributes">
+                    <attribute name="mode">month</attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+</odoo>

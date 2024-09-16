@@ -9,9 +9,11 @@ Zafiro particular customizations
     'depends': [
         'shelter_website',
         'hide_cart',
+        'calendar',
     ],
     'data': [
         'views/product_views.xml',
+        'views/calendar_event_views.xml',
     ],
     'installable': True,
 }
