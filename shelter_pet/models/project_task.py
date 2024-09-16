@@ -29,7 +29,10 @@ class ProjectTask(models.Model):
 
     @api.onchange('user_ids')
     def _get_task_default_color_first_user(self):
+        color = self.color
         if self.user_ids:
             first_user = self.user_ids[0]
             if first_user.color:
-                self.color = first_user.color
+                color = first_user.color
+        self.color = color
+    color = fields.Integer(store=True, compute='_get_task_default_color_first_user')
