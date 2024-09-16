@@ -22,6 +22,7 @@ Base module for Pets as Odoo Products.
         "views/project_task_views.xml",
         "views/stock_location_views.xml",
         "views/res_company_views.xml",
+        "views/res_users_views.xml",
         "data/partner_type.xml",
         "views/menu_views.xml",
     ],
