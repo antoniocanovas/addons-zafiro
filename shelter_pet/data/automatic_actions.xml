@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
+    <!-- En 04/2025 estaba ya comentado y añado otra acción, así que la quito:
     <record id="shelter_pet_update_first_user_task_color" model="base.automation">
         <field name="name">=> Set favourite color task from first user</field>
         <field name="model_id" ref="project.model_project_task"/>
@@ -15,6 +15,7 @@ if record.user_ids.ids:
         <field name="trigger_field_ids" eval="[(6,0, [ref('project.field_project_task__user_ids')])]"/>
         <field name="active" eval="True"/>
     </record>
+    -->
 
 
     <record id="shelter_pet_update_sale_description" model="base.automation">
