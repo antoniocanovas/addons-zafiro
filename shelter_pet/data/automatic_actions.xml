@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <!-- En 04/2025 estaba ya comentado y añado otra acción, así que la quito:
+    <!-- En 04/2025 estaba ya comentado y añado otra acción, así que la comento (borrar en funturo):
     <record id="shelter_pet_update_first_user_task_color" model="base.automation">
         <field name="name">=> Set favourite color task from first user</field>
         <field name="model_id" ref="project.model_project_task"/>
@@ -25,6 +25,32 @@ if record.user_ids.ids:
         <field name="code">
 if record.pet_ok:
     description = ""
+    if record.categ_id.id: description += record.categ_id.name + "\n"
+
+    description += "Sexo: "
+    if record.sex == "male": description += "Macho" + "\n"
+    elif record.sex == "female": description += "Hembra" + "\n"
+    else: description += "\n"
+
+    description += "Fecha de nacimiento: "
+    if record.birthdate: description += str(record.birthdate.strftime('%d/%m/%Y')) + "\n"
+    else: description += "\n"
+
+    if record.pet_color: description += "Color: " + record.pet_color + "\n"
+    if record.hair: description += "Pelo: " + str(record.hair) + "\n"
+
+    description += "Vacunas: "
+    if record.pet_vaccine: description += str(record.pet_vaccine) + "\n"
+    else: description += "\n"
+
+    description += "Desparasitaje: "
+    if record.pet_deworming: description += record.pet_deworming + "\n"
+    else: description += "\n"
+
+    description += "Castración: "
+    if record.pet_castration: description += record.pet_castration + "\n"
+    else: description += "\n"
+
     record['description_sale'] = description
         </field>
         <field name="trigger">on_write</field>
