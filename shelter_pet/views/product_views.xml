@@ -31,11 +31,15 @@
                             <field name="birthdate"/>
                             <field name="pet_color"/>
                             <field name="hair"/>
+                            <field name="pet_deworming"/>
+                            <field name="pet_behaviour"/>
                         </group>
                         <group>
-                            <field name="volunteer_id" optional="hide" domain="[('type_char','ilike','volunteer')]"/>
+                            <field name="volunteer_id" domain="[('type_char','ilike','volunteer')]"/>
                             <field name="rescuer_id" optional="hide"/>
-                            <field name="veterinary_id" optional="hide" domain="[('type_char','ilike','veterinary')]"/>
+                            <field name="veterinary_id" domain="[('type_char','ilike','veterinary')]"/>
+                            <field name="pet_vaccine"/>
+                            <field name="pet_castration"/>
                             <field name="default_code" optional="show"/>
                             <field name="barcode" optional="hide"/>
                             <field name="date_start"/>

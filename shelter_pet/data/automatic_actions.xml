@@ -16,4 +16,29 @@ if record.user_ids.ids:
         <field name="active" eval="True"/>
     </record>
 
+
+    <record id="shelter_pet_update_sale_description" model="base.automation">
+        <field name="name">=> Set Pet sale description</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">
+if record.pet_ok:
+    description = ""
+    record['description_sale'] = description
+        </field>
+        <field name="trigger">on_write</field>
+        <field name="trigger_field_ids"
+               eval="[(6,0, [
+               ref('shelter_pet.field_product_template__sex'),
+               ref('shelter_pet.field_product_template__birthdate'),
+               ref('shelter_pet.field_product_template__pet_color'),
+               ref('shelter_pet.field_product_template__hair'),
+               ref('shelter_pet.field_product_template__pet_vaccine'),
+               ref('shelter_pet.field_product_template__pet_deworming'),
+               ref('shelter_pet.field_product_template__pet_castration'),
+               ref('product.field_product_template__categ_id'),
+               ])]"/>
+        <field name="active" eval="True"/>
+    </record>
+
 </odoo>

@@ -25,6 +25,11 @@ class ProductTemplate(models.Model):
     date_start = fields.Date('Date start')
     date_finish = fields.Date('Date finish')
 
+    pet_vaccine = fields.Char('Vaccines')
+    pet_deworming = fields.Char('Deworming')
+    pet_castration = fields.Char('Castration')
+    pet_behaviour = fields.Char('Behaviour')
+
 #    Especie: Felina (son las categorías)
 #    Raza: Común Europeo
 
