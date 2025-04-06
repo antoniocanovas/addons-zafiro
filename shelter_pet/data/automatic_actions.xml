@@ -24,8 +24,17 @@ if record.user_ids.ids:
         <field name="state">code</field>
         <field name="code">
 if record.pet_ok:
-    description = ""
+    description = "CHIP: "
+    if record.barcode: description += str(record.barcode) + "\n"
+    else: description += "\n"
+
+    description += "Especie: "
     if record.categ_id.id: description += record.categ_id.name + "\n"
+    else: description += "\n"
+
+    description += "Raza: "
+    if record.pet_breed: description += str(record.pet_breed) + "\n"
+    else: description += "\n"
 
     description += "Sexo: "
     if record.sex == "male": description += "Macho" + "\n"
@@ -37,18 +46,18 @@ if record.pet_ok:
     else: description += "\n"
 
     if record.pet_color: description += "Color: " + record.pet_color + "\n"
-    if record.hair: description += "Pelo: " + str(record.hair) + "\n"
+    if record.hair: description += "Pelaje: " + str(record.hair) + "\n"
 
     description += "Vacunas: "
     if record.pet_vaccine: description += str(record.pet_vaccine) + "\n"
     else: description += "\n"
 
-    description += "Desparasitaje: "
-    if record.pet_deworming: description += record.pet_deworming + "\n"
+    description += "Esterilizado: "
+    if record.pet_castration: description += record.pet_castration + "\n"
     else: description += "\n"
 
-    description += "Castración: "
-    if record.pet_castration: description += record.pet_castration + "\n"
+    description += "Desparasitado: "
+    if record.pet_deworming: description += record.pet_deworming + "\n"
     else: description += "\n"
 
     record['description_sale'] = description
@@ -63,7 +72,9 @@ if record.pet_ok:
                ref('shelter_pet.field_product_template__pet_vaccine'),
                ref('shelter_pet.field_product_template__pet_deworming'),
                ref('shelter_pet.field_product_template__pet_castration'),
+               ref('shelter_pet.field_product_template__pet_breed'),
                ref('product.field_product_template__categ_id'),
+               ref('product.field_product_template__barcode'),
                ])]"/>
         <field name="active" eval="True"/>
     </record>

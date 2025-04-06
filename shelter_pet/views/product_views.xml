@@ -27,12 +27,12 @@
                         <group>
                             <field name="home_id" domain="[('type_char','ilike','home')]"/>
                             <field name="categ_id"/>
+                            <field name="pet_breed"/>
                             <field name="sex"/>
                             <field name="birthdate"/>
                             <field name="pet_color"/>
                             <field name="hair"/>
                             <field name="pet_deworming"/>
-                            <field name="pet_behaviour"/>
                         </group>
                         <group>
                             <field name="volunteer_id" domain="[('type_char','ilike','volunteer')]"/>
@@ -44,6 +44,7 @@
                             <field name="barcode" optional="hide"/>
                             <field name="date_start"/>
                             <field name="date_finish"/>
+                            <field name="pet_behaviour"/>
                         </group>
                     </group>
                 </page>

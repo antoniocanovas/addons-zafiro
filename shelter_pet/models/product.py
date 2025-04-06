@@ -29,6 +29,7 @@ class ProductTemplate(models.Model):
     pet_deworming = fields.Char('Deworming')
     pet_castration = fields.Char('Castration')
     pet_behaviour = fields.Char('Behaviour')
+    pet_breed = fields.Char('Breed')
 
 #    Especie: Felina (son las categorías)
 #    Raza: Común Europeo
