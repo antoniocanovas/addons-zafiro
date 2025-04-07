@@ -367,13 +367,17 @@
                                     <field name="birthdate"/>
                                     <field name="pet_color"/>
                                     <field name="hair"/>
+                                    <field name="pet_deworming"/>
                                 </group>
                                 <group>
-                                    <field name="veterinary_id" optional="hide" domain="[('type_char','ilike','veterinary')]"/>
-                                    <field name="default_code" optional="show" string="Expedient number"/>
-                                    <field name="barcode" optional="hide" string="Chip"/>
+                                    <field name="veterinary_id" domain="[('type_char','ilike','veterinary')]"/>
+                                    <field name="pet_vaccine"/>
+                                    <field name="pet_castration"/>
+                                    <field name="default_code" optional="show"/>
+                                    <field name="barcode" optional="hide"/>
                                     <field name="date_start"/>
                                     <field name="date_finish"/>
+                                    <field name="pet_behaviour"/>
                                 </group>
                             </group>
                             <group string="Sale and eCommerce description (Pet history)" name="description">
