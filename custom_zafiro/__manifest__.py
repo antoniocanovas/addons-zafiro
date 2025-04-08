@@ -13,6 +13,7 @@ Zafiro particular customizations
     ],
     'data': [
         'views/product_views.xml',
+        'views/sale_order_views.xml',
         'views/calendar_event_views.xml',
     ],
     'installable': True,

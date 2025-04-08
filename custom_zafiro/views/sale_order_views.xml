@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="sale_order_shelter_inh_form" model="ir.ui.view">
+        <field name="name">sale.order.shelter.inh.form</field>
+        <field name="model">sale.order</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="priority">90</field>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="attrs">{"readonly": False}</attribute>
+                    <attribute name="readonly"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+
+</odoo>
