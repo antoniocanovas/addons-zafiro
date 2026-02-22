@@ -13,6 +13,9 @@
                     <attribute name="attrs">{"readonly": False}</attribute>
                     <attribute name="readonly"/>
                 </xpath>
+                <xpath expr="//field[@name='opportunity_id']" position="attributes">
+                    <attribute name="groups"/>
+                </xpath>
             </data>
         </field>
     </record>
