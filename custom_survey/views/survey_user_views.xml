@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="survey_user_input_view_tree_inh" model="ir.ui.view">
+        <field name="name">survey.user_input.view.tree.scoring.total</field>
+        <field name="model">survey.user_input</field>
+        <field name="inherit_id" ref="survey.survey_user_input_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='scoring_percentage']" position="after">
+                <field name="scoring_total"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
