@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <template id="survey_fill_form_done_hide_result" inherit_id="survey.survey_fill_form_done" name="Survey: hide results charts when scoring without answers">
+        <xpath expr="//div[hasclass('o_survey_result')]" position="attributes">
+            <attribute name="t-if">graph_data and survey.scoring_type != 'scoring_without_answers'</attribute>
+        </xpath>
+    </template>
+
+</odoo>
