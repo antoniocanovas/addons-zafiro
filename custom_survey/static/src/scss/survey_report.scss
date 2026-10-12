@@ -1,0 +1,160 @@
+.o_survey_report {
+    font-size: 0.95rem;
+
+    .o_survey_report_title {
+        margin-bottom: 16px;
+    }
+
+    table.o_survey_report_summary {
+        width: 100%;
+        margin-bottom: 28px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        td {
+            padding: 6px 12px;
+            vertical-align: middle;
+        }
+        .o_survey_report_summary_label {
+            width: 15%;
+            color: #6c757d;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+    }
+
+    .o_survey_report_section {
+        margin: 24px 0 12px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid #495057;
+        color: #495057;
+    }
+
+    .o_survey_report_question {
+        margin-bottom: 18px;
+        page-break-inside: avoid;
+    }
+
+    table.o_survey_report_question_header {
+        width: 100%;
+        td {
+            vertical-align: top;
+            padding: 0;
+        }
+        .o_survey_report_question_number {
+            width: 32px;
+            font-weight: bold;
+            color: #6c757d;
+        }
+        .o_survey_report_question_title {
+            font-weight: bold;
+        }
+        .o_survey_report_question_score {
+            width: 110px;
+            text-align: right;
+            white-space: nowrap;
+        }
+    }
+
+    .o_survey_report_question_description {
+        margin-left: 32px;
+        color: #6c757d;
+        font-size: 0.9em;
+    }
+
+    .o_survey_report_answer {
+        margin: 6px 0 0 32px;
+    }
+
+    .o_survey_report_value {
+        display: inline-block;
+        min-width: 40%;
+        padding: 4px 10px;
+        border-left: 3px solid #adb5bd;
+        background-color: #f8f9fa;
+        &.o_survey_report_correct {
+            border-left-color: #28a745;
+            background-color: #eaf6ec;
+        }
+        &.o_survey_report_wrong {
+            border-left-color: #dc3545;
+            background-color: #fbeaec;
+        }
+        .fa {
+            margin-right: 6px;
+        }
+    }
+
+    .o_survey_report_text {
+        white-space: pre-wrap;
+    }
+
+    .o_survey_report_correct_answer {
+        margin-top: 4px;
+        color: #28a745;
+    }
+
+    table.o_survey_report_choices {
+        td {
+            padding: 2px 6px 2px 0;
+            vertical-align: top;
+        }
+        .o_survey_report_choice_icon {
+            width: 20px;
+            color: #6c757d;
+        }
+        .o_survey_report_choice_mark {
+            padding-left: 12px;
+            white-space: nowrap;
+        }
+        tr.o_survey_report_selected {
+            font-weight: bold;
+            .o_survey_report_choice_icon {
+                color: #212529;
+            }
+        }
+        tr.o_survey_report_correct td {
+            color: #28a745;
+        }
+        tr.o_survey_report_wrong td {
+            color: #dc3545;
+        }
+    }
+
+    table.o_survey_report_matrix {
+        width: auto;
+        min-width: 60%;
+        th, td {
+            padding: 3px 10px;
+        }
+        .fa-check {
+            color: #212529;
+        }
+    }
+
+    .o_survey_report_comment {
+        margin-top: 6px;
+        font-style: italic;
+        .o_survey_report_comment_label {
+            font-style: normal;
+            color: #6c757d;
+        }
+    }
+
+    .o_survey_report_pill {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 10px;
+        font-size: 0.85em;
+        font-weight: bold;
+        color: #fff;
+        &.o_survey_report_pill_success {
+            background-color: #28a745;
+        }
+        &.o_survey_report_pill_warning {
+            background-color: #e67e22;
+        }
+        &.o_survey_report_pill_danger {
+            background-color: #dc3545;
+        }
+    }
+}

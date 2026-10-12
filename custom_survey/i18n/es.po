@@ -1,0 +1,122 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_survey
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: custom_survey
+#: model:ir.actions.report,name:custom_survey.action_report_survey_user_input
+msgid "Survey Answers"
+msgstr "Respuestas de la encuesta"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Participant"
+msgstr "Participante"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Anonymous"
+msgstr "Anónimo"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Score"
+msgstr "Puntuación"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Date"
+msgstr "Fecha"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Result"
+msgstr "Resultado"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Passed"
+msgstr "Aprobado"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Failed"
+msgstr "Suspendido"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "(min."
+msgstr "(mín."
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Status"
+msgstr "Estado"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "There are no answers to display."
+msgstr "No hay respuestas que mostrar."
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Not answered"
+msgstr "Sin responder"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Correct"
+msgstr "Correcta"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Incorrect"
+msgstr "Incorrecta"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Correct answer:"
+msgstr "Respuesta correcta:"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Correct answer"
+msgstr "Respuesta correcta"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "pts"
+msgstr "ptos"
+
+#. module: custom_survey
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_document
+#: model_terms:ir.ui.view,arch_db:custom_survey.report_survey_user_input_question
+msgid "Comment:"
+msgstr "Comentario:"

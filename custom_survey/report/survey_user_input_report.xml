@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="action_report_survey_user_input" model="ir.actions.report">
+        <field name="name">Survey Answers</field>
+        <field name="model">survey.user_input</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">custom_survey.report_survey_user_input</field>
+        <field name="report_file">custom_survey.report_survey_user_input</field>
+        <field name="print_report_name">'Respuestas - %s - %s' % (object.survey_id.title, object.partner_id.name or object.email or object.nickname or '')</field>
+        <field name="binding_model_id" ref="survey.model_survey_user_input"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_survey_user_input">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="custom_survey.report_survey_user_input_document" t-lang="o.partner_id.lang or o.env.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_survey_user_input_document">
+        <t t-call="web.external_layout">
+            <t t-set="survey" t-value="o.survey_id"/>
+            <t t-set="is_scored" t-value="survey.scoring_type != 'no_scoring'"/>
+            <t t-set="sections" t-value="o._get_report_sections()"/>
+            <div class="page o_survey_report">
+
+                <h2 class="o_survey_report_title" t-field="survey.title"/>
+
+                <!-- Summary -->
+                <table class="o_survey_report_summary">
+                    <tr>
+                        <td class="o_survey_report_summary_label">Participant</td>
+                        <td>
+                            <span t-if="o.partner_id" t-field="o.partner_id.name"/>
+                            <span t-elif="o.email" t-field="o.email"/>
+                            <span t-elif="o.nickname" t-field="o.nickname"/>
+                            <span t-else="" class="text-muted">Anonymous</span>
+                        </td>
+                        <t t-if="is_scored">
+                            <td class="o_survey_report_summary_label">Score</td>
+                            <td>
+                                <strong t-out="'%g' % o.scoring_total"/> / <span t-out="'%g' % o._get_report_max_score()"/>
+                                (<span t-out="'%g' % o.scoring_percentage"/> %)
+                            </td>
+                        </t>
+                    </tr>
+                    <tr>
+                        <td class="o_survey_report_summary_label">Date</td>
+                        <td>
+                            <span t-if="o.end_datetime" t-field="o.end_datetime"/>
+                            <span t-else="" t-field="o.start_datetime"/>
+                        </td>
+                        <t t-if="is_scored">
+                            <td class="o_survey_report_summary_label">Result</td>
+                            <td>
+                                <span t-if="o.scoring_success" class="o_survey_report_pill o_survey_report_pill_success">Passed</span>
+                                <span t-else="" class="o_survey_report_pill o_survey_report_pill_danger">Failed</span>
+                                <span class="text-muted small">(min. <t t-out="'%g' % survey.scoring_success_min"/> %)</span>
+                            </td>
+                        </t>
+                    </tr>
+                    <tr>
+                        <td class="o_survey_report_summary_label">Status</td>
+                        <td t-att-colspan="3 if is_scored else 1"><span t-field="o.state"/></td>
+                    </tr>
+                </table>
+
+                <p t-if="not sections" class="text-muted text-center"><em>There are no answers to display.</em></p>
+
+                <t t-foreach="sections" t-as="section">
+                    <h4 t-if="section['page']" class="o_survey_report_section" t-field="section['page'].title"/>
+                    <t t-foreach="section['questions']" t-as="item">
+                        <t t-call="custom_survey.report_survey_user_input_question"/>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_survey_user_input_question">
+        <t t-set="question" t-value="item['question']"/>
+        <t t-set="lines" t-value="item['lines']"/>
+        <t t-set="answer_lines" t-value="lines.filtered(lambda line: not line.skipped)"/>
+        <t t-set="comment_line" t-value="question.question_type in ['simple_choice', 'multiple_choice', 'matrix'] and lines.filtered(lambda line: line.answer_type == 'char_box')[:1]"/>
+        <t t-set="choice_lines" t-value="answer_lines.filtered(lambda line: line.answer_type == 'suggestion')"/>
+        <t t-set="show_score" t-value="is_scored and item['max_score'] &gt; 0"/>
+        <div class="o_survey_report_question">
+            <table class="o_survey_report_question_header">
+                <tr>
+                    <td class="o_survey_report_question_number"><t t-out="item['number']"/>.</td>
+                    <td class="o_survey_report_question_title"><span t-field="question.title"/></td>
+                    <td t-if="show_score" class="o_survey_report_question_score">
+                        <span t-attf-class="o_survey_report_pill #{'o_survey_report_pill_success' if item['score'] &gt;= item['max_score'] else 'o_survey_report_pill_warning' if item['score'] &gt; 0 else 'o_survey_report_pill_danger'}">
+                            <t t-out="'%g' % item['score']"/> / <t t-out="'%g' % item['max_score']"/> pts
+                        </span>
+                    </td>
+                </tr>
+            </table>
+            <div t-if="not is_html_empty(question.description)" class="o_survey_report_question_description" t-field="question.description"/>
+
+            <div class="o_survey_report_answer">
+                <!-- Not answered -->
+                <t t-if="not answer_lines and not comment_line">
+                    <em class="text-muted">Not answered</em>
+                </t>
+
+                <!-- Free inputs: text, number, date, datetime -->
+                <t t-elif="question.question_type in ['text_box', 'char_box', 'numerical_box', 'date', 'datetime']">
+                    <t t-set="line" t-value="answer_lines[:1]"/>
+                    <t t-set="has_correction" t-value="is_scored and question.is_scored_question and question.question_type in ['numerical_box', 'date', 'datetime']"/>
+                    <div t-attf-class="o_survey_report_value #{has_correction and (line.answer_is_correct and 'o_survey_report_correct' or 'o_survey_report_wrong') or ''}">
+                        <t t-if="has_correction">
+                            <i t-if="line.answer_is_correct" class="fa fa-check" title="Correct"/>
+                            <i t-else="" class="fa fa-times" title="Incorrect"/>
+                        </t>
+                        <span t-if="question.question_type == 'text_box'" class="o_survey_report_text" t-field="line.value_text_box"/>
+                        <span t-if="question.question_type == 'char_box'" t-field="line.value_char_box"/>
+                        <span t-if="question.question_type == 'numerical_box'" t-out="'%g' % line.value_numerical_box"/>
+                        <span t-if="question.question_type == 'date'" t-field="line.value_date"/>
+                        <span t-if="question.question_type == 'datetime'" t-field="line.value_datetime"/>
+                    </div>
+                    <div t-if="has_correction and not line.answer_is_correct" class="o_survey_report_correct_answer">
+                        Correct answer:
+                        <strong t-if="question.question_type == 'numerical_box'" t-out="'%g' % question.answer_numerical_box"/>
+                        <strong t-if="question.question_type == 'date'" t-field="question.answer_date"/>
+                        <strong t-if="question.question_type == 'datetime'" t-field="question.answer_datetime"/>
+                    </div>
+                </t>
+
+                <!-- Simple / multiple choice -->
+                <t t-elif="question.question_type in ['simple_choice', 'multiple_choice']">
+                    <t t-set="has_correction" t-value="is_scored and any(question.suggested_answer_ids.mapped('is_correct'))"/>
+                    <table class="o_survey_report_choices">
+                        <t t-foreach="question.suggested_answer_ids" t-as="suggestion">
+                            <t t-set="selected" t-value="suggestion in choice_lines.suggested_answer_id"/>
+                            <tr t-attf-class="#{selected and 'o_survey_report_selected' or ''} #{has_correction and suggestion.is_correct and 'o_survey_report_correct' or ''} #{has_correction and selected and not suggestion.is_correct and 'o_survey_report_wrong' or ''}">
+                                <td class="o_survey_report_choice_icon">
+                                    <t t-if="question.question_type == 'simple_choice'">
+                                        <i t-attf-class="fa #{selected and 'fa-dot-circle-o' or 'fa-circle-o'}"/>
+                                    </t>
+                                    <t t-else="">
+                                        <i t-attf-class="fa #{selected and 'fa-check-square-o' or 'fa-square-o'}"/>
+                                    </t>
+                                </td>
+                                <td><span t-field="suggestion.value"/></td>
+                                <td class="o_survey_report_choice_mark">
+                                    <t t-if="has_correction and suggestion.is_correct">
+                                        <i class="fa fa-check" title="Correct"/>
+                                        <span t-if="not selected" class="small">Correct answer</span>
+                                    </t>
+                                    <i t-elif="has_correction and selected" class="fa fa-times" title="Incorrect"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                </t>
+
+                <!-- Matrix -->
+                <t t-elif="question.question_type == 'matrix'">
+                    <table class="table table-sm o_survey_report_matrix">
+                        <thead>
+                            <tr>
+                                <th/>
+                                <th t-foreach="question.suggested_answer_ids" t-as="column" class="text-center"><span t-field="column.value"/></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="question.matrix_row_ids" t-as="row">
+                                <td><span t-field="row.value"/></td>
+                                <td t-foreach="question.suggested_answer_ids" t-as="column" class="text-center">
+                                    <i t-if="choice_lines.filtered(lambda line: line.matrix_row_id == row and line.suggested_answer_id == column)" class="fa fa-check"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+
+                <div t-if="comment_line" class="o_survey_report_comment">
+                    <span class="o_survey_report_comment_label">Comment:</span>
+                    <span t-field="comment_line.value_char_box"/>
+                </div>
+            </div>
+        </div>
+    </template>
+
+</odoo>
